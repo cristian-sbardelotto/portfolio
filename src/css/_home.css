@@ -1,0 +1,55 @@
+@keyframes scale {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+
+  text-align: center;
+}
+
+.home img {
+  width: 70vw;
+  margin-top: 2rem;
+
+  border-radius: 50%;
+  /* animation: scale 1s alternate-reverse infinite; */
+}
+
+.home p {
+  display: flex;
+  justify-content: center;
+
+  width: fit-content;
+  padding: .5rem .5rem;
+
+  font-family: 'Raleway', sans-serif;
+
+  background-color: #14142B;
+  color: var(--primary-font-color);
+  border-radius: .75rem;
+}
+
+.home h1 {
+  color: var(--primary-font-color);
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800; 
+  font-size: 2.75rem;
+
+  max-width: 8ch;
+}
+
+.home span {
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+}

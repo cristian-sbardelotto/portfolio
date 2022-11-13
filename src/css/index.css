@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;800&display=swap');
+
 @import './_variables.css';
 @import './_reset.css';
 
-@import './_header.css'
+@import './_header.css';
+@import './_home.css';
