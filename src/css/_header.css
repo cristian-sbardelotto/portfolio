@@ -1,0 +1,11 @@
+body {
+  background-color: var(--background-color);
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+
+  margin-top: 1.75rem;
+}

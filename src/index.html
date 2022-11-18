@@ -1,15 +1,87 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/index.css">
-    <title>Web Portfolio</title>
-  </head>
-  <body>
-    <div id="app">
 
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/index.css">
+  <title>Web Portfolio</title>
+</head>
+
+<body>
+  <div id="app">
+    <header class="header">
+      <a href='https://linkedin.com'>
+        <image src='./assets/icon-linkedin.svg' alt='linkedin-icon' width='32px' height='32px' />
+      </a>
+      <a href='https://github.com' target="_blank">
+        <image src='./assets/icon-github.svg' target="_blank" alt='linkedin-icon' width='32px' height='32px' />
+      </a>
+
+      <a href='https://instagram.com'>
+        <image src='./assets/icon-instagram.svg' target="_blank" alt='linkedin-icon' width='32px' height='32px' />
+      </a>
+
+    </header>
+
+    <section class='home'>
+      <img src='./assets/profile-pic.png' alt='Foto de perfil' />
+
+      <p>👋Saudações!</p>
+
+      <h1>Cristian Sbardelotto</h1>
+
+      <span>Web Developer | FullStack</span>
+
+      <div class='home__conversation'>
+        <div class="home__conversation-link">
+          <span>Baixar CV</span>
+          <img src='./assets/download-button.svg' alt='download button' />
+        </div>
+
+        <button>
+          <img src='./assets/whatsapp-button.svg' alt='whatsapp button' />
+          <span>Vamos conversar</span>
+        </button>
+      </div>
+    </section>
+    
+    <section class='container_cards'> 
+    <div class="card_dev">
+      <img src="./assets/icon-dev.svg" alt="icone programador">
+      <h2>
+        <small>3 anos como</small> Programador
+      </h2>
     </div>
-  </body>
+    <div class="card_design">
+      <img src="./assets/icon-design.svg" alt="icone programador">
+      <h2>
+        <small>4 anos como</small> Designer
+      </h2>
+    </div>
+    <div class="card_project">
+      <img src="./assets/icon-project.svg" alt="icone programador">
+      <h2>
+        <small>7 anos de</small> Trabalhos
+      </h2>
+  </div>
+</section>
+<section class="informações">
+  <div class="container_info">
+    <img src="./assets/pic-teste.svg" alt="foto de perfil">
+    <div class="btn-info">
+      <h4>🧐 Sobre mim</h4>
+    </div>
+    <h2>João Vitor</h2>
+    <p>Me chamo João Vitor Santos mas pode me chamar apenas de João. Prazer! Há mais de 2 anos desenvolvendo e programando interfaces com JavaScript,
+    React JS e Typescript. Graduado em Análise e Desenvolvimento de Sistemas pela Fatec de São José dos Campos. Interesses
+    em desenvolvimento Front-end com React, React Native e UX/UI Design.
+
+    🚀 Tentando ser um pouquinho melhor do que ontem todos os dias.</p>
+  </div>
+</section>
+  </div>
+</body>
+
 </html>
