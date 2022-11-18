@@ -19,7 +19,7 @@ body * {
 
   text-align: center;
 
-  margin-bottom: 15rem;
+  margin-bottom: 1rem;
 }
 
 .home img {
@@ -73,7 +73,7 @@ body * {
   gap: .5rem;
   justify-content: center;
   align-items: center;
-  width: 10rem;
+  width: 16rem;
   padding: .5rem 0;
 
   background: unset;
