@@ -1,0 +1,128 @@
+@import './index.css';
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #090E16;
+    color: #fff;
+}
+
+.container_cards {
+    height: 81.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container_cards h2 {
+    font-weight: 700;
+    font-size: 2.4rem;
+}
+
+.container_cards small {
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+
+.card_dev {
+    width: 24.6rem;
+    height: 20rem;
+
+    border: solid 0.1rem #7B4AE2;
+    border-radius: 2rem;
+
+    margin-bottom: 3.2rem;
+    text-align: center;
+    padding: 2.5rem;
+}
+
+
+.card_design {
+    width: 24.6rem;
+    height: 20rem;
+
+    border: solid 0.1rem #7B4AE2;
+    border-radius: 2rem;
+
+    margin-bottom: 3.2rem;
+    text-align: center;
+    padding: 3rem;
+}
+
+.card_project {
+    width: 24.6rem;
+    height: 20rem;
+
+    border: solid 0.1rem #7B4AE2;
+    border-radius: 2rem;
+
+    text-align: center;
+    padding: 3rem;
+}
+
+.container_info {
+    height: 81.2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-info {
+    width: 11.3rem;
+    height: 3.2rem;
+    border-radius: 1rem;
+    
+    margin-left: 2.4rem;
+    margin-top: 3.8rem;
+    margin-bottom: 1.6rem;
+    padding-top: 0.5rem;
+    text-align: center;
+
+    background-color: #7B4AE21A;;
+}
+
+.btn-info h4 {
+    font-weight: 700;
+    font-size: 1.4rem;
+    color:#7B4AE2;;
+}
+
+.container_info h2 {
+    font-size: 2.4rem;
+
+    margin-left: 2.4rem;
+    margin-bottom: 3.2rem;
+
+}
+
+.container_info p {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    opacity: 50%;
+
+    width: 32.7rem;
+    margin-left: 2.4rem;
+}
+
+@media screen and (min-width: 902px){
+    .container_cards {
+        flex-direction: initial;
+        height: 50rem;
+    }
+}
+
+@media screen and (min-width: 902px) {
+    .card_dev {
+        margin-bottom: 0;
+        margin-right: 8rem;
+    }
+}
+
+@media screen and (min-width: 902px) {
+    .card_design {
+        margin-bottom: 0;
+        margin-right: 8rem;
+    }
+}
