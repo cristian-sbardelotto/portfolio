@@ -1,15 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/index.css">
-    <title>Web Portfolio</title>
-  </head>
-  <body>
-    <div id="app">
 
-    </div>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/index.css">
+  <title>Web Portfolio</title>
+</head>
+
+<body>
+  <div id="app">
+    <header class="header">
+      <a href='https://linkedin.com'>
+        <image src='./assets/icon-linkedin.svg' alt='linkedin-icon' width='32px' height='32px' />
+      </a>
+      <a href='https://github.com' target="_blank">
+        <image src='./assets/icon-github.svg' target="_blank" alt='linkedin-icon' width='32px' height='32px' />
+      </a>
+
+      <a href='https://instagram.com'>
+        <image src='./assets/icon-instagram.svg' target="_blank" alt='linkedin-icon' width='32px' height='32px' />
+      </a>
+
+    </header>
+
+    <section class='home'>
+      <img src='./assets/profile-pic.png' alt='Foto de perfil' />
+
+      <p>👋Saudações!</p>
+
+      <h1>Cristian Sbardelotto</h1>
+
+      <span>Web Developer | FullStack</span>
+
+      <div class='home__conversation'>
+        <div class="home__conversation-link">
+          <span>Baixar CV</span>
+          <img src='./assets/download-button.svg' alt='download button' />
+        </div>
+
+        <button>
+          <img src='./assets/whatsapp-button.svg' alt='whatsapp button' />
+          Vamos conversar
+        </button>
+      </div>
+    </section>
+  </div>
+</body>
+
 </html>
