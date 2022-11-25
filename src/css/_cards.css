@@ -73,18 +73,10 @@ body {
     margin: 0 auto;
 }
 
-.btn-info {
-    width: 11.3rem;
-    height: 3.2rem;
-    border-radius: 1rem;
-    
-    margin-left: 2.4rem;
-    margin-top: 3.8rem;
-    margin-bottom: 1.6rem;
+.btn-info { 
+    margin: 3.8rem 0 1.6rem 2.4rem;
     padding-top: 0.5rem;
     text-align: center;
-
-    background-color: #7B4AE21A;;
 }
 
 .btn-info h4 {
