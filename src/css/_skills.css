@@ -1,0 +1,35 @@
+.skills__techs-img {
+  display: flex;
+  justify-content: center;
+}
+
+.skills span,
+.skills h2,
+.skills div p {
+  margin: 0 0 3rem 2.4rem;
+}
+
+.skills img {
+  margin-bottom: 3rem;
+
+  color: purple;
+  transition: 0.3s scale ease;
+}
+
+.skills img:hover {
+  scale: 1.2;
+}
+
+.skills h2 {
+  font-weight: 800;
+  font-size: 2.4rem;
+
+  max-width: 13ch;
+}
+
+.skills div p {
+  font-weight: 400;
+  font-size: 14px;
+
+  color: #fff5;
+}
