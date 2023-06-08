@@ -1,8 +1,14 @@
 'use client';
 
+import { Header } from '@/components/Header';
+
 import { GlobalStyle } from '@/styles/GlobalStyle';
 import light from '@/styles/themes/light';
 import { ThemeProvider } from 'styled-components';
+
+import { Plus_Jakarta_Sans } from 'next/font/google';
+
+const jakartaSans = Plus_Jakarta_Sans({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'My Portfolio',
@@ -19,7 +25,11 @@ export default function RootLayout({ children }: LayoutProps) {
       <html lang='pt-br'>
         <GlobalStyle />
 
-        <body>{children}</body>
+        <body className={jakartaSans.className}>
+          <Header />
+
+          {children}
+        </body>
       </html>
     </ThemeProvider>
   );
