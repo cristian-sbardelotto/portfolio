@@ -6,13 +6,15 @@ export function Header() {
   return (
     <S.Header>
       <h1>
-        Cristian <span>Sbardelotto</span>
+        <Link href='/'>
+          Cristian <span>Sbardelotto</span>
+        </Link>
       </h1>
 
       <nav>
         <ul>
           <li>
-            <Link href='/about'>About Me</Link>
+            <Link href='/about'>About me</Link>
           </li>
           <li>
             <Link href='/skills'>Skills</Link>
@@ -25,7 +27,9 @@ export function Header() {
 
       <div>
         <span>Change theme</span>
-        <button>Contact</button>
+        <button>
+          <Link href='/contact'>Contact</Link>
+        </button>
       </div>
     </S.Header>
   );
