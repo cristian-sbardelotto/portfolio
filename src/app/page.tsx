@@ -1,19 +1,7 @@
-'use client';
-
-import styled from 'styled-components';
-
 export default function Home() {
   return (
-    <Hero>
+    <main>
       <h1>Homepage</h1>
-    </Hero>
+    </main>
   );
 }
-
-const Hero = styled.main`
-  background-color: red;
-
-  h1 {
-    color: blue;
-  }
-`;
