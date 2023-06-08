@@ -1,10 +1,13 @@
 'use client';
 
+import { useState } from 'react';
+
 import { Header } from '@/components/Header';
 
 import { GlobalStyle } from '@/styles/GlobalStyle';
 import light from '@/styles/themes/light';
-import { ThemeProvider } from 'styled-components';
+import dark from '@/styles/themes/dark';
+import { ThemeProvider, DefaultTheme } from 'styled-components';
 
 import { Plus_Jakarta_Sans } from 'next/font/google';
 
@@ -20,13 +23,22 @@ type LayoutProps = {
 };
 
 export default function RootLayout({ children }: LayoutProps) {
+  const [theme, setTheme] = useState<DefaultTheme>(dark);
+
+  function toggleTheme() {
+    setTheme(theme.title === 'light' ? dark : light);
+  }
+
   return (
-    <ThemeProvider theme={light}>
+    <ThemeProvider theme={theme}>
       <html lang='pt-br'>
         <GlobalStyle />
 
         <body className={jakartaSans.className}>
-          <Header />
+          <Header
+            toggleTheme={toggleTheme}
+            theme={theme}
+          />
 
           {children}
         </body>

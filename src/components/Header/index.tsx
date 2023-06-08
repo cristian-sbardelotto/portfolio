@@ -1,8 +1,16 @@
 import Link from 'next/link';
 
-import * as S from './styles';
+import { Sun, Moon } from 'lucide-react';
 
-export function Header() {
+import * as S from './styles';
+import { DefaultTheme } from 'styled-components';
+
+type HeaderProps = {
+  theme: DefaultTheme;
+  toggleTheme: () => void;
+};
+
+export function Header({ theme, toggleTheme }: HeaderProps) {
   return (
     <S.Header>
       <h1>
@@ -26,7 +34,14 @@ export function Header() {
       </nav>
 
       <div>
-        <span>Change theme</span>
+        <div>
+          {theme.title === 'dark' ? (
+            <Moon onClick={toggleTheme} />
+          ) : (
+            <Sun onClick={toggleTheme} />
+          )}
+        </div>
+
         <button>
           <Link href='/contact'>Contact</Link>
         </button>
