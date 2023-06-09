@@ -1,9 +1,10 @@
 import Link from 'next/link';
 
-import { Sun, Moon } from 'lucide-react';
+import { Sun, Moon, AlignJustify, X } from 'lucide-react';
 
 import * as S from './styles';
 import { DefaultTheme } from 'styled-components';
+import { useState } from 'react';
 
 type HeaderProps = {
   theme: DefaultTheme;
@@ -11,6 +12,8 @@ type HeaderProps = {
 };
 
 export function Header({ theme, toggleTheme }: HeaderProps) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <S.Header>
       <h1>
@@ -19,7 +22,7 @@ export function Header({ theme, toggleTheme }: HeaderProps) {
         </Link>
       </h1>
 
-      <nav>
+      <S.NavLinks isMenuOpen={isMenuOpen}>
         <ul>
           <li>
             <Link href='/about'>About me</Link>
@@ -30,22 +33,33 @@ export function Header({ theme, toggleTheme }: HeaderProps) {
           <li>
             <Link href='/portfolio'>Portfolio</Link>
           </li>
-        </ul>
-      </nav>
-
-      <div>
-        <div>
-          {theme.title === 'dark' ? (
-            <Moon onClick={toggleTheme} />
-          ) : (
-            <Sun onClick={toggleTheme} />
+          {isMenuOpen && window.innerWidth < 768 && (
+            <li>
+              <Link href='/contact'>Contact</Link>
+            </li>
           )}
-        </div>
+        </ul>
+      </S.NavLinks>
 
-        <button>
+      <S.NavMenuGroup>
+        {theme.title === 'dark' ? (
+          <Moon onClick={toggleTheme} />
+        ) : (
+          <Sun onClick={toggleTheme} />
+        )}
+
+        <S.ContactButton>
           <Link href='/contact'>Contact</Link>
-        </button>
-      </div>
+        </S.ContactButton>
+
+        <S.NavButton>
+          {isMenuOpen ? (
+            <X onClick={() => setIsMenuOpen(false)} />
+          ) : (
+            <AlignJustify onClick={() => setIsMenuOpen(true)} />
+          )}
+        </S.NavButton>
+      </S.NavMenuGroup>
     </S.Header>
   );
 }
