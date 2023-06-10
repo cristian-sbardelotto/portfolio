@@ -3,6 +3,7 @@
 import { useState } from 'react';
 
 import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 
 import { GlobalStyle } from '@/styles/GlobalStyle';
 import light from '@/styles/themes/light';
@@ -44,6 +45,8 @@ export default function RootLayout({ children }: LayoutProps) {
           />
 
           {children}
+
+          <Footer />
         </body>
       </html>
     </ThemeProvider>

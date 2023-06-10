@@ -45,6 +45,8 @@ export const AboveTitle = styled.span`
 export const StyledTitle = styled.h2`
   ${Title};
 
+  margin-bottom: 5rem;
+
   font-size: 4rem;
 
   @media screen and (max-width: 768px) {
@@ -53,10 +55,10 @@ export const StyledTitle = styled.h2`
 `;
 
 export const Article = styled.article`
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 3vh;
+  gap: 1.5vh;
 
   max-width: 50vw;
   font-size: 1.75rem;
