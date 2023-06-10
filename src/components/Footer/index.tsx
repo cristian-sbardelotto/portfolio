@@ -7,7 +7,7 @@ import * as S from './styles';
 export function Footer() {
   return (
     <S.Footer>
-      <p>© 2022 - Cristian Sbardelotto</p>
+      <p>© 2023 - Cristian Sbardelotto</p>
 
       <SocialLinks />
 

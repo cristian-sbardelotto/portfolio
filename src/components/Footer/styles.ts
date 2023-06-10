@@ -8,6 +8,8 @@ export const Footer = styled.footer`
   justify-content: space-between;
   align-items: center;
 
+  margin-top: 5rem;
+
   position: fixed;
   bottom: 0;
 
@@ -26,5 +28,22 @@ export const Footer = styled.footer`
     background-color: ${({ theme }) => theme.colors.alt};
     border: none;
     border-radius: 50%;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 2rem 0;
+    justify-content: space-around;
+
+    > p {
+      font-size: 1.2rem;
+    }
+
+    > button {
+      display: none;
+    }
+
+    svg {
+      height: 20px;
+    }
   }
 `;
