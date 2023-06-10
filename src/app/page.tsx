@@ -1,9 +1,6 @@
 'use client';
 
-import Link from 'next/link';
-
-import { Github, Linkedin, Phone } from 'lucide-react';
-
+import { SocialLinks } from '@/components/SocialLinks';
 import * as S from './styles';
 
 const date = new Date();
@@ -45,29 +42,7 @@ export default function Home() {
           </p>
         </S.Article>
 
-        <S.LinksList>
-          <li>
-            <Link
-              href='https://github.com/cristian-sbardelotto'
-              target='_blank'
-            >
-              <Github />
-            </Link>
-          </li>
-          <li>
-            <Link
-              href='https://linkedin.com/in/cristian-k-sbardelotto'
-              target='_blank'
-            >
-              <Linkedin />
-            </Link>
-          </li>
-          <li>
-            <Link href='/contact'>
-              <Phone />
-            </Link>
-          </li>
-        </S.LinksList>
+        <SocialLinks />
       </div>
 
       <S.StyledImage

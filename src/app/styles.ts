@@ -53,6 +53,7 @@ export const StyledTitle = styled.h2`
 `;
 
 export const Article = styled.article`
+  margin-bottom: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 3vh;
@@ -64,23 +65,6 @@ export const Article = styled.article`
     max-width: 90vw;
 
     font-size: 1.5rem;
-  }
-`;
-
-export const LinksList = styled.ul`
-  margin-top: 1.5rem;
-  display: flex;
-  gap: 2rem;
-
-  list-style: none;
-
-  li a svg {
-    transition: 0.2s color;
-
-    &:hover {
-      cursor: pointer;
-      color: ${({ theme }) => theme.colors.alt};
-    }
   }
 `;
 
