@@ -1,7 +1,8 @@
 import styled from 'styled-components';
+import { Title } from '@/styles/utils/title';
 
 type NavLinksProps = {
-  isMenuOpen: boolean;
+  ismenuopen: string;
 };
 
 export const Header = styled.header`
@@ -24,11 +25,7 @@ export const Header = styled.header`
   animation: appear 0.5s;
 
   h1 {
-    font-size: 2.5rem;
-
-    span {
-      color: ${({ theme }) => theme.colors.alt};
-    }
+    ${Title}
   }
 `;
 
@@ -44,7 +41,7 @@ export const NavLinks = styled.nav<NavLinksProps>`
 
     @media screen and (max-width: 768px) {
       padding: 2rem;
-      display: ${({ isMenuOpen }) => (isMenuOpen ? 'flex' : 'none')};
+      display: ${({ ismenuopen }) => (ismenuopen === 'true' ? 'flex' : 'none')};
       flex-direction: column;
 
       position: absolute;

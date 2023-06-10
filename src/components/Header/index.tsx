@@ -12,7 +12,7 @@ type HeaderProps = {
 };
 
 export function Header({ theme, toggleTheme }: HeaderProps) {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState<'true' | 'false'>('false');
 
   return (
     <S.Header>
@@ -22,7 +22,7 @@ export function Header({ theme, toggleTheme }: HeaderProps) {
         </Link>
       </h1>
 
-      <S.NavLinks isMenuOpen={isMenuOpen}>
+      <S.NavLinks ismenuopen={isMenuOpen}>
         <ul>
           <li>
             <Link href='/about'>About me</Link>
@@ -33,7 +33,7 @@ export function Header({ theme, toggleTheme }: HeaderProps) {
           <li>
             <Link href='/portfolio'>Portfolio</Link>
           </li>
-          {isMenuOpen && window.innerWidth < 768 && (
+          {isMenuOpen === 'true' && window.innerWidth < 768 && (
             <li>
               <Link href='/contact'>Contact</Link>
             </li>
@@ -53,10 +53,10 @@ export function Header({ theme, toggleTheme }: HeaderProps) {
         </S.ContactButton>
 
         <S.NavButton>
-          {isMenuOpen ? (
-            <X onClick={() => setIsMenuOpen(false)} />
+          {isMenuOpen === 'true' ? (
+            <X onClick={() => setIsMenuOpen('false')} />
           ) : (
-            <AlignJustify onClick={() => setIsMenuOpen(true)} />
+            <AlignJustify onClick={() => setIsMenuOpen('true')} />
           )}
         </S.NavButton>
       </S.NavMenuGroup>
