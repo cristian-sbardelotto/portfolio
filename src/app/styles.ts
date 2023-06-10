@@ -4,18 +4,24 @@ import { Title } from '@/styles/utils/title';
 import Image from 'next/image';
 
 export const Container = styled.main`
-  width: 100vw;
+  width: 100%;
+  padding: 0 5vw;
+  margin: 8vh 0;
 
   display: flex;
-  justify-content: space-around;
-
-  margin-top: 10vh;
+  justify-content: space-between;
 
   > div {
     display: flex;
     flex-direction: column;
     align-items: start;
     gap: 2rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    justify-content: initial;
+    gap: 4rem;
   }
 `;
 
@@ -40,14 +46,29 @@ export const StyledTitle = styled.h2`
   ${Title};
 
   font-size: 4rem;
+
+  @media screen and (max-width: 768px) {
+    font-size: 3.25rem;
+  }
 `;
 
 export const Article = styled.article`
-  max-width: 45vw;
-  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+
+  max-width: 50vw;
+  font-size: 1.75rem;
+
+  @media screen and (max-width: 768px) {
+    max-width: 90vw;
+
+    font-size: 1.5rem;
+  }
 `;
 
 export const LinksList = styled.ul`
+  margin-top: 1.5rem;
   display: flex;
   gap: 2rem;
 
@@ -65,4 +86,11 @@ export const LinksList = styled.ul`
 
 export const StyledImage = styled(Image)`
   border-radius: 50%;
+
+  @media screen and (max-width: 768px) {
+    width: 250px;
+    height: 250px;
+
+    align-self: center;
+  }
 `;

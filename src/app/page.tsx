@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 
-import { Github, Linkedin } from 'lucide-react';
+import { Github, Linkedin, Phone } from 'lucide-react';
 
 import * as S from './styles';
 
@@ -27,14 +27,19 @@ export default function Home() {
           <p>
             Hey there! My name is Cristian Sbardelotto, and I am{' '}
             {currentYear - birthYear}.
-            <br /> <br />
+          </p>
+          <p>
             I started studying Web Programming in August 2022, and since then, I
             feel more and more inspired and willing to pursue my career in the
             area.
-            <br /> <br />
+          </p>
+
+          <p>
             My current goal is to get my first job and, in the future, become a
             Tech Lead.
-            <br /> <br />
+          </p>
+
+          <p>
             My main technologies are Javascript/Typescript, React, NextJS, and
             Styled-Components.
           </p>
@@ -49,13 +54,17 @@ export default function Home() {
               <Github />
             </Link>
           </li>
-
           <li>
             <Link
               href='https://linkedin.com/in/cristian-k-sbardelotto'
               target='_blank'
             >
               <Linkedin />
+            </Link>
+          </li>
+          <li>
+            <Link href='/contact'>
+              <Phone />
             </Link>
           </li>
         </S.LinksList>
