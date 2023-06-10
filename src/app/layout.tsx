@@ -34,7 +34,10 @@ export default function RootLayout({ children }: LayoutProps) {
       <html lang='pt-br'>
         <GlobalStyle />
 
-        <body className={jakartaSans.className}>
+        <body
+          className={jakartaSans.className}
+          suppressHydrationWarning={true}
+        >
           <Header
             toggleTheme={toggleTheme}
             theme={theme}
