@@ -1,6 +1,7 @@
 'use client';
 
 import { SocialLinks } from '@/components/SocialLinks';
+import { Line } from '@/components/Line';
 import * as S from './styles';
 
 const date = new Date();
@@ -12,7 +13,7 @@ export default function Home() {
     <S.Container>
       <div>
         <S.AboveTitle>
-          <hr />
+          <Line />
           my name is
         </S.AboveTitle>
 

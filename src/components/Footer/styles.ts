@@ -8,8 +8,6 @@ export const Footer = styled.footer`
   justify-content: space-between;
   align-items: center;
 
-  margin-top: 5rem;
-
   position: fixed;
   bottom: 0;
 
