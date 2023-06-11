@@ -22,5 +22,6 @@ module.exports = {
     quotes: ['warn', 'single'],
     semi: ['warn', 'always'],
     'react/react-in-jsx-scope': 'off',
+    'react/no-unescaped-entities': 'off',
   },
 };
