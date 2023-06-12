@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { Github, Linkedin, Phone } from 'lucide-react';
+import { Github, Linkedin, Mail, Phone } from 'lucide-react';
 import * as S from './styles';
 
 export function SocialLinks() {
@@ -20,6 +20,14 @@ export function SocialLinks() {
           target='_blank'
         >
           <Linkedin />
+        </Link>
+      </li>
+      <li>
+        <Link
+          href='https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=cristian.k.sbardelotto@gmail.com'
+          target='_blank'
+        >
+          <Mail />
         </Link>
       </li>
       <li>
