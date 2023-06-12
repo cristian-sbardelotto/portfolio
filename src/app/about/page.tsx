@@ -37,7 +37,7 @@ export default function About() {
         </S.Article>
       </div>
 
-      <S.ExperienceSection>
+      <section>
         <S.SytledTitle>
           My <span>experience</span>
         </S.SytledTitle>
@@ -70,7 +70,7 @@ export default function About() {
           their difficulties. This experience significantly helped me build my
           communication, mentoring, and public speaking skills.
         </ExperienceCard>
-      </S.ExperienceSection>
+      </section>
     </S.Container>
   );
 }

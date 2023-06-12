@@ -22,6 +22,18 @@ export const CardHeader = styled.div`
   img {
     border-radius: 50%;
   }
+
+  @media screen and (max-width: 768px) {
+    gap: 0;
+
+    hr {
+      display: none;
+    }
+
+    h3 {
+      font-size: 2rem;
+    }
+  }
 `;
 
 export const CardBody = styled.div`
@@ -47,8 +59,13 @@ export const CardBody = styled.div`
 
   p {
     font-size: 1.7rem;
+    line-height: 160%;
 
     margin-bottom: 2rem;
     max-width: 80ch;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 0;
   }
 `;
