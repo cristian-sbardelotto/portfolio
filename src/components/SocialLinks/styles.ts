@@ -14,4 +14,8 @@ export const SocialLinks = styled.ul`
       color: ${({ theme }) => theme.colors.alt};
     }
   }
+
+  @media screen and (max-width: 768px) {
+    gap: 0.5rem;
+  }
 `;

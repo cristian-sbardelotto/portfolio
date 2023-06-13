@@ -34,12 +34,6 @@ export const AboveTitle = styled.span`
   line-height: 8px;
   color: #656d72;
   text-transform: uppercase;
-
-  hr {
-    width: 1rem;
-    display: inline-block;
-    margin-right: 1rem;
-  }
 `;
 
 export const StyledTitle = styled.h2`
