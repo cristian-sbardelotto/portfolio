@@ -1,10 +1,12 @@
 import Link from 'next/link';
 
+import { Button } from '../Button';
+
 import { Sun, Moon, AlignJustify, X } from 'lucide-react';
 
-import * as S from './styles';
 import { DefaultTheme } from 'styled-components';
 import { useState } from 'react';
+import * as S from './styles';
 
 type HeaderProps = {
   theme: DefaultTheme;
@@ -48,9 +50,9 @@ export function Header({ theme, toggleTheme }: HeaderProps) {
           <Sun onClick={toggleTheme} />
         )}
 
-        <S.ContactButton>
+        <Button>
           <Link href='/contact'>Contact</Link>
-        </S.ContactButton>
+        </Button>
 
         <S.NavButton>
           {isMenuOpen === 'true' ? (

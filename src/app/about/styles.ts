@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Title } from '@/styles/utils/title';
+import { Title } from '@/styles/utils';
 
 export const Container = styled.div`
   padding: 5rem;

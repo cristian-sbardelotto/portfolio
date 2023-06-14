@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Title } from '@/styles/utils/title';
+import { Title } from '@/styles/utils';
 
 type NavLinksProps = {
   ismenuopen: string;
@@ -89,6 +89,12 @@ export const NavMenuGroup = styled.div`
   svg {
     cursor: pointer;
   }
+
+  @media screen and (max-width: 768px) {
+    button:has(a) {
+      display: none;
+    }
+  }
 `;
 
 export const NavButton = styled.button`
@@ -101,31 +107,5 @@ export const NavButton = styled.button`
 
   @media screen and (max-width: 768px) {
     display: block;
-  }
-`;
-
-export const ContactButton = styled.button`
-  padding: 1rem 1.5rem;
-
-  border: 2px solid ${({ theme }) => theme.colors.text};
-  border-radius: 8px;
-  background: transparent;
-  font-family: '__Plus_Jakarta_Sans_fd0c7c',
-    '__Plus_Jakarta_Sans_Fallback_fd0c7c';
-  font-weight: 600;
-
-  transition: all 0.2s;
-
-  &:hover {
-    background: ${({ theme }) => theme.colors.text};
-    cursor: pointer;
-
-    a {
-      color: ${({ theme }) => theme.colors.background};
-    }
-  }
-
-  @media screen and (max-width: 768px) {
-    display: none;
   }
 `;
