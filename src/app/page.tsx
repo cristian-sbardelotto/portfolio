@@ -1,7 +1,10 @@
 'use client';
 
+import Link from 'next/link';
+
 import { SocialLinks } from '@/components/SocialLinks';
 import { Line } from '@/components/Line';
+import { Button } from '@/components/Button';
 import * as S from './styles';
 
 const date = new Date();
@@ -43,7 +46,13 @@ export default function Home() {
           </p>
         </S.Article>
 
-        <SocialLinks />
+        <S.SocialGroup>
+          <SocialLinks />
+
+          <Button>
+            <Link href='/contact'>Contact me</Link>
+          </Button>
+        </S.SocialGroup>
       </div>
 
       <S.StyledImage

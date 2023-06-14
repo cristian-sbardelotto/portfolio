@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Title } from '@/styles/utils/title';
+import { Title } from '@/styles/utils';
 
 import Image from 'next/image';
 
@@ -61,6 +61,20 @@ export const Article = styled.article`
     max-width: 90vw;
 
     font-size: 1.5rem;
+  }
+`;
+
+export const SocialGroup = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 2rem;
+
+  @media screen and (max-width: 768px) {
+    button {
+      display: none;
+    }
   }
 `;
 
