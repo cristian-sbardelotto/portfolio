@@ -16,12 +16,11 @@ export default function Home() {
     <S.Container>
       <div>
         <S.AboveTitle>
-          <Line />
-          my name is
+          <Line />i am a
         </S.AboveTitle>
 
         <S.StyledTitle>
-          Cristian <span>Sbardelotto</span>
+          FullStack <span>Developer</span>
         </S.StyledTitle>
 
         <S.Article>
@@ -41,8 +40,8 @@ export default function Home() {
           </p>
 
           <p>
-            My main technologies are Javascript/Typescript, React, NextJS, and
-            Styled-Components.
+            My main technologies are Javascript/Typescript, React, NextJS,
+            Styled-Components, NodeJS and Prisma + Fastify.
           </p>
         </S.Article>
 
