@@ -32,6 +32,7 @@ export const AboveTitle = styled.span`
   font-weight: 200;
   font-size: 1.5rem;
   line-height: 8px;
+  letter-spacing: 0.7rem;
   color: #656d72;
   text-transform: uppercase;
 `;
