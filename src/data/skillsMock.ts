@@ -4,16 +4,16 @@ import javascript from 'public/assets/javascript.svg';
 import typescript from 'public/assets/typescript.svg';
 import react from 'public/assets/react.svg';
 import nextjs from 'public/assets/nextjs.svg';
-import git from 'public/assets/git.svg';
-import github from 'public/assets/github.svg';
 import sass from 'public/assets/sass.svg';
 import tailwind from 'public/assets/tailwindcss.svg';
 import styledComponents from 'public/assets/styled-components.svg';
 import bootstrap from 'public/assets/bootstrap.svg';
+import nodejs from 'public/assets/nodejs.svg';
 import fastify from 'public/assets/fastify.svg';
 import express from 'public/assets/express.svg';
 import prisma from 'public/assets/prisma.svg';
-import nodejs from 'public/assets/nodejs.svg';
+import git from 'public/assets/git.svg';
+import github from 'public/assets/github.svg';
 import windows from 'public/assets/windows.svg';
 import linux from 'public/assets/linux.svg';
 
@@ -43,14 +43,6 @@ export const skills = [
     name: 'NextJS',
   },
   {
-    image: git,
-    name: 'Git',
-  },
-  {
-    image: github,
-    name: 'Github',
-  },
-  {
     image: sass,
     name: 'Sass',
   },
@@ -67,6 +59,10 @@ export const skills = [
     name: 'Bootstrap',
   },
   {
+    image: nodejs,
+    name: 'NodeJS',
+  },
+  {
     image: fastify,
     name: 'Fastify',
   },
@@ -79,8 +75,12 @@ export const skills = [
     name: 'Prisma',
   },
   {
-    image: nodejs,
-    name: 'NodeJS',
+    image: git,
+    name: 'Git',
+  },
+  {
+    image: github,
+    name: 'Github',
   },
   {
     image: windows,

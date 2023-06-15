@@ -9,16 +9,18 @@ export default function Skills() {
   return (
     <S.Container>
       <S.StyledTitle>
-        Main <span>technologies</span>
+        Technologies <span>&</span> Skills
       </S.StyledTitle>
 
-      {skills.map((skill, index) => (
-        <SkillsList
-          key={index}
-          image={skill.image}
-          name={skill.name}
-        />
-      ))}
+      <S.Skills>
+        {skills.map((skill, index) => (
+          <SkillsList
+            key={index}
+            image={skill.image}
+            name={skill.name}
+          />
+        ))}
+      </S.Skills>
     </S.Container>
   );
 }
