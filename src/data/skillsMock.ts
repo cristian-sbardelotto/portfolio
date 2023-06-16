@@ -17,77 +17,85 @@ import github from 'public/assets/github.svg';
 import windows from 'public/assets/windows.svg';
 import linux from 'public/assets/linux.svg';
 
-export const skills = [
-  {
-    image: html,
-    name: 'HTML',
-  },
-  {
-    image: css,
-    name: 'CSS',
-  },
-  {
-    image: javascript,
-    name: 'JavaScript',
-  },
-  {
-    image: typescript,
-    name: 'TypeScript',
-  },
-  {
-    image: react,
-    name: 'React',
-  },
-  {
-    image: nextjs,
-    name: 'NextJS',
-  },
-  {
-    image: sass,
-    name: 'Sass',
-  },
-  {
-    image: tailwind,
-    name: 'Tailwind',
-  },
-  {
-    image: styledComponents,
-    name: 'Styled Components',
-  },
-  {
-    image: bootstrap,
-    name: 'Bootstrap',
-  },
-  {
-    image: nodejs,
-    name: 'NodeJS',
-  },
-  {
-    image: fastify,
-    name: 'Fastify',
-  },
-  {
-    image: express,
-    name: 'Express',
-  },
-  {
-    image: prisma,
-    name: 'Prisma',
-  },
-  {
-    image: git,
-    name: 'Git',
-  },
-  {
-    image: github,
-    name: 'Github',
-  },
-  {
-    image: windows,
-    name: 'Windows',
-  },
-  {
-    image: linux,
-    name: 'Linux',
-  },
-];
+export const skills = {
+  frontend: [
+    {
+      image: html,
+      name: 'HTML',
+    },
+    {
+      image: css,
+      name: 'CSS',
+    },
+    {
+      image: javascript,
+      name: 'JavaScript',
+    },
+    {
+      image: typescript,
+      name: 'TypeScript',
+    },
+    {
+      image: react,
+      name: 'React',
+    },
+    {
+      image: nextjs,
+      name: 'NextJS',
+    },
+    {
+      image: sass,
+      name: 'Sass',
+    },
+    {
+      image: tailwind,
+      name: 'Tailwind',
+    },
+    {
+      image: styledComponents,
+      name: 'Styled Components',
+    },
+    {
+      image: bootstrap,
+      name: 'Bootstrap',
+    },
+  ],
+
+  backend: [
+    {
+      image: nodejs,
+      name: 'NodeJS',
+    },
+    {
+      image: fastify,
+      name: 'Fastify',
+    },
+    {
+      image: express,
+      name: 'Express',
+    },
+    {
+      image: prisma,
+      name: 'Prisma',
+    },
+  ],
+
+  complementary: [
+    {
+      image: git,
+      name: 'Git',
+    },
+    {
+      image: github,
+      name: 'Github',
+    },
+    {
+      image: windows,
+      name: 'Windows',
+    },
+    {
+      image: linux,
+      name: 'Linux',
+    },
+  ],
+};
