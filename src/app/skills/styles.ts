@@ -39,6 +39,10 @@ export const SkillsSectionHeader = styled.div`
   display: flex;
   justify-content: center;
   gap: 2rem;
+
+  @media screen and (max-width: 524px) {
+    flex-direction: column;
+  }
 `;
 
 export const AreaSelector = styled.button<AreaSelectorProps>`
@@ -59,4 +63,11 @@ export const AreaSelector = styled.button<AreaSelectorProps>`
   background: transparent;
 
   cursor: pointer;
+
+  @media screen and (max-width: 524px) {
+    padding: 0;
+
+    font-size: 1.7rem;
+    border: none;
+  }
 `;
