@@ -48,22 +48,33 @@ export default function Skills() {
         Technologies <span>&</span> Skills
       </S.StyledTitle>
 
-      <section>
-        <div
-          className='header'
-          style={{ display: 'flex', gap: '2rem' }}
-        >
-          <span onClick={() => setSelectedArea('frontend')}>Frontend</span>
-          <span onClick={() => setSelectedArea('backend')}>Backend</span>
-          <span onClick={() => setSelectedArea('complementary')}>
+      <S.SkillsSection>
+        <S.SkillsSectionHeader>
+          <S.AreaSelector
+            id='frontend'
+            activeArea={selectedArea}
+            onClick={() => setSelectedArea('frontend')}
+          >
+            Frontend
+          </S.AreaSelector>
+          <S.AreaSelector
+            id='backend'
+            activeArea={selectedArea}
+            onClick={() => setSelectedArea('backend')}
+          >
+            Backend
+          </S.AreaSelector>
+          <S.AreaSelector
+            id='complementary'
+            activeArea={selectedArea}
+            onClick={() => setSelectedArea('complementary')}
+          >
             Complementary
-          </span>
-        </div>
+          </S.AreaSelector>
+        </S.SkillsSectionHeader>
 
-        <div className='body'>
-          <S.Skills>{renderAreaSkills(selectedArea)}</S.Skills>
-        </div>
-      </section>
+        <S.Skills>{renderAreaSkills(selectedArea)}</S.Skills>
+      </S.SkillsSection>
     </S.Container>
   );
 }

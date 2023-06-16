@@ -18,18 +18,18 @@ export const ListItem = styled.li`
   }
 
   img {
-    height: 8rem;
-    width: 8rem;
+    height: 6rem;
+    width: 6rem;
 
     transition: 0.3s scale;
   }
 
   span {
-    width: 14rem;
+    width: 12rem;
     opacity: 0;
 
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 
     transition: 0.3s opacity;
   }
