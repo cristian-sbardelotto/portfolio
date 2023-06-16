@@ -2,13 +2,13 @@
 
 import { useState } from 'react';
 
+import { AreaProps } from '@/types';
+
 import { SkillsList } from '@/components/SkillsList';
 import { skills } from '@/data/skillsMock';
 import * as S from './styles';
 
-type SelectedAreaProps = 'frontend' | 'backend' | 'complementary';
-
-function renderAreaSkills(area: SelectedAreaProps) {
+function renderAreaSkills(area: AreaProps) {
   if (area === 'frontend') {
     return skills.frontend.map((skill, index) => (
       <SkillsList
@@ -39,8 +39,7 @@ function renderAreaSkills(area: SelectedAreaProps) {
 }
 
 export default function Skills() {
-  const [selectedArea, setSelectedArea] =
-    useState<SelectedAreaProps>('frontend');
+  const [selectedArea, setSelectedArea] = useState<AreaProps>('frontend');
 
   return (
     <S.Container>

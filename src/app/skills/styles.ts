@@ -3,8 +3,10 @@
 import { Title } from '@/styles/utils';
 import styled from 'styled-components';
 
-type AreaSelectorProps = {
-  activeArea: string;
+import { AreaProps } from '@/types';
+
+type ActiveAreaProps = {
+  activeArea: AreaProps;
 };
 
 export const Container = styled.main`
@@ -45,10 +47,10 @@ export const SkillsSectionHeader = styled.div`
   }
 `;
 
-export const AreaSelector = styled.button<AreaSelectorProps>`
-  padding: 1.5rem;
+export const AreaSelector = styled.button<ActiveAreaProps>`
+  padding: 1rem;
 
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-family: '__Plus_Jakarta_Sans_fd0c7c',
     '__Plus_Jakarta_Sans_Fallback_fd0c7c';
 
@@ -67,7 +69,6 @@ export const AreaSelector = styled.button<AreaSelectorProps>`
   @media screen and (max-width: 524px) {
     padding: 0;
 
-    font-size: 1.7rem;
     border: none;
   }
 `;
