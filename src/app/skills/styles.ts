@@ -10,17 +10,28 @@ type ActiveAreaProps = {
 };
 
 export const Container = styled.main`
-  padding: 0 3rem 12rem 3rem;
+  padding: 2rem 5rem 12rem 5rem;
 
-  > div h3 {
-    font-size: 2rem;
+  p {
+    margin-top: 5rem;
+
+    text-align: center;
+    font-size: 1.9rem;
+
+    a {
+      color: ${({ theme }) => theme.colors.alt};
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 `;
 
 export const StyledTitle = styled.h3`
   ${Title};
   margin: 3rem 0 6rem 0;
-  font-size: 2.8rem;
+  font-size: 4rem;
 `;
 
 export const Skills = styled.ul`
