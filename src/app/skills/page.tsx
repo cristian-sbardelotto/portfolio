@@ -10,33 +10,35 @@ import { skills } from '@/data/skillsMock';
 import * as S from './styles';
 
 function renderAreaSkills(area: AreaProps) {
-  if (area === 'frontend') {
-    return skills.frontend.map((skill, index) => (
-      <SkillsList
-        key={index}
-        image={skill.image}
-        name={skill.name}
-      />
-    ));
-  }
-
-  if (area === 'backend') {
-    return skills.backend.map((skill, index) => (
-      <SkillsList
-        key={index}
-        image={skill.image}
-        name={skill.name}
-      />
-    ));
-  }
-
-  return skills.complementary.map((skill, index) => (
+  const frontendSkills = skills.frontend.map((skill, index) => (
     <SkillsList
       key={index}
       image={skill.image}
       name={skill.name}
     />
   ));
+
+  const backendSkills = skills.backend.map((skill, index) => (
+    <SkillsList
+      key={index}
+      image={skill.image}
+      name={skill.name}
+    />
+  ));
+
+  const complementarySkills = skills.complementary.map((skill, index) => (
+    <SkillsList
+      key={index}
+      image={skill.image}
+      name={skill.name}
+    />
+  ));
+
+  if (area === 'frontend') return frontendSkills;
+
+  if (area === 'backend') return backendSkills;
+
+  return complementarySkills;
 }
 
 export default function Skills() {
