@@ -2,41 +2,46 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 import { AreaProps } from '@/types';
+
+import usa from '@/../public/assets/usa.svg';
 
 import { SkillsList } from '@/components/SkillsList';
 import { skills } from '@/data/skillsMock';
 import * as S from './styles';
 
 function renderAreaSkills(area: AreaProps) {
-  if (area === 'frontend') {
-    return skills.frontend.map((skill, index) => (
-      <SkillsList
-        key={index}
-        image={skill.image}
-        name={skill.name}
-      />
-    ));
-  }
-
-  if (area === 'backend') {
-    return skills.backend.map((skill, index) => (
-      <SkillsList
-        key={index}
-        image={skill.image}
-        name={skill.name}
-      />
-    ));
-  }
-
-  return skills.complementary.map((skill, index) => (
+  const frontendSkills = skills.frontend.map((skill, index) => (
     <SkillsList
       key={index}
       image={skill.image}
       name={skill.name}
     />
   ));
+
+  const backendSkills = skills.backend.map((skill, index) => (
+    <SkillsList
+      key={index}
+      image={skill.image}
+      name={skill.name}
+    />
+  ));
+
+  const complementarySkills = skills.complementary.map((skill, index) => (
+    <SkillsList
+      key={index}
+      image={skill.image}
+      name={skill.name}
+    />
+  ));
+
+  if (area === 'frontend') return frontendSkills;
+
+  if (area === 'backend') return backendSkills;
+
+  return complementarySkills;
 }
 
 export default function Skills() {
@@ -77,16 +82,26 @@ export default function Skills() {
       </S.SkillsSection>
 
       <p>
-        Interested in my habilities?{' '}
-        <Link href='https://github.com/cristian-sbardelotto'>
-          Visit my Github
+        You can{' '}
+        <Link
+          href='https://github.com/cristian-sbardelotto'
+          target='_blank'
+        >
+          visit my Github
         </Link>{' '}
-        to check out all my projects and get to know me better!
+        to check out all my projects, or view some of my{' '}
+        <Link href='/projects'>best/favorite projects here.</Link>
       </p>
 
       <p>
-        You can also{' '}
-        <Link href='/portfolio'>view some of my best projects here</Link>.
+        <Image
+          src={usa}
+          alt='United States Flag Image'
+          width={30}
+          height={30}
+        />
+        I am Brazilian, but I am constantly in contact with English, so I can
+        communicate, read, listen and understand both in English and Portuguese.
       </p>
     </S.Container>
   );

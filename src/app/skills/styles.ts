@@ -12,11 +12,26 @@ type ActiveAreaProps = {
 export const Container = styled.main`
   padding: 2rem 5rem 12rem 5rem;
 
+  @media screen and (max-width: 768px) {
+    padding: 2rem 2rem 12rem 2rem;
+  }
+
   p {
     margin-top: 5rem;
 
     text-align: center;
     font-size: 1.9rem;
+
+    @media screen and (max-width: 768px) {
+      font-size: 1.5rem;
+    }
+
+    &:last-child {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+    }
 
     a {
       color: ${({ theme }) => theme.colors.alt};

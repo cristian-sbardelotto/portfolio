@@ -9,6 +9,7 @@ import tailwind from 'public/assets/tailwindcss.svg';
 import styledComponents from 'public/assets/styled-components.svg';
 import bootstrap from 'public/assets/bootstrap.svg';
 import nodejs from 'public/assets/nodejs.svg';
+import mongodb from 'public/assets/mongodb.svg';
 import fastify from 'public/assets/fastify.svg';
 import express from 'public/assets/express.svg';
 import prisma from 'public/assets/prisma.svg';
@@ -65,6 +66,10 @@ export const skills = {
     {
       image: nodejs,
       name: 'NodeJS',
+    },
+    {
+      image: mongodb,
+      name: 'MongoDB',
     },
     {
       image: fastify,

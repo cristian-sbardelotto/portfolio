@@ -18,10 +18,15 @@ export const ListItem = styled.li`
   }
 
   img {
-    height: 6rem;
-    width: 6rem;
+    height: 7rem;
+    width: 7rem;
 
     transition: 0.3s scale;
+
+    @media screen and (max-width: 768px) {
+      height: 6rem;
+      width: 6rem;
+    }
   }
 
   span {
