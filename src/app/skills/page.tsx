@@ -2,8 +2,11 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 import { AreaProps } from '@/types';
+
+import usa from '@/../public/assets/usa.svg';
 
 import { SkillsList } from '@/components/SkillsList';
 import { skills } from '@/data/skillsMock';
@@ -79,16 +82,26 @@ export default function Skills() {
       </S.SkillsSection>
 
       <p>
-        Interested in my habilities?{' '}
-        <Link href='https://github.com/cristian-sbardelotto'>
-          Visit my Github
+        You can{' '}
+        <Link
+          href='https://github.com/cristian-sbardelotto'
+          target='_blank'
+        >
+          visit my Github
         </Link>{' '}
-        to check out all my projects and get to know me better!
+        to check out all my projects, or view some of my{' '}
+        <Link href='/portfolio'>best/favorite projects here.</Link>
       </p>
 
       <p>
-        You can also{' '}
-        <Link href='/portfolio'>view some of my best projects here</Link>.
+        <Image
+          src={usa}
+          alt='United States Flag Image'
+          width={30}
+          height={30}
+        />
+        I am Brazilian, but I am constantly in contact with English, so I can
+        communicate, read, listen and understand both in English and Portuguese.
       </p>
     </S.Container>
   );
