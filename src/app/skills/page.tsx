@@ -90,7 +90,7 @@ export default function Skills() {
           visit my Github
         </Link>{' '}
         to check out all my projects, or view some of my{' '}
-        <Link href='/portfolio'>best/favorite projects here.</Link>
+        <Link href='/projects'>best/favorite projects here.</Link>
       </p>
 
       <p>

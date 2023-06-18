@@ -33,7 +33,7 @@ export function Header({ theme, toggleTheme }: HeaderProps) {
             <Link href='/skills'>Skills</Link>
           </li>
           <li>
-            <Link href='/portfolio'>Portfolio</Link>
+            <Link href='/projects'>Projects</Link>
           </li>
           {isMenuOpen === 'true' && window.innerWidth < 768 && (
             <li>
