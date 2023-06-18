@@ -3,6 +3,19 @@ import { createGlobalStyle } from 'styled-components';
 export const GlobalStyle = createGlobalStyle`
   html {
     font-size: 62.5%;
+
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: #8885;
+      border-radius: 5px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
   }
 
   * {
