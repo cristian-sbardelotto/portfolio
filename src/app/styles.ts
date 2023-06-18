@@ -56,7 +56,32 @@ export const Article = styled.article`
   gap: 1.5vh;
 
   max-width: 50vw;
-  font-size: 1.75rem;
+  font-size: 2rem;
+
+  p {
+    display: flex;
+    gap: 1rem;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+
+    color: ${({ theme }) => theme.colors.alt};
+
+    svg {
+      align-self: flex-end;
+      transition: 0.2s transform;
+    }
+
+    &:hover {
+      text-decoration: underline;
+
+      svg {
+        transform: translateX(1rem);
+      }
+    }
+  }
 
   @media screen and (max-width: 768px) {
     max-width: 90vw;
@@ -76,6 +101,19 @@ export const SocialGroup = styled.div`
     button {
       display: none;
     }
+  }
+`;
+
+export const ImageGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  div {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-evenly;
   }
 `;
 

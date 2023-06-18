@@ -1,6 +1,14 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
+
+import { ChevronRight } from 'lucide-react';
+
+import typescript from '@/../public/assets/typescript.svg';
+import nextjs from '@/../public/assets/nextjs.svg';
+import nodejs from '@/../public/assets/nodejs.svg';
+import windows from '@/../public/assets/windows.svg';
 
 import { SocialLinks } from '@/components/SocialLinks';
 import { Line } from '@/components/Line';
@@ -43,6 +51,13 @@ export default function Home() {
             My main technologies are Javascript/Typescript, React, NextJS,
             Styled-Components, NodeJS and Prisma + Fastify.
           </p>
+
+          <p>
+            Know more about me{' '}
+            <Link href='/about'>
+              here <ChevronRight />
+            </Link>
+          </p>
         </S.Article>
 
         <S.SocialGroup>
@@ -54,13 +69,45 @@ export default function Home() {
         </S.SocialGroup>
       </div>
 
-      <S.StyledImage
-        src='https://github.com/cristian-sbardelotto.png'
-        alt="Cristian Sbardelotto's profile picture"
-        width={300}
-        height={300}
-        priority={true}
-      />
+      <S.ImageGroup>
+        <S.StyledImage
+          src='https://github.com/cristian-sbardelotto.png'
+          alt="Cristian Sbardelotto's profile picture"
+          width={300}
+          height={300}
+          priority={true}
+        />
+
+        <div>
+          <Image
+            src={typescript}
+            alt='Typescript Logo'
+            height={40}
+            width={40}
+          />
+
+          <Image
+            src={nextjs}
+            alt='Next.js Logo'
+            height={40}
+            width={40}
+          />
+
+          <Image
+            src={nodejs}
+            alt='Node.js Logo'
+            height={40}
+            width={40}
+          />
+
+          <Image
+            src={windows}
+            alt='Windows Logo'
+            height={40}
+            width={40}
+          />
+        </div>
+      </S.ImageGroup>
     </S.Container>
   );
 }
