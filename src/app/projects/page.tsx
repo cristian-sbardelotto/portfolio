@@ -10,6 +10,8 @@ const projects = {
   image: memeCreator,
   description: 'Nice project description',
   technologies: ['nextjs', 'react', 'typescript'],
+  githubUrl: 'https://github.com/cristian-sbardelotto/meme-creator',
+  deployUrl: 'https://meme-creator-kappa.vercel.app',
 };
 
 export default function Projects() {
