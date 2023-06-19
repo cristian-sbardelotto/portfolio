@@ -1,18 +1,11 @@
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 import Link from 'next/link';
 
 import { GithubIcon, Rocket } from 'lucide-react';
 
-import * as S from './styles';
+import { ProjectProps } from '@/types';
 
-type ProjectCardProps = {
-  title: string;
-  image: string | StaticImageData;
-  description: string;
-  technologies: string[];
-  githubUrl: string;
-  deployUrl?: string;
-};
+import * as S from './styles';
 
 export function ProjectCard({
   title,
@@ -21,7 +14,7 @@ export function ProjectCard({
   technologies,
   githubUrl,
   deployUrl,
-}: ProjectCardProps) {
+}: ProjectProps) {
   return (
     <S.Container>
       <S.ImageGroup>
