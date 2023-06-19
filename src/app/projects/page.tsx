@@ -3,16 +3,7 @@
 import { ProjectCard } from '@/components/ProjectCard';
 import * as S from './styles';
 
-import memeCreator from '@/../public/images/meme-creator.png';
-
-const projects = {
-  title: 'Any project',
-  image: memeCreator,
-  description: 'Nice project description',
-  technologies: ['nextjs', 'react', 'typescript'],
-  githubUrl: 'https://github.com/cristian-sbardelotto/meme-creator',
-  deployUrl: 'https://meme-creator-kappa.vercel.app',
-};
+import { projects } from '@/data/projectsMock';
 
 export default function Projects() {
   return (
@@ -21,7 +12,12 @@ export default function Projects() {
         My <span>Projects</span>
       </S.StyledTitle>
 
-      <ProjectCard {...projects} />
+      {projects.map((project, index) => (
+        <ProjectCard
+          key={index}
+          {...project}
+        />
+      ))}
     </S.Container>
   );
 }
