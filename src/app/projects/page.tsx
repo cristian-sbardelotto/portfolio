@@ -3,12 +3,12 @@
 import { ProjectCard } from '@/components/ProjectCard';
 import * as S from './styles';
 
-import html from '@/../public/assets/html.svg';
+import memeCreator from '@/../public/images/meme-creator.png';
 
 const projects = {
   title: 'Any project',
-  image: html,
-  description: 'nice project',
+  image: memeCreator,
+  description: 'Nice project description',
   technologies: ['nextjs', 'react', 'typescript'],
 };
 

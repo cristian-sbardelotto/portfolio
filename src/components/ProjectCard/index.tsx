@@ -1,10 +1,10 @@
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 
 import * as S from './styles';
 
 type ProjectCardProps = {
   title: string;
-  image: string;
+  image: string | StaticImageData;
   description: string;
   technologies: string[];
 };
@@ -20,16 +20,19 @@ export function ProjectCard({
       <Image
         src={image}
         alt={`${title} Project Card`}
-        height={100}
       />
 
-      <h4>{title}</h4>
+      <section>
+        <h4>{title}</h4>
 
-      <p>{description}</p>
+        <p>{description}</p>
 
-      {technologies.map((technology, index) => (
-        <span key={index}>{technology}</span>
-      ))}
+        <div>
+          {technologies.map((technology, index) => (
+            <span key={index}>{technology}</span>
+          ))}
+        </div>
+      </section>
     </S.Container>
   );
 }
