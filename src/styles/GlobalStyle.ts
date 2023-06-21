@@ -35,6 +35,8 @@ export const GlobalStyle = createGlobalStyle`
 
     transition-property: background-color, color;
     transition-duration: 0.3s;
+
+    margin-bottom: 10rem;
   }
 
   a {

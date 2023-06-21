@@ -27,6 +27,7 @@ export function ProjectCard({
           <Link
             href={githubUrl}
             target='_blank'
+            title='Go see the project on Github'
           >
             <GithubIcon />
           </Link>
@@ -35,6 +36,7 @@ export function ProjectCard({
             <Link
               href={deployUrl}
               target='_blank'
+              title='Go see the project on Web'
             >
               <Rocket />
             </Link>

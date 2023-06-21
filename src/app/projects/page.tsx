@@ -12,12 +12,14 @@ export default function Projects() {
         My <span>Projects</span>
       </S.StyledTitle>
 
-      {projects.map((project, index) => (
-        <ProjectCard
-          key={index}
-          {...project}
-        />
-      ))}
+      <main>
+        {projects.map((project, index) => (
+          <ProjectCard
+            key={index}
+            {...project}
+          />
+        ))}
+      </main>
     </S.Container>
   );
 }
