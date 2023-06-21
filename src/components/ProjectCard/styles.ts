@@ -79,7 +79,7 @@ export const ImageGroup = styled.div`
     }
 
     img {
-      filter: contrast(1.1);
+      filter: brightness(0.5);
     }
   }
 
@@ -94,6 +94,7 @@ export const ImageGroup = styled.div`
 
     a {
       transition: 0.3s all;
+      color: #fff;
     }
 
     a:hover {

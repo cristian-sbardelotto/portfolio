@@ -52,7 +52,7 @@ export const projects: ProjectProps[] = [
     image: imagineshop,
     description:
       'The project simulates an users login API, and does simple functions, like create, read, update and delete.',
-    technologies: ['javascript', 'mongodb', 'mongoose', 'dotenv'],
+    technologies: ['javascript', 'nodejs', 'mongodb', 'mongoose', 'dotenv'],
     githubUrl: 'https://github.com/cristian-sbardelotto/imagineshop-api',
   },
   {
@@ -60,7 +60,13 @@ export const projects: ProjectProps[] = [
     image: todoList,
     description:
       'Simple to-do list that allows user to create, delete and mark tasks.',
-    technologies: ['typescript', 'reactjs', 'styled-components', 'vite'],
+    technologies: [
+      'typescript',
+      'reactjs',
+      'styled-components',
+      'vite',
+      'vercel',
+    ],
     githubUrl: 'https://github.com/cristian-sbardelotto/to-do-list',
     deployUrl: 'https://to-do-list-henna-three.vercel.app',
   },
@@ -69,7 +75,7 @@ export const projects: ProjectProps[] = [
     image: qrCodeGenerator,
     description:
       'A simple QR Code generator that allows the user to download the image of any link that was typed. Idea provided by Sujeito Programador.',
-    technologies: ['javascript', 'reactjs', 'qr-code', 'vite'],
+    technologies: ['javascript', 'reactjs', 'qr-code', 'vite', 'vercel'],
     githubUrl: 'https://github.com/cristian-sbardelotto/qr-code-generator',
     deployUrl: 'https://qr-code-generator-pied.vercel.app/',
   },
@@ -77,7 +83,14 @@ export const projects: ProjectProps[] = [
     title: 'Studion',
     image: studion,
     description: 'Page simulating an event manager, provided by Imagine School',
-    technologies: ['html', 'css', 'javascript', 'jquery', 'slick-slider'],
+    technologies: [
+      'html',
+      'css',
+      'javascript',
+      'jquery',
+      'slick-slider',
+      'vercel',
+    ],
     githubUrl: 'https://github.com/cristian-sbardelotto/studion',
     deployUrl: 'https://studion-eight.vercel.app/',
   },

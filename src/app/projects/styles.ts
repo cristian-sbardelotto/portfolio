@@ -12,13 +12,48 @@ export const Container = styled.div`
   }
 `;
 
-export const StyledTitle = styled.h2`
+export const TitleGroup = styled.div`
   margin-bottom: 3rem;
 
-  ${Title};
-  font-size: 4rem;
+  display: flex;
+  justify-content: space-between;
+
+  p {
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    font-size: 2rem;
+
+    a {
+      color: ${({ theme }) => theme.colors.alt};
+      display: flex;
+
+      &:hover {
+        text-decoration: underline;
+
+        svg {
+          transform: translateX(1rem);
+        }
+      }
+
+      svg {
+        align-self: flex-end;
+        transition: 0.2s transform;
+      }
+    }
+  }
 
   @media screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: 2rem;
+
     margin-bottom: 7rem;
   }
+`;
+
+export const StyledTitle = styled.h2`
+  ${Title};
+  font-size: 4rem;
 `;
