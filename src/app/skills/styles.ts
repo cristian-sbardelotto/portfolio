@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import { AreaProps } from '@/types';
 
 type ActiveAreaProps = {
-  activeArea: AreaProps;
+  activearea: AreaProps;
 };
 
 export const Container = styled.main`
@@ -80,12 +80,12 @@ export const AreaSelector = styled.button<ActiveAreaProps>`
   font-family: '__Plus_Jakarta_Sans_fd0c7c',
     '__Plus_Jakarta_Sans_Fallback_fd0c7c';
 
-  color: ${({ theme, id, activeArea }) =>
-    activeArea === id ? theme.colors.alt : theme.colors.text};
+  color: ${({ theme, id, activearea }) =>
+    activearea === id ? theme.colors.alt : theme.colors.text};
 
   border: 1.5px solid
-    ${({ theme, id, activeArea }) =>
-      activeArea === id ? theme.colors.alt : theme.colors.text};
+    ${({ theme, id, activearea }) =>
+      activearea === id ? theme.colors.alt : theme.colors.text};
 
   border-radius: 10px;
   background: transparent;
