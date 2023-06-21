@@ -57,21 +57,21 @@ export default function Skills() {
         <S.SkillsSectionHeader>
           <S.AreaSelector
             id='frontend'
-            activeArea={selectedArea}
+            activearea={selectedArea}
             onClick={() => setSelectedArea('frontend')}
           >
             Frontend
           </S.AreaSelector>
           <S.AreaSelector
             id='backend'
-            activeArea={selectedArea}
+            activearea={selectedArea}
             onClick={() => setSelectedArea('backend')}
           >
             Backend
           </S.AreaSelector>
           <S.AreaSelector
             id='complementary'
-            activeArea={selectedArea}
+            activearea={selectedArea}
             onClick={() => setSelectedArea('complementary')}
           >
             Complementary

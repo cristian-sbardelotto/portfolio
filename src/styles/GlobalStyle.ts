@@ -13,6 +13,10 @@ export const GlobalStyle = createGlobalStyle`
       border-radius: 5px;
     }
 
+    ::-webkit-scrollbar-thumb:active {
+      background-color: #888;
+    }
+
     ::-webkit-scrollbar-track {
       background-color: transparent;
     }
@@ -31,6 +35,8 @@ export const GlobalStyle = createGlobalStyle`
 
     transition-property: background-color, color;
     transition-duration: 0.3s;
+
+    margin-bottom: 10rem;
   }
 
   a {
