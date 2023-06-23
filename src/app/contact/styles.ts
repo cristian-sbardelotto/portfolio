@@ -6,8 +6,17 @@ export const Container = styled.div`
     img {
       width: 100vw;
       height: 20vh;
+      margin-bottom: 5rem;
 
       object-fit: cover;
+    }
+
+    section {
+      width: 80vw;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 `;

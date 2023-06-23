@@ -6,9 +6,18 @@ export const List = styled.ul`
   flex-direction: column;
   gap: 5rem;
 
+  font-size: 1.5rem;
+
   li a {
+    width: fit-content;
+
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 4rem;
+
+    span:hover {
+      color: ${({ theme }) => theme.colors.alt};
+      text-decoration: underline;
+    }
   }
 `;

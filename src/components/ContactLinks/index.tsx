@@ -13,7 +13,7 @@ export function ContactLinks() {
           target='_blank'
         >
           <MessageCircle />
-          WhatsApp
+          <span>WhatsApp</span>
         </Link>
       </li>
       <li>
@@ -22,7 +22,7 @@ export function ContactLinks() {
           target='_blank'
         >
           <Github />
-          github.com/cristian-sbardelotto
+          <span>github.com/cristian-sbardelotto</span>
         </Link>
       </li>
       <li>
@@ -31,7 +31,7 @@ export function ContactLinks() {
           target='_blank'
         >
           <Linkedin />
-          linkedin.com/in/cristian-k-sbardelotto
+          <span>linkedin.com/in/cristian-k-sbardelotto</span>
         </Link>
       </li>
       <li>
@@ -40,7 +40,7 @@ export function ContactLinks() {
           target='_blank'
         >
           <Mail />
-          cristian.k.sbardelotto@gmail.com
+          <span>cristian.k.sbardelotto@gmail.com</span>
         </Link>
       </li>
     </S.List>
