@@ -20,4 +20,12 @@ export const List = styled.ul`
       text-decoration: underline;
     }
   }
+
+  @media screen and (max-width: 524px) {
+    font-size: 1.25rem;
+
+    li a {
+      gap: 1rem;
+    }
+  }
 `;

@@ -18,6 +18,14 @@ export const Container = styled.div`
       align-items: center;
       justify-content: center;
     }
+
+    @media screen and (max-width: 768px) {
+      section {
+        width: 100vw;
+
+        font-size: 1rem;
+      }
+    }
   }
 `;
 
@@ -26,4 +34,8 @@ export const StyledTitle = styled.h2`
   margin: 0 0 5rem 5rem;
 
   font-size: 4rem;
+
+  @media screen and (max-width: 768px) {
+    font-size: 3rem;
+  }
 `;
