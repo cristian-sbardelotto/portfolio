@@ -1,11 +1,11 @@
 import Link from 'next/link';
+import { useState } from 'react';
 
 import { Button } from '../Button';
 
 import { Sun, Moon, AlignJustify, X } from 'lucide-react';
 
 import { DefaultTheme } from 'styled-components';
-import { useState } from 'react';
 import * as S from './styles';
 
 type HeaderProps = {

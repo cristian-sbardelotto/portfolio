@@ -9,7 +9,7 @@ export const Container = styled.main`
   margin: 8vh 0 12vh 0;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 
   > div {
     display: flex;
@@ -18,7 +18,7 @@ export const Container = styled.main`
     gap: 2rem;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     flex-direction: column;
     justify-content: initial;
     gap: 4rem;
@@ -44,7 +44,7 @@ export const StyledTitle = styled.h2`
 
   font-size: 4rem;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     font-size: 3.25rem;
   }
 `;
@@ -53,7 +53,7 @@ export const Article = styled.article`
   margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 1.5vh;
+  gap: 3vh;
 
   max-width: 50vw;
   font-size: 2rem;
@@ -61,6 +61,7 @@ export const Article = styled.article`
   p {
     display: flex;
     gap: 1rem;
+    align-items: center;
   }
 
   a {
@@ -83,7 +84,7 @@ export const Article = styled.article`
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     max-width: 90vw;
 
     font-size: 1.5rem;
@@ -120,7 +121,7 @@ export const ImageGroup = styled.div`
 export const StyledImage = styled(Image)`
   border-radius: 50%;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     width: 250px;
     height: 250px;
 
