@@ -37,7 +37,7 @@ export function Header({ theme, toggleTheme }: HeaderProps) {
           </li>
           {isMenuOpen === 'true' && window.innerWidth < 768 && (
             <li>
-              <Link href='/contact'>Contact</Link>
+              <Link href='/contact'>Contact me</Link>
             </li>
           )}
         </ul>
@@ -51,7 +51,7 @@ export function Header({ theme, toggleTheme }: HeaderProps) {
         )}
 
         <Button>
-          <Link href='/contact'>Contact</Link>
+          <Link href='/contact'>Contact me</Link>
         </Button>
 
         <S.NavButton>

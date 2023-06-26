@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const StyledButton = styled.button`
-  padding: 1rem 1.5rem;
+  width: 10.75rem;
+  height: 4.5rem;
 
   border: 2px solid ${({ theme }) => theme.colors.text};
   border-radius: 8px;
@@ -14,10 +15,17 @@ export const StyledButton = styled.button`
 
   &:hover {
     background: ${({ theme }) => theme.colors.text};
-    cursor: pointer;
 
     * {
       color: ${({ theme }) => theme.colors.background};
     }
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
   }
 `;
