@@ -37,20 +37,43 @@ export const AboveTitle = styled.span`
   text-transform: uppercase;
 `;
 
-export const StyledTitle = styled.h2`
-  ${Title};
+export const StyledTitle = styled.div`
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+  }
 
-  margin-bottom: 5rem;
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
 
-  font-size: 4rem;
+  width: 400px;
+
+  border-right: 3px solid;
+  white-space: nowrap;
+  animation: typing 4s steps(21), blink 0.8s infinite alternate;
+  overflow: hidden;
 
   @media screen and (max-width: 1024px) {
-    font-size: 3.25rem;
+    width: 325px;
+  }
+
+  h2 {
+    ${Title};
+
+    font-size: 4rem;
+
+    @media screen and (max-width: 1024px) {
+      font-size: 3.25rem;
+    }
   }
 `;
 
 export const Article = styled.article`
-  margin-bottom: 2rem;
+  margin: 5rem 0 2rem 0;
   display: flex;
   flex-direction: column;
   gap: 3vh;

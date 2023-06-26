@@ -28,7 +28,9 @@ export default function Home() {
         </S.AboveTitle>
 
         <S.StyledTitle>
-          FullStack <span>Developer</span>
+          <h2>
+            FullStack <span>Developer</span>
+          </h2>
         </S.StyledTitle>
 
         <S.Article>
