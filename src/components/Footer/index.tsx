@@ -12,7 +12,10 @@ export function Footer() {
       <SocialLinks />
 
       <button>
-        <Link href='/'>
+        <Link
+          href='/'
+          title='Go back to homepage'
+        >
           <Home />
         </Link>
       </button>
