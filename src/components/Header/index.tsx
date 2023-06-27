@@ -1,11 +1,11 @@
 import Link from 'next/link';
+import { useState } from 'react';
 
 import { Button } from '../Button';
 
 import { Sun, Moon, AlignJustify, X } from 'lucide-react';
 
 import { DefaultTheme } from 'styled-components';
-import { useState } from 'react';
 import * as S from './styles';
 
 type HeaderProps = {
@@ -37,7 +37,7 @@ export function Header({ theme, toggleTheme }: HeaderProps) {
           </li>
           {isMenuOpen === 'true' && window.innerWidth < 768 && (
             <li>
-              <Link href='/contact'>Contact</Link>
+              <Link href='/contact'>Contact me</Link>
             </li>
           )}
         </ul>
@@ -51,7 +51,7 @@ export function Header({ theme, toggleTheme }: HeaderProps) {
         )}
 
         <Button>
-          <Link href='/contact'>Contact</Link>
+          <Link href='/contact'>Contact me</Link>
         </Button>
 
         <S.NavButton>

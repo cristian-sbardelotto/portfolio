@@ -23,7 +23,7 @@ export const SytledTitle = styled.h2`
 `;
 
 export const Article = styled.article`
-  max-width: 80ch;
+  max-width: 120ch;
 
   font-size: 1.6rem;
   line-height: 175%;

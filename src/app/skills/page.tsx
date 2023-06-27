@@ -86,11 +86,17 @@ export default function Skills() {
         <Link
           href='https://github.com/cristian-sbardelotto'
           target='_blank'
+          title='My Github'
         >
           visit my Github
         </Link>{' '}
         to check out all my projects, or view some of my{' '}
-        <Link href='/projects'>best/favorite projects here.</Link>
+        <Link
+          href='/projects'
+          title='My Projects'
+        >
+          best/favorite projects here.
+        </Link>
       </p>
 
       <p>

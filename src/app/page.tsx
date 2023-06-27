@@ -28,7 +28,9 @@ export default function Home() {
         </S.AboveTitle>
 
         <S.StyledTitle>
-          FullStack <span>Developer</span>
+          <h2>
+            FullStack <span>Developer</span>
+          </h2>
         </S.StyledTitle>
 
         <S.Article>
@@ -82,6 +84,7 @@ export default function Home() {
           <Image
             src={typescript}
             alt='Typescript Logo'
+            title='Typescript'
             height={40}
             width={40}
           />
@@ -89,6 +92,7 @@ export default function Home() {
           <Image
             src={nextjs}
             alt='Next.js Logo'
+            title='Next.js'
             height={40}
             width={40}
           />
@@ -96,6 +100,7 @@ export default function Home() {
           <Image
             src={nodejs}
             alt='Node.js Logo'
+            title='Node.js'
             height={40}
             width={40}
           />
@@ -103,6 +108,7 @@ export default function Home() {
           <Image
             src={windows}
             alt='Windows Logo'
+            title='Windows'
             height={40}
             width={40}
           />

@@ -41,6 +41,7 @@ export function ExperienceCard({
           <Link
             href={teacherProfile}
             target='_blank'
+            title={teacher}
           >
             {teacher}
           </Link>

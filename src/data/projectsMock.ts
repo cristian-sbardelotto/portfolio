@@ -71,7 +71,7 @@ export const projects: ProjectProps[] = [
     deployUrl: 'https://to-do-list-henna-three.vercel.app',
   },
   {
-    title: 'To Do List',
+    title: 'QR Code Generator',
     image: qrCodeGenerator,
     description:
       'A simple QR Code generator that allows the user to download the image of any link that was typed. Idea provided by Sujeito Programador.',

@@ -8,7 +8,7 @@ type NavLinksProps = {
 export const Header = styled.header`
   @keyframes appear {
     0% {
-      transform: translateX(2rem);
+      transform: translateY(2rem);
       opacity: 0;
     }
 
