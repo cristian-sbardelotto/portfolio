@@ -73,7 +73,7 @@ export const StyledTitle = styled.div`
 `;
 
 export const Article = styled.article`
-  margin: 5rem 0 2rem 0;
+  margin: 2rem 0 2rem 0;
   display: flex;
   flex-direction: column;
   gap: 3vh;
@@ -131,7 +131,7 @@ export const SocialGroup = styled.div`
 export const ImageGroup = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
 
   div {
     width: 100%;
@@ -149,5 +149,45 @@ export const StyledImage = styled(Image)`
     height: 250px;
 
     align-self: center;
+  }
+`;
+
+export const Error404Page = styled.main`
+  height: 70vh;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  img {
+    width: 300px;
+    height: 300px;
+  }
+
+  div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    h2 {
+      font-size: 7rem;
+      color: ${({ theme }) => theme.colors.alt};
+    }
+
+    h3 {
+      font-size: 2rem;
+    }
+
+    button {
+      width: 300px;
+      height: 70px;
+      font-size: 1.8rem;
+
+      a {
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
 `;
