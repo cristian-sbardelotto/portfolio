@@ -15,6 +15,7 @@ export default function NotFoundError() {
         src={astronaut}
         alt='Image of an astronaut on a rocket'
       />
+
       <div>
         <h2>404</h2>
 

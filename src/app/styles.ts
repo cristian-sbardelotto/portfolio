@@ -190,4 +190,35 @@ export const Error404Page = styled.main`
       }
     }
   }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+
+    div {
+      padding: 0 3rem;
+
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+
+      h2 {
+        font-size: 4rem;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+      }
+
+      button {
+        width: 150px;
+        height: 40px;
+        font-size: 1.3rem;
+      }
+    }
+
+    img {
+      width: 200px;
+      height: 200px;
+    }
+  }
 `;
