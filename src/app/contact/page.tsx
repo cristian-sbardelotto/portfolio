@@ -9,12 +9,12 @@ import * as S from './styles';
 
 export default function Contact() {
   return (
-    <S.Container>
+    <div>
       <S.StyledTitle>
         Contact <span>me</span>
       </S.StyledTitle>
 
-      <main>
+      <S.Container>
         <Image
           src={developer}
           alt='Image of a person programming'
@@ -23,7 +23,7 @@ export default function Contact() {
         <section>
           <ContactLinks />
         </section>
-      </main>
-    </S.Container>
+      </S.Container>
+    </div>
   );
 }

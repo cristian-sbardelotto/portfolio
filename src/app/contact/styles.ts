@@ -1,30 +1,28 @@
 import { Title } from '@/styles/utils';
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  main {
-    img {
-      width: 100vw;
-      height: 20vh;
-      margin-bottom: 5rem;
+export const Container = styled.main`
+  img {
+    width: 100vw;
+    height: 20vh;
+    margin-bottom: 5rem;
 
-      object-fit: cover;
-    }
+    object-fit: cover;
+  }
 
+  section {
+    width: 80vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 768px) {
     section {
-      width: 80vw;
+      width: 100vw;
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    @media screen and (max-width: 768px) {
-      section {
-        width: 100vw;
-
-        font-size: 1rem;
-      }
+      font-size: 1rem;
     }
   }
 `;
