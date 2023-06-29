@@ -64,6 +64,14 @@ export const skills = {
 
   backend: [
     {
+      image: javascript,
+      name: 'JavaScript',
+    },
+    {
+      image: typescript,
+      name: 'TypeScript',
+    },
+    {
       image: nodejs,
       name: 'NodeJS',
     },
