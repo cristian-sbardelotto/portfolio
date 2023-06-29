@@ -14,8 +14,6 @@ export const SytledTitle = styled.h2`
 
   margin-bottom: 3rem;
 
-  font-size: 4rem;
-
   @media screen and (max-width: 768px) {
     font-size: 3rem;
   }

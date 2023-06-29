@@ -64,8 +64,6 @@ export const StyledTitle = styled.div`
   h2 {
     ${Title};
 
-    font-size: 4rem;
-
     @media screen and (max-width: 1024px) {
       font-size: 3.25rem;
     }

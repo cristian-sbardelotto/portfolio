@@ -20,7 +20,6 @@ export const StyledTitle = styled.h2`
   margin-block: 3rem;
 
   text-align: center;
-  font-size: 4rem;
 
   @media screen and (max-width: 768px) {
     font-size: 3rem;

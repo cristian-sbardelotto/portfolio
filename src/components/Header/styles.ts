@@ -28,6 +28,7 @@ export const Header = styled.header`
 
   h1 {
     ${Title}
+    font-size: 2.5rem;
   }
 `;
 

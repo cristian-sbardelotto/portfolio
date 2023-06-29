@@ -59,5 +59,4 @@ export const TitleGroup = styled.div`
 
 export const StyledTitle = styled.h2`
   ${Title};
-  font-size: 4rem;
 `;

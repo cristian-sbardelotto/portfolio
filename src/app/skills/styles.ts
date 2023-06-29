@@ -46,7 +46,6 @@ export const Container = styled.main`
 export const StyledTitle = styled.h2`
   ${Title};
   margin: 3rem 0 6rem 0;
-  font-size: 4rem;
 `;
 
 export const Skills = styled.ul`
