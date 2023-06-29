@@ -6,7 +6,7 @@ import Image from 'next/image';
 export const Container = styled.main`
   width: 100%;
   padding: 0 5vw;
-  margin: 8vh 0 12vh 0;
+  margin-top: 8vh;
 
   display: flex;
   justify-content: space-around;

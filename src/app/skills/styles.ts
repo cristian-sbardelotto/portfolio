@@ -10,7 +10,7 @@ type ActiveAreaProps = {
 };
 
 export const Container = styled.main`
-  padding: 2rem 5rem 12rem 5rem;
+  padding: 2rem 5rem 0 5rem;
 
   @media screen and (max-width: 768px) {
     padding: 2rem 2rem 12rem 2rem;

@@ -2,13 +2,17 @@ import { Title } from '@/styles/utils';
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  padding: 3rem 5vw;
+  padding: 3rem 5vw 0 5vw;
 
   main {
     display: flex;
     justify-content: center;
     gap: 3rem;
     flex-flow: row wrap;
+
+    @media screen and (max-width: 768px) {
+      gap: 5rem;
+    }
   }
 `;
 
