@@ -3,34 +3,23 @@ import styled from 'styled-components';
 
 export const Container = styled.main`
   img {
-    width: 100vw;
+    width: 100%;
     height: 20vh;
-    margin-bottom: 5rem;
+    margin-bottom: 9rem;
 
     object-fit: cover;
-  }
 
-  section {
-    width: 80vw;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  @media screen and (max-width: 768px) {
-    section {
-      width: 100vw;
-
-      font-size: 1rem;
+    @media screen and (max-width: 524px) {
+      margin-bottom: 5rem;
     }
   }
 `;
 
 export const StyledTitle = styled.h2`
   ${Title};
-  margin: 0 0 5rem 5rem;
+  margin-block: 3rem;
 
+  text-align: center;
   font-size: 4rem;
 
   @media screen and (max-width: 768px) {

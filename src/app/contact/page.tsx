@@ -20,9 +20,7 @@ export default function Contact() {
           alt='Image of a person programming'
         />
 
-        <section>
-          <ContactLinks />
-        </section>
+        <ContactLinks />
       </S.Container>
     </div>
   );
