@@ -9,21 +9,19 @@ import * as S from './styles';
 
 export default function Contact() {
   return (
-    <S.Container>
+    <div>
       <S.StyledTitle>
         Contact <span>me</span>
       </S.StyledTitle>
 
-      <main>
+      <S.Container>
         <Image
           src={developer}
           alt='Image of a person programming'
         />
 
-        <section>
-          <ContactLinks />
-        </section>
-      </main>
-    </S.Container>
+        <ContactLinks />
+      </S.Container>
+    </div>
   );
 }

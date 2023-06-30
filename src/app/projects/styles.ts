@@ -2,13 +2,29 @@ import { Title } from '@/styles/utils';
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  padding: 3rem 5vw;
+  padding: 3rem 5vw 0 5vw;
 
   main {
     display: flex;
     justify-content: center;
     gap: 3rem;
     flex-flow: row wrap;
+
+    @media screen and (max-width: 1168px) {
+      .swiper-wrapper {
+        margin-left: 100px;
+      }
+    }
+
+    @media screen and (max-width: 524px) {
+      .swiper-wrapper {
+        margin-left: 0;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      gap: 5rem;
+    }
   }
 `;
 
@@ -55,5 +71,4 @@ export const TitleGroup = styled.div`
 
 export const StyledTitle = styled.h2`
   ${Title};
-  font-size: 4rem;
 `;

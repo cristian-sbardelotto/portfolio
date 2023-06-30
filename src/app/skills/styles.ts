@@ -10,7 +10,7 @@ type ActiveAreaProps = {
 };
 
 export const Container = styled.main`
-  padding: 2rem 5rem 12rem 5rem;
+  padding: 2rem 5rem 0 5rem;
 
   @media screen and (max-width: 768px) {
     padding: 2rem 2rem 12rem 2rem;
@@ -46,7 +46,6 @@ export const Container = styled.main`
 export const StyledTitle = styled.h2`
   ${Title};
   margin: 3rem 0 6rem 0;
-  font-size: 4rem;
 `;
 
 export const Skills = styled.ul`
@@ -77,8 +76,8 @@ export const AreaSelector = styled.button<ActiveAreaProps>`
   padding: 1rem;
 
   font-size: 1.7rem;
-  font-family: '__Plus_Jakarta_Sans_fd0c7c',
-    '__Plus_Jakarta_Sans_Fallback_fd0c7c';
+  font-family: '__Plus_Jakarta_Sans_47178e',
+    '__Plus_Jakarta_Sans_Fallback_47178e';
 
   color: ${({ theme, id, activearea }) =>
     activearea === id ? theme.colors.alt : theme.colors.text};

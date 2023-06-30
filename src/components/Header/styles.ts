@@ -22,10 +22,13 @@ export const Header = styled.header`
   justify-content: space-between;
   align-items: center;
 
+  border-bottom: 1px solid
+    ${({ theme }) => (theme.title === 'light' ? '#0005' : '#fff5')};
   animation: appear 0.5s;
 
   h1 {
     ${Title}
+    font-size: 2.5rem;
   }
 `;
 

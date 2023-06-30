@@ -3,7 +3,6 @@ import { Title } from '@/styles/utils';
 
 export const Container = styled.div`
   padding: 5rem;
-  margin-bottom: 6rem;
 
   @media screen and (max-width: 768px) {
     padding: 2rem;
@@ -14,8 +13,6 @@ export const SytledTitle = styled.h2`
   ${Title};
 
   margin-bottom: 3rem;
-
-  font-size: 4rem;
 
   @media screen and (max-width: 768px) {
     font-size: 3rem;

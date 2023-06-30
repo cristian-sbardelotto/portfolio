@@ -6,7 +6,7 @@ import Image from 'next/image';
 export const Container = styled.main`
   width: 100%;
   padding: 0 5vw;
-  margin: 8vh 0 12vh 0;
+  margin-top: 8vh;
 
   display: flex;
   justify-content: space-around;
@@ -64,8 +64,6 @@ export const StyledTitle = styled.div`
   h2 {
     ${Title};
 
-    font-size: 4rem;
-
     @media screen and (max-width: 1024px) {
       font-size: 3.25rem;
     }
@@ -73,7 +71,7 @@ export const StyledTitle = styled.div`
 `;
 
 export const Article = styled.article`
-  margin: 5rem 0 2rem 0;
+  margin: 2rem 0 2rem 0;
   display: flex;
   flex-direction: column;
   gap: 3vh;
@@ -131,7 +129,7 @@ export const SocialGroup = styled.div`
 export const ImageGroup = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
 
   div {
     width: 100%;
@@ -149,5 +147,76 @@ export const StyledImage = styled(Image)`
     height: 250px;
 
     align-self: center;
+  }
+`;
+
+export const Error404Page = styled.main`
+  height: 70vh;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  img {
+    width: 300px;
+    height: 300px;
+  }
+
+  div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    h2 {
+      font-size: 7rem;
+      color: ${({ theme }) => theme.colors.alt};
+    }
+
+    h3 {
+      font-size: 2rem;
+    }
+
+    button {
+      width: 300px;
+      height: 70px;
+      font-size: 1.8rem;
+
+      a {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+
+    div {
+      padding: 0 3rem;
+
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+
+      h2 {
+        font-size: 4rem;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+      }
+
+      button {
+        width: 150px;
+        height: 40px;
+        font-size: 1.3rem;
+      }
+    }
+
+    img {
+      width: 200px;
+      height: 200px;
+    }
   }
 `;

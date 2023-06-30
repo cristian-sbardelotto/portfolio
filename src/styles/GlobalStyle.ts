@@ -13,6 +13,10 @@ export const GlobalStyle = createGlobalStyle`
       border-radius: 5px;
     }
 
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: #8888;
+    }
+
     ::-webkit-scrollbar-thumb:active {
       background-color: #888;
     }

@@ -27,5 +27,7 @@ export const StyledButton = styled.button`
     justify-content: center;
     width: 100%;
     height: 100%;
+    font-family: '__Plus_Jakarta_Sans_47178e',
+      '__Plus_Jakarta_Sans_Fallback_47178e';
   }
 `;
