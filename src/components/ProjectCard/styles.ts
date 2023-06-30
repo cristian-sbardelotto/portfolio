@@ -105,7 +105,7 @@ export const ImageGroup = styled.div`
   img {
     transition: 0.3s all;
 
-    height: 50%;
+    height: 220px;
     width: 100%;
   }
 `;
