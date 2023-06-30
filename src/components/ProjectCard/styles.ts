@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 500px;
-  height: 500px;
+  height: 470px;
+  margin-bottom: 50px;
 
   border-radius: 15px;
   background: ${({ theme }) => theme.colors.altBackground};
@@ -10,7 +11,7 @@ export const Container = styled.div`
   overflow-x: hidden;
   overflow-y: auto;
 
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: #0004 0 5px 15px;
 
   section {
     padding: 2rem;
@@ -28,8 +29,8 @@ export const Container = styled.div`
     }
   }
 
-  @media screen and (max-width: 1168px) {
-    width: 375px;
+  @media screen and (max-width: 768px) {
+    width: 400px;
     height: 375px;
 
     section {
@@ -47,6 +48,10 @@ export const Container = styled.div`
         font-size: 1.2rem;
       }
     }
+  }
+
+  @media screen and (max-width: 658px) {
+    width: 300px;
   }
 `;
 
@@ -101,6 +106,10 @@ export const ImageGroup = styled.div`
 
     a:hover {
       color: ${({ theme }) => theme.colors.alt};
+    }
+
+    @media screen and (max-width: 658px) {
+      right: 40%;
     }
   }
 

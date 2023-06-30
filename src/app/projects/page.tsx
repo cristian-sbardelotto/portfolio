@@ -37,7 +37,12 @@ export default function Projects() {
       <main>
         <Swiper
           spaceBetween={50}
-          slidesPerView={2}
+          slidesPerView={1}
+          breakpoints={{
+            '1168': {
+              slidesPerView: 2,
+            },
+          }}
           navigation={true}
           pagination={{
             dynamicBullets: true,

@@ -10,6 +10,7 @@ export const Footer = styled.footer`
 
   position: fixed;
   bottom: 0;
+  z-index: 2;
 
   background-color: ${({ theme }) => theme.colors.altBackground};
 

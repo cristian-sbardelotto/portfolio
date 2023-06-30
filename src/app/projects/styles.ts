@@ -10,6 +10,18 @@ export const Container = styled.div`
     gap: 3rem;
     flex-flow: row wrap;
 
+    @media screen and (max-width: 1168px) {
+      .swiper-wrapper {
+        margin-left: 100px;
+      }
+    }
+
+    @media screen and (max-width: 524px) {
+      .swiper-wrapper {
+        margin-left: 0;
+      }
+    }
+
     @media screen and (max-width: 768px) {
       gap: 5rem;
     }
