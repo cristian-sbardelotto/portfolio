@@ -10,6 +10,8 @@ export const Container = styled.div`
   overflow-x: hidden;
   overflow-y: auto;
 
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
   section {
     padding: 2rem;
 
