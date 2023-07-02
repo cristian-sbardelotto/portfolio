@@ -1,10 +1,11 @@
+import { Metadata } from 'next';
 import { ReactNode } from 'react';
 
 type SkillsLayoutProps = {
   children: ReactNode;
 };
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'About Me',
   description: 'Section to tell more about me',
 };

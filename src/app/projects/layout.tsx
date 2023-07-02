@@ -1,10 +1,11 @@
+import { Metadata } from 'next';
 import { ReactNode } from 'react';
 
 type ProjectsLayoutProps = {
   children: ReactNode;
 };
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Projects',
   description: 'Section to show my best projects',
 };
