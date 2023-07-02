@@ -10,6 +10,14 @@ export const Container = styled.div`
     gap: 3rem;
     flex-flow: row wrap;
 
+    .swiper-wrapper {
+      cursor: grab;
+
+      &:active {
+        cursor: grabbing;
+      }
+    }
+
     @media screen and (max-width: 1168px) {
       .swiper-wrapper {
         margin-left: 100px;

@@ -2,14 +2,15 @@
 
 import { useState } from 'react';
 
-import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { Header } from '@/components/Header';
 
 import { GlobalStyle } from '@/styles/GlobalStyle';
-import light from '@/styles/themes/light';
 import dark from '@/styles/themes/dark';
-import { ThemeProvider, DefaultTheme } from 'styled-components';
+import light from '@/styles/themes/light';
+import { DefaultTheme, ThemeProvider } from 'styled-components';
 
+import { Metadata } from 'next';
 import { Plus_Jakarta_Sans } from 'next/font/google';
 
 const jakartaSans = Plus_Jakarta_Sans({ subsets: ['latin'] });
@@ -18,7 +19,7 @@ type LayoutProps = {
   children: React.ReactNode;
 };
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'My Portfolio',
   description:
     'Website to show my abilities and my best projects in Web Development',
