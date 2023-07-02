@@ -10,19 +10,12 @@ import dark from '@/styles/themes/dark';
 import light from '@/styles/themes/light';
 import { DefaultTheme, ThemeProvider } from 'styled-components';
 
-import { Metadata } from 'next';
 import { Plus_Jakarta_Sans } from 'next/font/google';
 
 const jakartaSans = Plus_Jakarta_Sans({ subsets: ['latin'] });
 
 type LayoutProps = {
   children: React.ReactNode;
-};
-
-export const metadata: Metadata = {
-  title: 'My Portfolio',
-  description:
-    'Website to show my abilities and my best projects in Web Development',
 };
 
 export default function RootLayout({ children }: LayoutProps) {
@@ -36,6 +29,10 @@ export default function RootLayout({ children }: LayoutProps) {
     <ThemeProvider theme={theme}>
       <html lang='pt-br'>
         <GlobalStyle />
+
+        <head>
+          <title>My Portfolio</title>
+        </head>
 
         <body
           className={jakartaSans.className}
