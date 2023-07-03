@@ -30,7 +30,7 @@ This project also makes it easy to contact with me.
 </p>
 
 <p align="center">
-  <img alt="Project preview" src="./.github/preview3.png" width="45%" height="500">
+  <img alt="Project preview" src="./.github/preview3.png" width="30%" height="500">
 </p>
 
 <br />
