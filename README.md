@@ -65,7 +65,7 @@ This project also makes it easy to contact with me.
 <br />
 
 
-### To make this project, I used this [Figma Design](link).
+### To make this project, I used this [Figma Design](https://www.figma.com/file/2dONk0zr1PPGVhKjNNoMSH/Portfolio-Web-Template-(Community)?node-id=1%3A306&mode=dev).
 
 ### To see the Deploy, check [THIS LINK](https://portfolio-git-main-cristian-sbardelotto.vercel.app/).
 
