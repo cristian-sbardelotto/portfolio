@@ -1,11 +1,11 @@
 import { ProjectProps } from '@/types';
 
+import imagineshop from '/public/images/imagineshop.png';
 import memeCreator from '/public/images/meme-creator.png';
 import nlwSpacetime from '/public/images/nlw-spacetime.png';
-import imagineshop from '/public/images/imagineshop.png';
-import todoList from '/public/images/todo-list.png';
-import studion from '/public/images/studion.png';
 import qrCodeGenerator from '/public/images/qr-code-generator.png';
+import studion from '/public/images/studion.png';
+import todoList from '/public/images/todo-list.png';
 
 export const projects: ProjectProps[] = [
   {
@@ -93,5 +93,13 @@ export const projects: ProjectProps[] = [
     ],
     githubUrl: 'https://github.com/cristian-sbardelotto/studion',
     deployUrl: 'https://studion-eight.vercel.app/',
+  },
+  {
+    title: 'Studion Backend',
+    image: studion,
+    description:
+      'Manage and view events effortlessly. Register, list, and interact with detailed information. Efficient and flexible.',
+    technologies: ['typescript', 'nodejs', 'fastify', 'prisma', 'tsx', 'jwt'],
+    githubUrl: 'https://github.com/cristian-sbardelotto/studion-backend',
   },
 ];
