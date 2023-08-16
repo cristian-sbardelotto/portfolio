@@ -30,7 +30,7 @@ This project also makes it easy to contact with me.
 </p>
 
 <p align="center">
-  <img alt="Project preview" src="./.github/preview3.png" width="45%" height="500">
+  <img alt="Project preview" src="./.github/preview3.png" width="30%" height="500">
 </p>
 
 <br />
@@ -65,7 +65,7 @@ This project also makes it easy to contact with me.
 <br />
 
 
-### To make this project, I used this [Figma Design](link).
+### To make this project, I used this [Figma Design](https://www.figma.com/file/2dONk0zr1PPGVhKjNNoMSH/Portfolio-Web-Template-(Community)?node-id=1%3A306&mode=dev).
 
 ### To see the Deploy, check [THIS LINK](https://portfolio-git-main-cristian-sbardelotto.vercel.app/).
 
@@ -132,5 +132,7 @@ Developed with ❤️ by <strong>Cristian Sbardelotto</strong>
 
 [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/cristian-k-sbardelotto/)
 [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/cristian-sbardelotto)
+
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://bit.ly/portfolioSbardelotto)
 
 </div>
