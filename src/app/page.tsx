@@ -1,18 +1,18 @@
 'use client';
 
-import Link from 'next/link';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { ChevronRight } from 'lucide-react';
 
-import typescript from '@/../public/assets/typescript.svg';
 import nextjs from '@/../public/assets/nextjs.svg';
 import nodejs from '@/../public/assets/nodejs.svg';
+import typescript from '@/../public/assets/typescript.svg';
 import windows from '@/../public/assets/windows.svg';
 
-import { SocialLinks } from '@/components/SocialLinks';
-import { Line } from '@/components/Line';
 import { Button } from '@/components/Button';
+import { Line } from '@/components/Line';
+import { SocialLinks } from '@/components/SocialLinks';
 import * as S from './styles';
 
 const date = new Date();
@@ -66,7 +66,12 @@ export default function Home() {
           <SocialLinks />
 
           <Button>
-            <Link href='/contact'>Contact me</Link>
+            <a
+              download
+              href='/assets/resume.pdf'
+            >
+              Download CV
+            </a>
           </Button>
         </S.SocialGroup>
       </div>
