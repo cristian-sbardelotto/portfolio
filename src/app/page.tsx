@@ -68,7 +68,7 @@ export default function Home() {
           <Button>
             <a
               download
-              href='/assets/resume.pdf'
+              href='/documents/resume.pdf'
             >
               Download CV
             </a>
