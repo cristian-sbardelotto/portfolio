@@ -9,7 +9,6 @@ This project also makes it easy to contact with me.
   <a href="#technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#learning">What I've Learned</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#installation">Installation</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#contribution">Contribution</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#layout">Layout</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </p>
 
@@ -103,20 +102,6 @@ pnpm dev
 ```
 
 <br/>
-
-<h1 id='contribution'>🤝 Contribution</h1>
-
-<br />
-
-**1.** Fork the `cristian-sbardelotto/portfolio` repository on GitHub.
-
-**2.** Create a new branch for your changes.
-
-**3.** Make the desired changes and commit.
-
-**4.** Submit a pull request with your changes.
-
-<br />
 
 ---
 
