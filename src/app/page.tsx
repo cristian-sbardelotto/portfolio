@@ -15,10 +15,6 @@ import { Line } from '@/components/Line';
 import { SocialLinks } from '@/components/SocialLinks';
 import * as S from './styles';
 
-const date = new Date();
-const currentYear = date.getFullYear();
-const birthYear = 2008;
-
 export default function Home() {
   return (
     <S.Container>
@@ -35,8 +31,7 @@ export default function Home() {
 
         <S.Article>
           <p>
-            Hey there! My name is Cristian Sbardelotto, and I am{' '}
-            {currentYear - birthYear}.
+            Hey there! My name is Cristian Sbardelotto.
           </p>
           <p>
             I started studying Web Programming in August 2022, and since then, I
