@@ -76,8 +76,7 @@ export const AreaSelector = styled.button<ActiveAreaProps>`
   padding: 1rem;
 
   font-size: 1.7rem;
-  font-family: '__Plus_Jakarta_Sans_47178e',
-    '__Plus_Jakarta_Sans_Fallback_47178e';
+  font-family: '__Inter_aaf875', sans-serif;
 
   color: ${({ theme, id, activearea }) =>
     activearea === id ? theme.colors.alt : theme.colors.text};

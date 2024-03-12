@@ -4,6 +4,7 @@ import { ReactNode } from 'react';
 export type AreaProps = 'frontend' | 'backend' | 'complementary';
 
 export type ProjectProps = {
+  id: string;
   title: string;
   image: string | StaticImageData;
   description: string;

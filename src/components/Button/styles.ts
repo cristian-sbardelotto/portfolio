@@ -7,8 +7,7 @@ export const StyledButton = styled.button`
   border: 2px solid ${({ theme }) => theme.colors.text};
   border-radius: 8px;
   background: transparent;
-  font-family: '__Plus_Jakarta_Sans_fd0c7c',
-    '__Plus_Jakarta_Sans_Fallback_fd0c7c';
+  font-family: '__Inter_aaf875', sans-serif;
   font-weight: 600;
 
   transition: all 0.2s;
@@ -27,7 +26,6 @@ export const StyledButton = styled.button`
     justify-content: center;
     width: 100%;
     height: 100%;
-    font-family: '__Plus_Jakarta_Sans_47178e',
-      '__Plus_Jakarta_Sans_Fallback_47178e';
+    font-family: '__Inter_aaf875', sans-serif;
   }
 `;

@@ -1,8 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { GithubIcon, Rocket } from 'lucide-react';
-
 import { ProjectProps } from '@/types';
 
 import * as S from './styles';
@@ -13,48 +11,37 @@ export function ProjectCard({
   description,
   technologies,
   githubUrl,
-  deployUrl,
 }: ProjectProps) {
   return (
     <S.Container>
       <S.ImageGroup>
-        <Image
-          src={image}
-          alt={`${title} Project Card`}
-        />
-
-        <div>
-          <Link
-            href={githubUrl}
-            target='_blank'
-            title='Go see the project on Github'
-          >
-            <GithubIcon />
-          </Link>
-
-          {deployUrl && (
-            <Link
-              href={deployUrl}
-              target='_blank'
-              title='Go see the project on Web'
-            >
-              <Rocket />
-            </Link>
-          )}
-        </div>
+        <Link
+          href={githubUrl}
+          target='_blank'
+        >
+          <Image
+            src={image}
+            alt={`${title} Project Card`}
+          />
+        </Link>
       </S.ImageGroup>
 
-      <section>
-        <h4>{title}</h4>
+      <h4>
+        <Link
+          href={githubUrl}
+          target='_blank'
+        >
+          {title}
+        </Link>
+      </h4>
 
-        <p>{description}</p>
+      <S.TechnologiesGroup>
+        {technologies.map(technology => (
+          <span key={technology}>{technology}</span>
+        ))}
+      </S.TechnologiesGroup>
 
-        <S.TechnologiesGroup>
-          {technologies.map((technology, index) => (
-            <span key={index}>{technology}</span>
-          ))}
-        </S.TechnologiesGroup>
-      </section>
+      <p>{description}</p>
     </S.Container>
   );
 }

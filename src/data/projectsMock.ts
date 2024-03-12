@@ -1,5 +1,7 @@
 import { ProjectProps } from '@/types';
 
+import { v4 as randomUUID } from 'uuid';
+
 import imagineshop from '/public/images/imagineshop.png';
 import memeCreator from '/public/images/meme-creator.png';
 import nlwSpacetime from '/public/images/nlw-spacetime.png';
@@ -9,6 +11,7 @@ import todoList from '/public/images/todo-list.png';
 
 export const projects: ProjectProps[] = [
   {
+    id: randomUUID(),
     title: 'NLW - Spacetime',
     image: nlwSpacetime,
     description:
@@ -24,6 +27,7 @@ export const projects: ProjectProps[] = [
     githubUrl: 'https://github.com/cristian-sbardelotto/nlw-spacetime',
   },
   {
+    id: randomUUID(),
     title: 'Meme Creator',
     image: memeCreator,
     description:
@@ -33,6 +37,7 @@ export const projects: ProjectProps[] = [
     deployUrl: 'https://meme-creator-kappa.vercel.app',
   },
   {
+    id: randomUUID(),
     title: 'ImagineShop',
     image: imagineshop,
     description:
@@ -48,6 +53,7 @@ export const projects: ProjectProps[] = [
     deployUrl: 'https://imagineshop-frontend-topaz.vercel.app',
   },
   {
+    id: randomUUID(),
     title: 'ImagineShop API',
     image: imagineshop,
     description:
@@ -56,6 +62,7 @@ export const projects: ProjectProps[] = [
     githubUrl: 'https://github.com/cristian-sbardelotto/imagineshop-api',
   },
   {
+    id: randomUUID(),
     title: 'To Do List',
     image: todoList,
     description:
@@ -71,6 +78,7 @@ export const projects: ProjectProps[] = [
     deployUrl: 'https://to-do-list-henna-three.vercel.app',
   },
   {
+    id: randomUUID(),
     title: 'QR Code Generator',
     image: qrCodeGenerator,
     description:
@@ -80,6 +88,7 @@ export const projects: ProjectProps[] = [
     deployUrl: 'https://qr-code-generator-pied.vercel.app/',
   },
   {
+    id: randomUUID(),
     title: 'Studion',
     image: studion,
     description: 'Page simulating an event manager, provided by Imagine School',
@@ -95,6 +104,7 @@ export const projects: ProjectProps[] = [
     deployUrl: 'https://studion-eight.vercel.app/',
   },
   {
+    id: randomUUID(),
     title: 'Studion Backend',
     image: studion,
     description:

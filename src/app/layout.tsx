@@ -8,9 +8,9 @@ import { ThemeProvider } from 'styled-components';
 
 import { useTheme } from '@/hooks/useTheme';
 import { ChildrenComponentProps } from '@/types';
-import { Plus_Jakarta_Sans } from 'next/font/google';
+import { Inter } from 'next/font/google';
 
-const jakartaSans = Plus_Jakarta_Sans({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'] });
 
 export default function RootLayout({ children }: ChildrenComponentProps) {
   const { theme, toggleTheme } = useTheme();
@@ -25,7 +25,7 @@ export default function RootLayout({ children }: ChildrenComponentProps) {
         </head>
 
         <body
-          className={jakartaSans.className}
+          className={inter.className}
           suppressHydrationWarning={true}
         >
           <Header
