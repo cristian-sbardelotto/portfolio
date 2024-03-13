@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 import { ProjectProps } from '@/types';
 
+import { ExternalLinkIcon } from 'lucide-react';
 import * as S from './styles';
 
 export function ProjectCard({
@@ -32,6 +33,8 @@ export function ProjectCard({
           target='_blank'
         >
           {title}
+
+          <ExternalLinkIcon />
         </Link>
       </h4>
 

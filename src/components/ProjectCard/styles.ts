@@ -16,11 +16,18 @@ export const Container = styled.div`
     font-size: 2.5rem;
 
     a {
-      transition: 0.3s;
+      display: flex;
+      gap: 8px;
+      align-items: center;
 
-      &:hover {
-        cursor: pointer;
-        filter: brightness(0.7);
+      svg {
+        display: none;
+      }
+    }
+
+    &:hover {
+      svg {
+        display: inline-block;
       }
     }
   }
@@ -40,6 +47,7 @@ export const TechnologiesGroup = styled.div`
 
   span {
     font-size: 1.3rem;
+    font-weight: 700;
     color: #737271;
   }
 `;
