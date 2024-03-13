@@ -45,17 +45,18 @@ export const TechnologiesGroup = styled.div`
 `;
 
 export const ImageGroup = styled.div`
-  &:hover {
-    img {
-      filter: brightness(0.5);
-      cursor: pointer;
-    }
-  }
-
   img {
-    transition: filter 0.3s;
-
     height: 220px;
     width: 100%;
+    border-radius: 5px;
+
+    transition: all 0.3s;
+
+    &:hover {
+      box-shadow: #7e74f171 -5px 5px, #7e74f12f -10px 10px;
+      cursor: pointer;
+      filter: brightness(0.9);
+      transform: translate(0.5rem, -0.5rem);
+    }
   }
 `;
