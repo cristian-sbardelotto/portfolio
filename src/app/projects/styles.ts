@@ -5,16 +5,21 @@ export const Container = styled.div`
   padding: 3rem 5vw 0 5vw;
 
   main {
-    max-width: 1250px;
     margin: 0 auto;
 
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     justify-items: center;
 
+    @media screen and (max-width: 1680px) {
+      max-width: 1250px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
     @media screen and (max-width: 1024px) {
       grid-template-columns: 1fr;
+      justify-items: start;
     }
   }
 `;
