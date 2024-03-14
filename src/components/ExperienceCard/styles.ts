@@ -51,8 +51,7 @@ export const CardBody = styled.div`
 
       &:hover {
         text-decoration: underline;
-        filter: ${({ theme }) =>
-          theme.title === 'light' ? 'brightness(0.7);' : 'brightness(1.4);'};
+        filter: brightness(1.4);
       }
     }
   }
