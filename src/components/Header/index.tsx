@@ -23,30 +23,40 @@ export function Header() {
           <li>
             <Link href='/about'>About me</Link>
           </li>
+
           <li>
             <Link href='/skills'>Skills</Link>
           </li>
+
           <li>
             <Link href='/projects'>Projects</Link>
           </li>
-          {isMenuOpen === 'true' && window.innerWidth < 768 && (
-            <li>
-              <Link href='/contact'>Contact me</Link>
-            </li>
-          )}
+
+          <li className='contact-link'>
+            <Link href='/contact'>Contact me</Link>
+          </li>
         </ul>
       </S.NavLinks>
 
       <S.NavMenuGroup>
-        <Button>
-          <Link href='/contact'>Contact me</Link>
-        </Button>
+        <Link
+          className='contact-button'
+          href='/contact'
+        >
+          <Button>Contact me</Button>
+        </Link>
 
         <S.NavButton>
           {isMenuOpen === 'true' ? (
-            <X onClick={() => setIsMenuOpen('false')} />
+            <X
+              className='list-icon'
+              onClick={() => setIsMenuOpen('false')}
+            />
           ) : (
-            <AlignJustify onClick={() => setIsMenuOpen('true')} />
+            <AlignJustify
+              className='list-icon'
+              onClick={() => setIsMenuOpen('true')}
+            />
           )}
         </S.NavButton>
       </S.NavMenuGroup>

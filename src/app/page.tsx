@@ -30,9 +30,7 @@ export default function Home() {
         </S.StyledTitle>
 
         <S.Article>
-          <p>
-            Hey there! My name is Cristian Sbardelotto.
-          </p>
+          <p>Hey there! My name is Cristian Sbardelotto.</p>
           <p>
             I started studying Web Programming in August 2022, and since then, I
             feel more and more inspired and willing to pursue my career in the
@@ -60,14 +58,12 @@ export default function Home() {
         <S.SocialGroup>
           <SocialLinks />
 
-          <Button>
-            <a
-              download
-              href='/documents/resume.pdf'
-            >
-              Download CV
-            </a>
-          </Button>
+          <a
+            download
+            href='/documents/resume.pdf'
+          >
+            <Button>Download CV</Button>
+          </a>
         </S.SocialGroup>
       </div>
 

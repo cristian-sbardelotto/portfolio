@@ -42,6 +42,10 @@ export const NavLinks = styled.nav<NavLinksProps>`
 
     animation: appear 0.2s;
 
+    .contact-link {
+      display: none;
+    }
+
     @media screen and (max-width: 768px) {
       padding: 2rem;
       display: ${({ ismenuopen }) => (ismenuopen === 'true' ? 'flex' : 'none')};
@@ -53,6 +57,10 @@ export const NavLinks = styled.nav<NavLinksProps>`
 
       border-radius: 1rem;
       background-color: ${({ theme }) => theme.colors.altBackground};
+
+      .contact-link {
+        display: inline-block;
+      }
     }
   }
 
@@ -94,7 +102,7 @@ export const NavMenuGroup = styled.div`
   }
 
   @media screen and (max-width: 768px) {
-    button:has(a) {
+    .contact-button {
       display: none;
     }
   }
@@ -107,6 +115,14 @@ export const NavButton = styled.button`
   border: none;
   background: transparent;
   color: ${({ theme }) => theme.colors.text};
+
+  .list-icon {
+    transition: filter 0.4s;
+
+    &:hover {
+      filter: brightness(0.7);
+    }
+  }
 
   @media screen and (max-width: 768px) {
     display: block;
