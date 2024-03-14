@@ -6,15 +6,13 @@ import { Header } from '@/components/Header';
 import { GlobalStyle } from '@/styles/GlobalStyle';
 import { ThemeProvider } from 'styled-components';
 
-import { useTheme } from '@/hooks/useTheme';
+import theme from '@/styles/theme';
 import { ChildrenComponentProps } from '@/types';
 import { Inter } from 'next/font/google';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export default function RootLayout({ children }: ChildrenComponentProps) {
-  const { theme, toggleTheme } = useTheme();
-
   return (
     <ThemeProvider theme={theme}>
       <html lang='pt-br'>
@@ -28,10 +26,7 @@ export default function RootLayout({ children }: ChildrenComponentProps) {
           className={inter.className}
           suppressHydrationWarning={true}
         >
-          <Header
-            toggleTheme={toggleTheme}
-            theme={theme}
-          />
+          <Header />
 
           {children}
 

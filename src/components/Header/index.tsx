@@ -3,17 +3,11 @@ import { useState } from 'react';
 
 import { Button } from '../Button';
 
-import { Sun, Moon, AlignJustify, X } from 'lucide-react';
+import { AlignJustify, X } from 'lucide-react';
 
-import { DefaultTheme } from 'styled-components';
 import * as S from './styles';
 
-type HeaderProps = {
-  theme: DefaultTheme;
-  toggleTheme: () => void;
-};
-
-export function Header({ theme, toggleTheme }: HeaderProps) {
+export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState<'true' | 'false'>('false');
 
   return (
@@ -44,12 +38,6 @@ export function Header({ theme, toggleTheme }: HeaderProps) {
       </S.NavLinks>
 
       <S.NavMenuGroup>
-        {theme.title === 'dark' ? (
-          <Moon onClick={toggleTheme} />
-        ) : (
-          <Sun onClick={toggleTheme} />
-        )}
-
         <Button>
           <Link href='/contact'>Contact me</Link>
         </Button>
