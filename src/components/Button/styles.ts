@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 export const StyledButton = styled.button`
-  width: 10.75rem;
-  height: 4.5rem;
+  padding: 1rem 1.5rem;
 
-  border: 2px solid ${({ theme }) => theme.colors.text};
+  border: ${({ theme }) => theme.borders.mainLight};
+  color: ${({ theme }) => theme.colors.text};
   border-radius: 8px;
   background: transparent;
   font-family: '__Inter_aaf875', sans-serif;
@@ -14,18 +14,7 @@ export const StyledButton = styled.button`
 
   &:hover {
     background: ${({ theme }) => theme.colors.text};
-
-    * {
-      color: ${({ theme }) => theme.colors.background};
-    }
-  }
-
-  a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    font-family: '__Inter_aaf875', sans-serif;
+    color: ${({ theme }) => theme.colors.background};
+    cursor: pointer;
   }
 `;

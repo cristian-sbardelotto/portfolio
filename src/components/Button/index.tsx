@@ -1,6 +1,8 @@
-import { ChildrenComponentProps } from '@/types';
 import * as S from './styles';
+import { ComponentPropsWithoutRef } from 'react';
 
-export function Button({ children }: ChildrenComponentProps) {
-  return <S.StyledButton>{children}</S.StyledButton>;
+type ButtonProps = ComponentPropsWithoutRef<'button'>;
+
+export function Button({ children, ...rest }: ButtonProps) {
+  return <S.StyledButton {...rest}>{children}</S.StyledButton>;
 }
