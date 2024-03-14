@@ -22,8 +22,8 @@ export const Header = styled.header`
   justify-content: space-between;
   align-items: center;
 
-  border-bottom: 1px solid
-    ${({ theme }) => (theme.title === 'light' ? '#0005' : '#fff5')};
+  border-bottom: 1px solid #fff2;
+  border-radius: 7px;
   animation: appear 0.5s;
 
   h1 {

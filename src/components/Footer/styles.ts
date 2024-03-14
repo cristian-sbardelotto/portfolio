@@ -12,7 +12,9 @@ export const Footer = styled.footer`
   bottom: 0;
   z-index: 2;
 
-  background-color: ${({ theme }) => theme.colors.altBackground};
+  backdrop-filter: blur(5px);
+  border-top: 1px solid #fff2;
+  border-radius: 7px;
 
   > p {
     color: ${({ theme }) => theme.colors.text};
