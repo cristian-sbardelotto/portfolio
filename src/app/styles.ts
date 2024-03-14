@@ -74,10 +74,11 @@ export const Article = styled.article`
   margin: 2rem 0 2rem 0;
   display: flex;
   flex-direction: column;
-  gap: 3vh;
+  gap: 2rem;
 
   max-width: 50vw;
-  font-size: 2rem;
+  font-size: 1.8rem;
+  line-height: 150%;
 
   p {
     display: flex;

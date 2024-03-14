@@ -13,7 +13,8 @@ export const Footer = styled.footer`
   z-index: 2;
 
   backdrop-filter: blur(5px);
-  border-top: 1px solid #fff2;
+  background-color: #09090bcc;
+  border-top: ${({ theme }) => theme.borders.mainLight};
   border-radius: 7px;
 
   > p {
