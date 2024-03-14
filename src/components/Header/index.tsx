@@ -8,7 +8,7 @@ import { AlignJustify, X } from 'lucide-react';
 import * as S from './styles';
 
 export function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState<'true' | 'false'>('false');
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <S.Header>
@@ -18,21 +18,24 @@ export function Header() {
         </Link>
       </h1>
 
-      <S.NavLinks ismenuopen={isMenuOpen}>
+      <S.NavLinks ismenuopen={isMenuOpen ? 1 : 0}>
         <ul>
-          <li>
+          <li onClick={() => setIsMenuOpen(false)}>
             <Link href='/about'>About me</Link>
           </li>
 
-          <li>
+          <li onClick={() => setIsMenuOpen(false)}>
             <Link href='/skills'>Skills</Link>
           </li>
 
-          <li>
+          <li onClick={() => setIsMenuOpen(false)}>
             <Link href='/projects'>Projects</Link>
           </li>
 
-          <li className='contact-link'>
+          <li
+            onClick={() => setIsMenuOpen(false)}
+            className='contact-link'
+          >
             <Link href='/contact'>Contact me</Link>
           </li>
         </ul>
@@ -47,15 +50,15 @@ export function Header() {
         </Link>
 
         <S.NavButton>
-          {isMenuOpen === 'true' ? (
+          {isMenuOpen ? (
             <X
               className='list-icon'
-              onClick={() => setIsMenuOpen('false')}
+              onClick={() => setIsMenuOpen(false)}
             />
           ) : (
             <AlignJustify
               className='list-icon'
-              onClick={() => setIsMenuOpen('true')}
+              onClick={() => setIsMenuOpen(true)}
             />
           )}
         </S.NavButton>

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Title } from '@/styles/utils';
 
 type NavLinksProps = {
-  ismenuopen: string;
+  ismenuopen: boolean | number; // boolean or 0 | 1
 };
 
 export const Header = styled.header`
@@ -48,7 +48,7 @@ export const NavLinks = styled.nav<NavLinksProps>`
 
     @media screen and (max-width: 768px) {
       padding: 2rem;
-      display: ${({ ismenuopen }) => (ismenuopen === 'true' ? 'flex' : 'none')};
+      display: ${({ ismenuopen }) => (ismenuopen ? 'flex' : 'none')};
       flex-direction: column;
 
       position: absolute;
