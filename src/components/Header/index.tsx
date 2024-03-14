@@ -14,7 +14,7 @@ export function Header() {
     <S.Header>
       <h1>
         <Link href='/'>
-          Cristian <span>Sbardelotto</span>
+          C <span>Sbardelotto</span>
         </Link>
       </h1>
 
