@@ -128,13 +128,6 @@ export const ImageGroup = styled.div`
   flex-direction: column;
   justify-content: space-around;
 
-  div {
-    width: 100%;
-
-    display: flex;
-    justify-content: space-evenly;
-  }
-
   @media screen and (max-width: 1024px) {
     flex-direction: column-reverse !important;
   }

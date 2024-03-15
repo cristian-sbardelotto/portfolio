@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const SocialLinks = styled.ul`
   display: flex;
+  align-items: center;
   gap: 2rem;
 
   list-style: none;
@@ -16,6 +17,6 @@ export const SocialLinks = styled.ul`
   }
 
   @media screen and (max-width: 768px) {
-    gap: 0.5rem;
+    gap: 1rem;
   }
 `;
