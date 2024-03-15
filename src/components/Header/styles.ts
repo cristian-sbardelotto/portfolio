@@ -28,7 +28,13 @@ export const Header = styled.header`
 
   h1 {
     ${Title}
+
     font-size: 2.5rem;
+    transition: 0.3s filter;
+
+    &:hover {
+      filter: brightness(0.8);
+    }
   }
 `;
 
