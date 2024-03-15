@@ -17,35 +17,23 @@ export const Footer = styled.footer`
   border-top: ${({ theme }) => theme.borders.mainLight};
   border-radius: 7px;
 
-  > p {
+  > a {
     color: ${({ theme }) => theme.colors.text};
     font-weight: 500;
-    font-size: 1.4rem;
-  }
+    font-size: 1.75rem;
 
-  > button {
-    width: 5rem;
-    height: 5rem;
+    transition: filter 0.3s;
 
-    background-color: ${({ theme }) => theme.colors.alt};
-    border: none;
-    border-radius: 50%;
+    &:hover {
+      filter: brightness(0.7);
+    }
   }
 
   @media screen and (max-width: 768px) {
-    padding: 2rem 0;
-    justify-content: space-around;
+    padding: 2rem 1rem;
 
-    > p {
+    > a {
       font-size: 1.2rem;
-    }
-
-    > button {
-      display: none;
-    }
-
-    svg {
-      height: 20px;
     }
   }
 `;

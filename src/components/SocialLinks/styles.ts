@@ -18,5 +18,10 @@ export const SocialLinks = styled.ul`
 
   @media screen and (max-width: 768px) {
     gap: 1rem;
+
+    svg {
+      height: 18px;
+      width: 18px;
+    }
   }
 `;
