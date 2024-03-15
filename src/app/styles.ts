@@ -123,20 +123,6 @@ export const Article = styled.article`
   }
 `;
 
-export const SocialGroup = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-right: 2rem;
-
-  @media screen and (max-width: 768px) {
-    button {
-      display: none;
-    }
-  }
-`;
-
 export const ImageGroup = styled.div`
   display: flex;
   flex-direction: column;
@@ -148,14 +134,18 @@ export const ImageGroup = styled.div`
     display: flex;
     justify-content: space-evenly;
   }
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column-reverse !important;
+  }
 `;
 
 export const StyledImage = styled(Image)`
   border-radius: 50%;
 
   @media screen and (max-width: 1024px) {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
 
     align-self: center;
   }

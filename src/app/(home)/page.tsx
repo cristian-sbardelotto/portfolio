@@ -49,14 +49,12 @@ export default function Home() {
           </p>
         </S.Article>
 
-        <S.SocialGroup>
-          <a
-            download
-            href='/documents/resume.pdf'
-          >
-            <Button variant='light'>Download CV</Button>
-          </a>
-        </S.SocialGroup>
+        <a
+          download
+          href='/documents/resume.pdf'
+        >
+          <Button variant='light'>Download CV</Button>
+        </a>
       </div>
 
       <S.ImageGroup className='image-group'>
