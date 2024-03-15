@@ -3,7 +3,7 @@ const theme = {
     background: '#09090B',
     altBackground: '#121214',
     text: '#FAFAF9',
-    altText: '#8E8D95',
+    altText: '#a8a29e',
 
     alt: '#F97316',
   },

@@ -24,24 +24,31 @@ export default function Home() {
         </S.StyledTitle>
 
         <S.Article>
-          <p>Hey there! My name is Cristian Sbardelotto.</p>
           <p>
-            I started studying Web Programming in August 2022, and since then, I
-            feel more and more inspired and willing to pursue my career in the
-            area.
+            Hey there! My name is <span>Cristian Sbardelotto.</span>
           </p>
 
           <p>
-            My current goal is to get my first job and, in the future, become a
-            Tech Lead.
+            I started studying <span>Web Programming</span> in August 2022, and
+            since then, I feel more and more <span>inspired and willing</span>{' '}
+            to pursue my career in the area.
           </p>
 
           <p>
-            My main technologies are Javascript/Typescript, React, NextJS,
-            Styled-Components, NodeJS and Prisma + Fastify.
+            My current <span>goal</span> is to get my first job and, in the
+            future, become a <span>Tech Lead</span>.
           </p>
 
           <p>
+            My main technologies are{' '}
+            <span>
+              Javascript, Typescript, React, NextJS, TailwindCSS, NodeJS,
+              Prisma, Fastify, Express
+            </span>
+            .
+          </p>
+
+          <p className='p-about-me'>
             Know more about me{' '}
             <Link href='/about'>
               here <ChevronRight size={18} />

@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import styled from 'styled-components';
 
 export const StyledButton = styled.button<{ variant: 'default' | 'light' }>`

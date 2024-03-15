@@ -93,9 +93,11 @@ export const Article = styled.article`
   line-height: 150%;
 
   p {
-    display: flex;
-    gap: 6px;
-    align-items: center;
+    color: ${({ theme }) => theme.colors.altText};
+
+    span {
+      color: ${({ theme }) => theme.colors.text};
+    }
 
     a {
       display: flex;
@@ -115,6 +117,12 @@ export const Article = styled.article`
         }
       }
     }
+  }
+
+  .p-about-me {
+    display: flex;
+    gap: 6px;
+    align-items: center;
   }
 
   @media screen and (max-width: 1024px) {
