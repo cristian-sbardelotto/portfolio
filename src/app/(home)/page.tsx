@@ -7,7 +7,7 @@ import { ChevronRight } from 'lucide-react';
 import { Button } from '@/components/Button';
 import { Line } from '@/components/Line';
 import { SocialLinks } from '@/components/SocialLinks';
-import * as S from './styles';
+import * as S from '../styles';
 
 export default function Home() {
   return (
