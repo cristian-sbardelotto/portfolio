@@ -1,14 +1,8 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 
 import { ChevronRight } from 'lucide-react';
-
-import nextjs from '@/../public/assets/nextjs.svg';
-import nodejs from '@/../public/assets/nodejs.svg';
-import typescript from '@/../public/assets/typescript.svg';
-import windows from '@/../public/assets/windows.svg';
 
 import { Button } from '@/components/Button';
 import { Line } from '@/components/Line';
@@ -50,14 +44,12 @@ export default function Home() {
           <p>
             Know more about me{' '}
             <Link href='/about'>
-              here <ChevronRight />
+              here <ChevronRight size={18} />
             </Link>
           </p>
         </S.Article>
 
         <S.SocialGroup>
-          <SocialLinks />
-
           <a
             download
             href='/documents/resume.pdf'
@@ -67,7 +59,7 @@ export default function Home() {
         </S.SocialGroup>
       </div>
 
-      <S.ImageGroup>
+      <S.ImageGroup className='image-group'>
         <S.StyledImage
           src='https://github.com/cristian-sbardelotto.png'
           alt="Cristian Sbardelotto's profile picture"
@@ -76,39 +68,7 @@ export default function Home() {
           priority={true}
         />
 
-        <div>
-          <Image
-            src={typescript}
-            alt='Typescript Logo'
-            title='Typescript'
-            height={40}
-            width={40}
-          />
-
-          <Image
-            src={nextjs}
-            alt='Next.js Logo'
-            title='Next.js'
-            height={40}
-            width={40}
-          />
-
-          <Image
-            src={nodejs}
-            alt='Node.js Logo'
-            title='Node.js'
-            height={40}
-            width={40}
-          />
-
-          <Image
-            src={windows}
-            alt='Windows Logo'
-            title='Windows'
-            height={40}
-            width={40}
-          />
-        </div>
+        <SocialLinks />
       </S.ImageGroup>
     </S.Container>
   );
