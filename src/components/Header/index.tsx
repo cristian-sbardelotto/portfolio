@@ -46,7 +46,7 @@ export function Header() {
           className='contact-button'
           href='/contact'
         >
-          <Button>Contact me</Button>
+          <Button variant='default'>Contact me</Button>
         </Link>
 
         <S.NavButton>

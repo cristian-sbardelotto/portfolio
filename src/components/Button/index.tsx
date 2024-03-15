@@ -1,8 +1,17 @@
 import * as S from './styles';
 import { ComponentPropsWithoutRef } from 'react';
 
-type ButtonProps = ComponentPropsWithoutRef<'button'>;
+type ButtonProps = ComponentPropsWithoutRef<'button'> & {
+  variant: 'default' | 'light';
+};
 
-export function Button({ children, ...rest }: ButtonProps) {
-  return <S.StyledButton {...rest}>{children}</S.StyledButton>;
+export function Button({ children, variant, ...rest }: ButtonProps) {
+  return (
+    <S.StyledButton
+      variant={variant}
+      {...rest}
+    >
+      {children}
+    </S.StyledButton>
+  );
 }

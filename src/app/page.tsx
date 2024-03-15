@@ -54,7 +54,7 @@ export default function Home() {
             download
             href='/documents/resume.pdf'
           >
-            <Button>Download CV</Button>
+            <Button variant='light'>Download CV</Button>
           </a>
         </S.SocialGroup>
       </div>

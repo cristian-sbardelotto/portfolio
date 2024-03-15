@@ -21,9 +21,9 @@ export default function NotFoundError() {
 
         <h3>Oops! It looks like you've accessed a page that doesn't exist.</h3>
 
-        <Button>
-          <Link href='/'>Go back to home</Link>
-        </Button>
+        <Link href='/'>
+          <Button variant='default'>Go back to home</Button>
+        </Link>
       </div>
     </S.Error404Page>
   );
