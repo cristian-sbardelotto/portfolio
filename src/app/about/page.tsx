@@ -42,34 +42,51 @@ export default function About() {
           My <span>experience</span>
         </S.StyledTitle>
 
-        <ExperienceCard
-          title='Curso de Javascript'
-          image='https://github.com/cursoemvideo.png'
-          teacher='Gustavo Guanabara'
-          teacherProfile='https://www.instagram.com/gustavoguanabara/'
-        >
-          One notable course I completed was the Javascript course taught by
-          Gustavo Guanabara, an experienced and renowned instructor in the
-          field, known for his incredible teaching methodology. This course
-          provided me with a comprehensive understanding of Javascript, which
-          also covered programming logic, helping me develop dynamic and
-          interactive websites.
-        </ExperienceCard>
+        <ExperienceCard.Root>
+          <ExperienceCard.Header image='https://github.com/cursoemvideo.png'>
+            Curso de Javascript
+          </ExperienceCard.Header>
 
-        <ExperienceCard
-          title='Curso de FullStack Developer'
-          image='https://media.eadbox.com/system/uploads/saas/toolbar_logo/5cb73db87ec70e00217d02c9/icone_escola.jpg'
-          teacher='Imagine School'
-          teacherProfile='https://imagineschool.com.br/'
-        >
-          Another experience I had was the FullStack course at Imagine School,
-          which greatly complemented my learning in both front-end and back-end
-          development. During the course, I had the rewarding opportunity to act
-          as a student monitor, where I was responsible for supporting the
-          course students by answering their questions and guiding them through
-          their difficulties. This experience significantly helped me build my
-          communication, mentoring, and public speaking skills.
-        </ExperienceCard>
+          <ExperienceCard.Info
+            date='Oct. 2023'
+            experienceUrl='https://www.cursoemvideo.com/'
+          >
+            Curso em Vídeo
+          </ExperienceCard.Info>
+
+          <ExperienceCard.Description>
+            One notable course I completed was the Javascript course taught by
+            Gustavo Guanabara, an experienced and renowned instructor in the
+            field, known for his incredible teaching methodology. This course
+            provided me with a comprehensive understanding of Javascript, which
+            also covered programming logic, helping me develop dynamic and
+            interactive websites.
+          </ExperienceCard.Description>
+        </ExperienceCard.Root>
+
+        <ExperienceCard.Root>
+          <ExperienceCard.Header image='https://media.eadbox.com/system/uploads/saas/toolbar_logo/5cb73db87ec70e00217d02c9/icone_escola.jpg'>
+            Curso de FullStack Developer
+          </ExperienceCard.Header>
+
+          <ExperienceCard.Info
+            date='Oct. 2022 - Sep. 2023'
+            experienceUrl='https://imagineschool.com.br/'
+          >
+            Imagine School
+          </ExperienceCard.Info>
+
+          <ExperienceCard.Description>
+            Another experience I had was the FullStack course at Imagine School,
+            which greatly complemented my learning in both front-end and
+            back-end development. During the course, I had the rewarding
+            opportunity to act as a student monitor, where I was responsible for
+            supporting the course students by answering their questions and
+            guiding them through their difficulties. This experience
+            significantly helped me build my communication, mentoring, and
+            public speaking skills.
+          </ExperienceCard.Description>
+        </ExperienceCard.Root>
       </section>
     </S.Container>
   );
