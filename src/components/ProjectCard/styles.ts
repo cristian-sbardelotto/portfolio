@@ -47,7 +47,6 @@ export const TechnologiesGroup = styled.div`
 
   span {
     font-size: 1.3rem;
-    font-weight: 700;
     color: #737271;
   }
 `;
