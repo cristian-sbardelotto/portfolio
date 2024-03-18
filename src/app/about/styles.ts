@@ -9,7 +9,7 @@ export const Container = styled.div`
   }
 `;
 
-export const SytledTitle = styled.h2`
+export const StyledTitle = styled.h2`
   ${Title};
 
   margin-bottom: 3rem;

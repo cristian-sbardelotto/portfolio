@@ -7,9 +7,9 @@ export default function About() {
   return (
     <S.Container>
       <div>
-        <S.SytledTitle>
+        <S.StyledTitle>
           About <span>me</span>
-        </S.SytledTitle>
+        </S.StyledTitle>
 
         <S.Article>
           <p>
@@ -38,9 +38,9 @@ export default function About() {
       </div>
 
       <section>
-        <S.SytledTitle>
+        <S.StyledTitle>
           My <span>experience</span>
-        </S.SytledTitle>
+        </S.StyledTitle>
 
         <ExperienceCard
           title='Curso de Javascript'
