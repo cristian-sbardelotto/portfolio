@@ -6,13 +6,13 @@ import * as S from './styles';
 type ExperienceCardInfoProps = {
   children: ReactNode | string;
   experienceUrl: string;
-  date: string;
+  duration: string;
 };
 
 export function ExperienceCardInfo({
   children,
   experienceUrl,
-  date,
+  duration,
 }: ExperienceCardInfoProps) {
   return (
     <S.Container>
@@ -26,7 +26,7 @@ export function ExperienceCardInfo({
         </Link>
       </S.Span>
 
-      <S.Span>{date}</S.Span>
+      <S.Span>{duration}</S.Span>
     </S.Container>
   );
 }

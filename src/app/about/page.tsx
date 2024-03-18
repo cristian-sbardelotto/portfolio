@@ -1,6 +1,8 @@
 'use client';
 
 import { ExperienceCard } from '@/components/ExperienceCard';
+import { experiences } from '@/data/experiencesMock';
+
 import * as S from './styles';
 
 export default function About() {
@@ -42,51 +44,24 @@ export default function About() {
           My <span>experience</span>
         </S.StyledTitle>
 
-        <ExperienceCard.Root>
-          <ExperienceCard.Header image='https://github.com/cursoemvideo.png'>
-            Curso de Javascript
-          </ExperienceCard.Header>
+        {experiences.map(experience => (
+          <ExperienceCard.Root key={experience.id}>
+            <ExperienceCard.Header image={experience.company.image}>
+              {experience.name}
+            </ExperienceCard.Header>
 
-          <ExperienceCard.Info
-            date='Oct. 2023'
-            experienceUrl='https://www.cursoemvideo.com/'
-          >
-            Curso em Vídeo
-          </ExperienceCard.Info>
+            <ExperienceCard.Info
+              duration={experience.duration}
+              experienceUrl={experience.company.url}
+            >
+              {experience.company.name}
+            </ExperienceCard.Info>
 
-          <ExperienceCard.Description>
-            One notable course I completed was the Javascript course taught by
-            Gustavo Guanabara, an experienced and renowned instructor in the
-            field, known for his incredible teaching methodology. This course
-            provided me with a comprehensive understanding of Javascript, which
-            also covered programming logic, helping me develop dynamic and
-            interactive websites.
-          </ExperienceCard.Description>
-        </ExperienceCard.Root>
-
-        <ExperienceCard.Root>
-          <ExperienceCard.Header image='https://media.eadbox.com/system/uploads/saas/toolbar_logo/5cb73db87ec70e00217d02c9/icone_escola.jpg'>
-            Curso de FullStack Developer
-          </ExperienceCard.Header>
-
-          <ExperienceCard.Info
-            date='Oct. 2022 - Sep. 2023'
-            experienceUrl='https://imagineschool.com.br/'
-          >
-            Imagine School
-          </ExperienceCard.Info>
-
-          <ExperienceCard.Description>
-            Another experience I had was the FullStack course at Imagine School,
-            which greatly complemented my learning in both front-end and
-            back-end development. During the course, I had the rewarding
-            opportunity to act as a student monitor, where I was responsible for
-            supporting the course students by answering their questions and
-            guiding them through their difficulties. This experience
-            significantly helped me build my communication, mentoring, and
-            public speaking skills.
-          </ExperienceCard.Description>
-        </ExperienceCard.Root>
+            <ExperienceCard.Description>
+              {experience.description}
+            </ExperienceCard.Description>
+          </ExperienceCard.Root>
+        ))}
       </section>
     </S.Container>
   );
