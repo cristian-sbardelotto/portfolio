@@ -48,6 +48,11 @@ export const NavLinks = styled.nav<NavLinksProps>`
 
     animation: appear 0.2s;
 
+    .active {
+      color: ${({ theme }) => theme.colors.alt};
+      pointer-events: none;
+    }
+
     .contact-link {
       display: none;
     }

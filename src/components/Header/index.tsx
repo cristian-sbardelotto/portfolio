@@ -1,13 +1,15 @@
 import Link from 'next/link';
 import { useState } from 'react';
 
+import { usePathname } from 'next/navigation';
+
 import { Button } from '../Button';
+import * as S from './styles';
 
 import { AlignJustify, X } from 'lucide-react';
 
-import * as S from './styles';
-
 export function Header() {
+  const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -21,15 +23,30 @@ export function Header() {
       <S.NavLinks ismenuopen={isMenuOpen ? 1 : 0}>
         <ul>
           <li onClick={() => setIsMenuOpen(false)}>
-            <Link href='/about'>About me</Link>
+            <Link
+              className={pathname === '/about' ? 'active' : ''}
+              href='/about'
+            >
+              About me
+            </Link>
           </li>
 
           <li onClick={() => setIsMenuOpen(false)}>
-            <Link href='/skills'>Skills</Link>
+            <Link
+              className={pathname === '/skills' ? 'active' : ''}
+              href='/skills'
+            >
+              Skills
+            </Link>
           </li>
 
           <li onClick={() => setIsMenuOpen(false)}>
-            <Link href='/projects'>Projects</Link>
+            <Link
+              className={pathname === '/projects' ? 'active' : ''}
+              href='/projects'
+            >
+              Projects
+            </Link>
           </li>
 
           <li
