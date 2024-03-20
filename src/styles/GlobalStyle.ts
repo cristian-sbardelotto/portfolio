@@ -31,6 +31,11 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
+
+    &::selection {
+      background-color: #98ff96;
+      color: ${({ theme }) => theme.colors.background};
+    }
   }
 
   body {
