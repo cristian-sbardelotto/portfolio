@@ -15,7 +15,7 @@ const inter = Inter({ subsets: ['latin'] });
 export default function RootLayout({ children }: ChildrenComponentProps) {
   return (
     <ThemeProvider theme={theme}>
-      <html lang='pt-br'>
+      <html lang='en'>
         <GlobalStyle />
 
         <head>
