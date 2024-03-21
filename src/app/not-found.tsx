@@ -2,13 +2,13 @@
 
 import Link from 'next/link';
 
-import * as S from './styles';
+import * as S from './(not-found)/styles';
 
 import { Button } from '@/components/Button';
 
 export default function NotFoundError() {
   return (
-    <S.Error404Page>
+    <S.Container>
       <div>
         <h2>404</h2>
 
@@ -20,6 +20,6 @@ export default function NotFoundError() {
       <Link href='/'>
         <Button variant='default'>Go back to home</Button>
       </Link>
-    </S.Error404Page>
+    </S.Container>
   );
 }
