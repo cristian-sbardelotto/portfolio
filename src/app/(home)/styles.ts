@@ -53,12 +53,16 @@ export const StyledTitle = styled.div`
     }
   }
 
-  width: 490px;
+  width: 400px;
 
   border-right: 3px solid;
   white-space: nowrap;
   animation: typing 3.5s steps(21), blink 0.8s infinite alternate;
   overflow: hidden;
+
+  h2 {
+    ${Title};
+  }
 
   @media screen and (max-width: 1440px) {
     width: 370px;
@@ -69,16 +73,11 @@ export const StyledTitle = styled.div`
   }
 
   @media screen and (max-width: 768px) {
-    width: 270px;
+    width: 250px;
 
     h2 {
-      font-size: 2.75rem !important;
+      font-size: 2.5rem !important;
     }
-  }
-
-  h2 {
-    ${Title};
-    font-size: 5rem;
   }
 `;
 
