@@ -1,30 +1,25 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 
 import * as S from './styles';
 
-import astronaut from '@/../public/assets/astronaut.svg';
 import { Button } from '@/components/Button';
 
 export default function NotFoundError() {
   return (
     <S.Error404Page>
-      <Image
-        src={astronaut}
-        alt='Image of an astronaut on a rocket'
-      />
-
       <div>
         <h2>404</h2>
 
-        <h3>Oops! It looks like you've accessed a page that doesn't exist.</h3>
+        <div className='separator' />
 
-        <Link href='/'>
-          <Button variant='default'>Go back to home</Button>
-        </Link>
+        <p>This page could not be found.</p>
       </div>
+
+      <Link href='/'>
+        <Button variant='default'>Go back to home</Button>
+      </Link>
     </S.Error404Page>
   );
 }

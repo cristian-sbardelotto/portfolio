@@ -156,69 +156,43 @@ export const Error404Page = styled.main`
   height: 70vh;
 
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  gap: 2rem;
 
-  img {
-    width: 300px;
-    height: 300px;
-  }
+  > div {
+    padding-inline: 1rem;
+    text-align: center;
 
-  div {
-    height: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
 
     h2 {
-      font-size: 7rem;
-      color: ${({ theme }) => theme.colors.alt};
+      font-size: 4rem;
     }
 
-    h3 {
+    .separator {
+      width: 1.5px;
+      height: 30px;
+      background: #262525;
+    }
+
+    p {
       font-size: 2rem;
-    }
-
-    button {
-      width: 300px;
-      height: 70px;
-      font-size: 1.8rem;
-
-      a {
-        width: 100%;
-        height: 100%;
-      }
+      color: ${({ theme }) => theme.colors.altText};
+      font-weight: 400;
     }
   }
 
   @media screen and (max-width: 768px) {
-    flex-direction: column;
-
-    div {
-      padding: 0 3rem;
-
+    > div {
       flex-direction: column;
-      align-items: center;
-      gap: 2rem;
 
-      h2 {
-        font-size: 4rem;
+      .separator {
+        display: none;
       }
-
-      h3 {
-        font-size: 1.5rem;
-      }
-
-      button {
-        width: 150px;
-        height: 40px;
-        font-size: 1.3rem;
-      }
-    }
-
-    img {
-      width: 200px;
-      height: 200px;
     }
   }
 `;
