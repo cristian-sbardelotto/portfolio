@@ -1,6 +1,15 @@
 import { Title } from '@/styles/utils';
 import Image from 'next/image';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const pulse = keyframes`
+ 0% {
+    box-shadow: 0 0 0 0px #fff1;
+  }
+  100% {
+    box-shadow: 0 0 0 20px #fff0;
+  }
+`;
 
 export const Container = styled.main`
   width: 100%;
@@ -9,6 +18,7 @@ export const Container = styled.main`
 
   display: flex;
   justify-content: space-around;
+  gap: 3rem;
 
   > div {
     display: flex;
@@ -141,6 +151,12 @@ export const ImageGroup = styled.div`
 
 export const StyledImage = styled(Image)`
   border-radius: 50%;
+  transition: scale 0.3s;
+  animation: ${pulse} 2s infinite;
+
+  &:hover {
+    scale: 1.02;
+  }
 
   @media screen and (max-width: 1024px) {
     width: 200px;
