@@ -27,5 +27,10 @@ export const Article = styled.article`
 
   p {
     margin-bottom: 2rem;
+    color: ${({ theme }) => theme.colors.altText};
+  }
+
+  span {
+    color: ${({ theme }) => theme.colors.text};
   }
 `;
