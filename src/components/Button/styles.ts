@@ -4,6 +4,10 @@ import styled from 'styled-components';
 export const StyledButton = styled.button<{ variant: 'default' | 'light' }>`
   padding: 1rem 1.5rem;
 
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
   border: ${({ theme }) => theme.borders.mainLight};
   color: ${({ theme, variant }) =>
     variant === 'default' ? theme.colors.text : theme.colors.background};

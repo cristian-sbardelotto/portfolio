@@ -2,15 +2,14 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 
 import { AreaProps } from '@/types';
-
-import usa from '@/../public/assets/usa.svg';
-
+import { Button } from '@/components/Button';
 import { SkillsList } from '@/components/SkillsList';
 import { skills } from '@/data/skillsMock';
 import * as S from './styles';
+
+import { GithubIcon } from 'lucide-react';
 
 function renderAreaSkills(area: AreaProps) {
   const frontendSkills = skills.frontend.map((skill, index) => (
@@ -37,11 +36,14 @@ function renderAreaSkills(area: AreaProps) {
     />
   ));
 
-  if (area === 'frontend') return frontendSkills;
-
-  if (area === 'backend') return backendSkills;
-
-  return complementarySkills;
+  switch (area) {
+    case 'backend':
+      return backendSkills;
+    case 'complementary':
+      return complementarySkills;
+    default:
+      return frontendSkills;
+  }
 }
 
 export default function Skills() {
@@ -49,9 +51,20 @@ export default function Skills() {
 
   return (
     <S.Container>
-      <S.StyledTitle>
-        Technologies <span>&</span> Skills
-      </S.StyledTitle>
+      <S.TitleSection>
+        <S.StyledTitle>
+          Technologies <span>&</span> Skills
+        </S.StyledTitle>
+
+        <Link
+          href='https://github.com/cristian-sbardelotto'
+          target='_blank'
+        >
+          <Button variant='light'>
+            <GithubIcon size={20} /> <p>Github</p>
+          </Button>
+        </Link>
+      </S.TitleSection>
 
       <S.SkillsSection>
         <S.SkillsSectionHeader>
@@ -82,33 +95,27 @@ export default function Skills() {
       </S.SkillsSection>
 
       <p>
-        You can{' '}
-        <Link
-          href='https://github.com/cristian-sbardelotto'
-          target='_blank'
-          title='My Github'
-        >
-          visit my Github
-        </Link>{' '}
-        to check out all my projects, or view some of my{' '}
+        You can also check out some of my best/favorite projects{' '}
         <Link
           href='/projects'
           title='My Projects'
         >
-          best/favorite projects here.
+          here.
         </Link>
       </p>
 
-      <p>
-        <Image
-          src={usa}
-          alt='United States Flag Image'
-          width={30}
-          height={30}
-        />
-        I am Brazilian, but I am constantly in contact with English, so I can
-        communicate, read, listen and understand both in English and Portuguese.
-      </p>
+      <S.Languages>
+        <S.Subtitle>Languages</S.Subtitle>
+
+        <ul>
+          <li>
+            <b>Portuguese</b>: native.
+          </li>
+          <li>
+            <b>English</b>: intermediate/advanced level.
+          </li>
+        </ul>
+      </S.Languages>
     </S.Container>
   );
 }

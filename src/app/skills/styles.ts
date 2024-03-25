@@ -16,11 +16,9 @@ export const Container = styled.main`
     padding: 2rem 2rem 12rem 2rem;
   }
 
-  p {
-    margin-top: 5rem;
-
-    text-align: center;
-    font-size: 1.9rem;
+  > p {
+    font-size: 2rem;
+    color: ${({ theme }) => theme.colors.altText};
 
     @media screen and (max-width: 768px) {
       font-size: 1.5rem;
@@ -43,9 +41,16 @@ export const Container = styled.main`
   }
 `;
 
+export const TitleSection = styled.section`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 3rem;
+`;
+
 export const StyledTitle = styled.h2`
   ${Title};
-  margin: 3rem 0 6rem 0;
 `;
 
 export const Skills = styled.ul`
@@ -59,6 +64,7 @@ export const Skills = styled.ul`
 
 export const SkillsSection = styled.section`
   text-align: center;
+  margin-bottom: 2rem;
 `;
 
 export const SkillsSectionHeader = styled.div`
@@ -94,5 +100,31 @@ export const AreaSelector = styled.button<ActiveAreaProps>`
     padding: 0;
 
     border: none;
+  }
+`;
+
+export const Subtitle = styled.h4`
+  font-size: 3.5rem;
+  margin-bottom: 0.75rem;
+`;
+
+export const Languages = styled.div`
+  margin-top: 2rem;
+
+  ul {
+    padding-left: 2rem;
+
+    li {
+      font-size: 1.5rem;
+      color: ${({ theme }) => theme.colors.altText};
+
+      b {
+        color: ${({ theme }) => theme.colors.text};
+      }
+
+      @media screen and (max-width: 768px) {
+        font-size: 1.25rem;
+      }
+    }
   }
 `;
