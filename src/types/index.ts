@@ -1,8 +1,6 @@
 import { StaticImageData } from 'next/image';
 import { ReactNode } from 'react';
 
-export type AreaProps = 'frontend' | 'backend' | 'complementary';
-
 export type ProjectProps = {
   id: string;
   title: string;

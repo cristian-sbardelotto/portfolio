@@ -7,15 +7,15 @@ type SkillsListProps = {
   name: string;
 };
 
-export function SkillsList({ image, name }: SkillsListProps) {
+export function SkillsItem({ image, name }: SkillsListProps) {
   return (
-    <S.ListItem>
+    <S.Container>
       <Image
         src={image}
         alt={`${name} image`}
       />
 
       <span>{name}</span>
-    </S.ListItem>
+    </S.Container>
   );
 }

@@ -3,12 +3,6 @@
 import { Title } from '@/styles/utils';
 import styled from 'styled-components';
 
-import { AreaProps } from '@/types';
-
-type ActiveAreaProps = {
-  activearea: AreaProps;
-};
-
 export const Container = styled.main`
   padding: 2rem 5rem 0 5rem;
 
@@ -75,31 +69,6 @@ export const SkillsSectionHeader = styled.div`
 
   @media screen and (max-width: 524px) {
     flex-direction: column;
-  }
-`;
-
-export const AreaSelector = styled.button<ActiveAreaProps>`
-  padding: 1rem;
-
-  font-size: 1.7rem;
-  font-family: '__Inter_aaf875', sans-serif;
-
-  color: ${({ theme, id, activearea }) =>
-    activearea === id ? theme.colors.alt : theme.colors.text};
-
-  border: 1.5px solid
-    ${({ theme, id, activearea }) =>
-      activearea === id ? theme.colors.alt : theme.colors.text};
-
-  border-radius: 10px;
-  background: transparent;
-
-  cursor: pointer;
-
-  @media screen and (max-width: 524px) {
-    padding: 0;
-
-    border: none;
   }
 `;
 

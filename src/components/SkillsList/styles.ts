@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ListItem = styled.li`
+export const Container = styled.li`
   width: fit-content;
   display: flex;
   flex-direction: column;
