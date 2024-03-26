@@ -65,6 +65,7 @@ export const NavLinks = styled.nav<NavLinksProps>`
       position: absolute;
       right: 7vw;
       top: 11vh;
+      z-index: 100;
 
       border-radius: 1rem;
       background-color: ${({ theme }) => theme.colors.altBackground};

@@ -41,19 +41,32 @@ export const TitleSection = styled.section`
   justify-content: space-between;
 
   margin-bottom: 3rem;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
 `;
 
 export const StyledTitle = styled.h2`
   ${Title};
+
+  @media screen and (max-width: 768px) {
+    font-size: 3.25rem;
+  }
 `;
 
 export const Skills = styled.ul`
   display: flex;
   gap: 2rem;
-  justify-content: center;
   flex-flow: row wrap;
 
   list-style: none;
+
+  @media screen and (max-width: 768px) {
+    padding-right: 1rem;
+    justify-content: center;
+  }
 `;
 
 export const SkillsSection = styled.section`
@@ -73,7 +86,7 @@ export const SkillsSectionHeader = styled.div`
 `;
 
 export const Subtitle = styled.h4`
-  font-size: 3.5rem;
+  font-size: 3rem;
   margin-bottom: 0.75rem;
 `;
 
@@ -97,7 +110,7 @@ export const Languages = styled.div`
       }
 
       @media screen and (max-width: 768px) {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
       }
     }
   }

@@ -33,13 +33,6 @@ export const Container = styled.li`
       width: 4rem;
     }
   }
-
-  span {
-    width: 12rem;
-
-    text-align: center;
-    font-size: 1.2rem;
-  }
 `;
 
 export const StackTitle = styled.p`
@@ -55,4 +48,8 @@ export const StackTitle = styled.p`
   background-color: ${({ theme }) => theme.colors.background};
   font-size: 1.25rem;
   user-select: none;
+
+  @media screen and (max-width: 524px) {
+    left: 25%;
+  }
 `;
