@@ -112,13 +112,18 @@ export const Languages = styled.div`
   margin-top: 2rem;
 
   ul {
+    margin-top: 2rem;
     padding-left: 2rem;
 
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
     li {
-      font-size: 1.5rem;
+      font-size: 1.75rem;
       color: ${({ theme }) => theme.colors.altText};
 
-      b {
+      span {
         color: ${({ theme }) => theme.colors.text};
       }
 

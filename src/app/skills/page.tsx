@@ -109,10 +109,10 @@ export default function Skills() {
 
         <ul>
           <li>
-            <b>Portuguese</b>: native.
+            <span>Portuguese</span>: native.
           </li>
           <li>
-            <b>English</b>: intermediate/advanced level.
+            <span>English</span>: intermediate/advanced level.
           </li>
         </ul>
       </S.Languages>
