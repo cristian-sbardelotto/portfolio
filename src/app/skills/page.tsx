@@ -3,7 +3,7 @@
 import Link from 'next/link';
 
 import { Button } from '@/components/Button';
-import { SkillsItem } from '@/components/SkillsList';
+import { SkillsItem } from '@/components/SkillsItem';
 import { skills } from '@/data/skillsMock';
 import * as S from './styles';
 

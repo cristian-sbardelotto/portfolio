@@ -7,21 +7,19 @@ export const Container = styled.li`
   align-items: center;
   gap: 2rem;
 
-  &:hover {
-    img {
-      scale: 1.2;
-    }
+  border: 1px solid #fff2;
+  border-radius: 15px;
+  background-color: #0d0d0f;
 
-    span {
-      opacity: 1;
-    }
+  transition: 0.7s border;
+
+  &:hover {
+    border: 1px solid ${({ theme }) => theme.colors.alt};
   }
 
   img {
     height: 7rem;
     width: 7rem;
-
-    transition: 0.3s scale;
 
     @media screen and (max-width: 768px) {
       height: 6rem;
@@ -31,11 +29,8 @@ export const Container = styled.li`
 
   span {
     width: 12rem;
-    opacity: 0;
 
     text-align: center;
     font-size: 1.2rem;
-
-    transition: 0.3s opacity;
   }
 `;
