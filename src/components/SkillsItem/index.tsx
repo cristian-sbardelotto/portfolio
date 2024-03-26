@@ -15,7 +15,7 @@ export function SkillsItem({ image, name }: SkillsItemProps) {
         alt={`${name} image`}
       />
 
-      <span>{name}</span>
+      {/* <span>{name}</span> */}
     </S.Container>
   );
 }

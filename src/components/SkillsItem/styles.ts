@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 
 export const Container = styled.li`
-  width: fit-content;
+  width: 87px;
+  height: 87px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 2rem;
 
@@ -18,12 +20,12 @@ export const Container = styled.li`
   }
 
   img {
-    height: 7rem;
-    width: 7rem;
+    height: 5rem;
+    width: 5rem;
 
     @media screen and (max-width: 768px) {
-      height: 6rem;
-      width: 6rem;
+      height: 4rem;
+      width: 4rem;
     }
   }
 
