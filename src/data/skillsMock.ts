@@ -60,10 +60,6 @@ export const skills: SkillsProps[] = [
     image: nodejs,
     name: 'NodeJS',
   },
-  // {
-  //   image: mongodb,
-  //   name: 'MongoDB',
-  // },
   {
     image: fastify,
     name: 'Fastify',

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.li`
+  position: relative;
   width: 87px;
   height: 87px;
   display: flex;
@@ -17,6 +18,10 @@ export const Container = styled.li`
 
   &:hover {
     border: 1px solid ${({ theme }) => theme.colors.alt};
+
+    p {
+      visibility: visible;
+    }
   }
 
   img {
@@ -35,4 +40,19 @@ export const Container = styled.li`
     text-align: center;
     font-size: 1.2rem;
   }
+`;
+
+export const StackTitle = styled.p`
+  visibility: hidden;
+  padding: 0.75rem 1rem;
+  position: absolute;
+  left: 50%;
+  bottom: 65%;
+  z-index: 99;
+
+  border: 1px solid #fff4;
+  border-radius: 8px;
+  background-color: ${({ theme }) => theme.colors.background};
+  font-size: 1.25rem;
+  user-select: none;
 `;
