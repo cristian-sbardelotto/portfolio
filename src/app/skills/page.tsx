@@ -12,55 +12,63 @@ import { GithubIcon } from 'lucide-react';
 export default function Skills() {
   return (
     <S.Container>
-      <S.TitleSection>
-        <S.StyledTitle>
-          Technologies <span>&</span> Skills
-        </S.StyledTitle>
+      <S.Wrapper>
+        <S.TitleSection>
+          <S.StyledTitle>
+            Technologies <span>&</span> Skills
+          </S.StyledTitle>
 
-        <Link
-          href='https://github.com/cristian-sbardelotto'
-          target='_blank'
-        >
-          <Button variant='light'>
-            <GithubIcon size={20} /> <p>Github</p>
-          </Button>
-        </Link>
-      </S.TitleSection>
+          <Link
+            href='https://github.com/cristian-sbardelotto'
+            target='_blank'
+          >
+            <Button variant='light'>
+              <GithubIcon size={20} /> <p>Github</p>
+            </Button>
+          </Link>
+        </S.TitleSection>
 
-      <S.SkillsSection>
-        <S.Skills>
-          {skills.map(skill => (
-            <SkillsItem
-              key={skill.name}
-              image={skill.image}
-              name={skill.name}
-            />
-          ))}
-        </S.Skills>
-      </S.SkillsSection>
+        <S.InfoGroup>
+          <div className='text-group'>
+            <p>
+              <span>Tip:</span> hover the technologies to get their name.
+            </p>
 
-      <p>
-        You can also check out some of my best/favorite projects{' '}
-        <Link
-          href='/projects'
-          title='My Projects'
-        >
-          here.
-        </Link>
-      </p>
+            <p>
+              You can also check out some of my best/favorite projects{' '}
+              <Link
+                href='/projects'
+                title='My Projects'
+              >
+                here.
+              </Link>
+            </p>
+          </div>
 
-      <S.Languages>
-        <S.Subtitle>Languages</S.Subtitle>
+          <S.Skills>
+            {skills.map(skill => (
+              <SkillsItem
+                key={skill.name}
+                image={skill.image}
+                name={skill.name}
+              />
+            ))}
+          </S.Skills>
+        </S.InfoGroup>
 
-        <ul>
-          <li>
-            <span>Portuguese</span>: native.
-          </li>
-          <li>
-            <span>English</span>: intermediate/advanced level.
-          </li>
-        </ul>
-      </S.Languages>
+        <S.Languages>
+          <S.Subtitle>Languages</S.Subtitle>
+
+          <ul>
+            <li>
+              <span>Portuguese</span>: native.
+            </li>
+            <li>
+              <span>English</span>: intermediate/advanced level.
+            </li>
+          </ul>
+        </S.Languages>
+      </S.Wrapper>
     </S.Container>
   );
 }

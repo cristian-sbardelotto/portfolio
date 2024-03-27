@@ -4,34 +4,19 @@ import { Title } from '@/styles/utils';
 import styled from 'styled-components';
 
 export const Container = styled.main`
+  display: flex;
+  justify-content: center;
+
+  @media screen and (max-width: 1024px) {
+    display: initial;
+  }
+`;
+
+export const Wrapper = styled.div`
   padding: 2rem 5rem 0 5rem;
 
   @media screen and (max-width: 768px) {
     padding: 2rem 2rem 12rem 2rem;
-  }
-
-  > p {
-    font-size: 2rem;
-    color: ${({ theme }) => theme.colors.altText};
-
-    @media screen and (max-width: 768px) {
-      font-size: 1.5rem;
-    }
-
-    &:last-child {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
-    }
-
-    a {
-      color: ${({ theme }) => theme.colors.alt};
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
   }
 `;
 
@@ -44,6 +29,7 @@ export const TitleSection = styled.section`
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
+    align-items: start;
     gap: 1.5rem;
   }
 `;
@@ -56,32 +42,63 @@ export const StyledTitle = styled.h2`
   }
 `;
 
-export const Skills = styled.ul`
-  display: flex;
-  gap: 2rem;
-  flex-flow: row wrap;
+export const InfoGroup = styled.section`
+  max-width: 140rem;
 
-  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10rem;
+  padding-inline: 1rem;
 
-  @media screen and (max-width: 768px) {
-    padding-right: 1rem;
-    justify-content: center;
+  .text-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    p {
+      font-size: 1.75rem;
+      color: ${({ theme }) => theme.colors.altText};
+
+      span {
+        color: ${({ theme }) => theme.colors.text};
+      }
+
+      @media screen and (max-width: 768px) {
+        font-size: 1.5rem;
+      }
+
+      a {
+        color: ${({ theme }) => theme.colors.alt};
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
   }
 `;
 
-export const SkillsSection = styled.section`
-  text-align: center;
+export const Skills = styled.ul`
   margin-bottom: 2rem;
-`;
 
-export const SkillsSectionHeader = styled.div`
-  margin-bottom: 5rem;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
   gap: 2rem;
+  justify-self: center;
 
-  @media screen and (max-width: 524px) {
-    flex-direction: column;
+  list-style: none;
+
+  @media screen and (max-width: 1024px) {
+    margin-top: 1.5rem;
+
+    display: flex;
+    flex-wrap: wrap;
   }
 `;
 

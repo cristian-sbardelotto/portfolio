@@ -48,6 +48,7 @@ export const StackTitle = styled.p`
   background-color: ${({ theme }) => theme.colors.background};
   font-size: 1.25rem;
   user-select: none;
+  white-space: nowrap;
 
   @media screen and (max-width: 524px) {
     left: 25%;
