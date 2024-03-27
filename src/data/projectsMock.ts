@@ -2,12 +2,12 @@ import { ProjectProps } from '@/types';
 
 import { v4 as randomUUID } from 'uuid';
 
-import portfolio from '/public/images/portfolio.png';
-import memeCreator from '/public/images/meme-creator.png';
-import studion from '/public/images/studion.png';
-import todoList from '/public/images/todo-list.png';
-import cristianOS from '/public/images/cristian-os.png';
-import devPolls from '/public/images/dev-polls.png';
+import portfolio from '/public/assets/projects/portfolio.svg';
+import memeCreator from '/public/assets/projects/meme-creator.svg';
+import studionBackend from '/public/assets/projects/studion-backend.svg';
+import todoList from '/public/assets/projects/todo-list.svg';
+import cristianOS from '/public/assets/projects/cristian-os.svg';
+import devPolls from '/public/assets/projects/dev-polls.svg';
 
 export const projects: ProjectProps[] = [
   {
@@ -47,7 +47,7 @@ export const projects: ProjectProps[] = [
   {
     id: randomUUID(),
     title: 'Studion Backend',
-    image: studion,
+    image: studionBackend,
     description:
       'Manage and view events effortlessly. Register, list, and interact with detailed information. Efficient and flexible.',
     technologies: ['typescript', 'nodejs', 'fastify', 'prisma'],

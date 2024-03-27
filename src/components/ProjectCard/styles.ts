@@ -52,18 +52,31 @@ export const TechnologiesGroup = styled.div`
 `;
 
 export const ImageGroup = styled.div`
-  img {
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     height: 220px;
-    width: 100%;
-    border-radius: 5px;
+
+    background-color: #0d0d0f;
+    border: ${({ theme }) => theme.borders.mainLight};
 
     transition: all 0.3s;
 
+    img {
+      transition: scale 0.3s;
+    }
+
     &:hover {
-      box-shadow: #7e74f171 -5px 5px, #7e74f12f -10px 10px;
+      box-shadow: #f974167c -5px 5px;
       cursor: pointer;
       filter: brightness(0.9);
       transform: translate(0.5rem, -0.5rem);
+
+      img {
+        scale: 1.1;
+      }
     }
   }
 `;
