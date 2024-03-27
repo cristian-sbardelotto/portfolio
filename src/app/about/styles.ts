@@ -2,7 +2,8 @@ import styled from 'styled-components';
 import { Title } from '@/styles/utils';
 
 export const Container = styled.div`
-  padding: 5rem;
+  max-width: 130rem;
+  padding: 5rem 7.5vw;
 
   @media screen and (max-width: 768px) {
     padding: 2rem;
