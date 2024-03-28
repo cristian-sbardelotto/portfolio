@@ -7,6 +7,7 @@ export const Container = styled.div`
 
   h3 {
     display: inline-block;
+    color: ${({ theme }) => theme.colors.lightText};
 
     font-size: 3rem;
   }

@@ -14,11 +14,13 @@ export const Container = styled.div`
 
   h4 {
     font-size: 2.5rem;
+    color: ${({ theme }) => theme.colors.lightText};
 
     a {
       display: flex;
       gap: 8px;
       align-items: center;
+      color: ${({ theme }) => theme.colors.lightText};
 
       svg {
         display: none;
@@ -60,7 +62,7 @@ export const ImageGroup = styled.div`
     height: 220px;
 
     background-color: #0d0d0f;
-    border: ${({ theme }) => theme.borders.mainLight};
+    border: ${({ theme }) => theme.borders.main};
 
     transition: all 0.3s;
 

@@ -14,11 +14,11 @@ export const Footer = styled.footer`
 
   backdrop-filter: blur(5px);
   background-color: #09090bcc;
-  border-top: ${({ theme }) => theme.borders.mainLight};
+  border-top: ${({ theme }) => theme.borders.main};
   border-radius: 7px;
 
   > a {
-    color: ${({ theme }) => theme.colors.text};
+    color: ${({ theme }) => theme.colors.lightText};
     font-weight: 500;
     font-size: 1.75rem;
 

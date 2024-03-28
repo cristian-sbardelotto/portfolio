@@ -101,17 +101,17 @@ export const Article = styled.article`
   line-height: 150%;
 
   p {
-    color: ${({ theme }) => theme.colors.altText};
+    color: ${({ theme }) => theme.colors.text};
 
     span {
-      color: ${({ theme }) => theme.colors.text};
+      color: ${({ theme }) => theme.colors.lightText};
     }
 
     a {
       display: flex;
       align-items: center;
 
-      color: ${({ theme }) => theme.colors.alt};
+      color: ${({ theme }) => theme.colors.main};
 
       svg {
         transition: 0.2s transform;

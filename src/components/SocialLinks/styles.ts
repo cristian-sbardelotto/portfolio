@@ -8,11 +8,12 @@ export const SocialLinks = styled.ul`
   list-style: none;
 
   li a svg {
+    color: ${({ theme }) => theme.colors.lightText};
     transition: 0.2s color;
 
     &:hover {
       cursor: pointer;
-      color: ${({ theme }) => theme.colors.alt};
+      color: ${({ theme }) => theme.colors.main};
     }
   }
 

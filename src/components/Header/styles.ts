@@ -22,7 +22,7 @@ export const Header = styled.header`
   justify-content: space-between;
   align-items: center;
 
-  border-bottom: ${({ theme }) => theme.borders.mainLight};
+  border-bottom: ${({ theme }) => theme.borders.main};
   border-radius: 7px;
   animation: appear 0.5s;
 
@@ -49,7 +49,7 @@ export const NavLinks = styled.nav<NavLinksProps>`
     animation: appear 0.2s;
 
     .active {
-      color: ${({ theme }) => theme.colors.alt};
+      color: ${({ theme }) => theme.colors.main};
       pointer-events: none;
     }
 
@@ -67,8 +67,9 @@ export const NavLinks = styled.nav<NavLinksProps>`
       top: 11vh;
       z-index: 100;
 
+      border: ${({ theme }) => theme.borders.main};
       border-radius: 1rem;
-      background-color: ${({ theme }) => theme.colors.altBackground};
+      background-color: ${({ theme }) => theme.colors.lightBackground};
 
       .contact-link {
         display: inline-block;
@@ -78,6 +79,7 @@ export const NavLinks = styled.nav<NavLinksProps>`
 
   li a {
     position: relative;
+    color: ${({ theme }) => theme.colors.lightText};
 
     transition: 0.2s all;
 
@@ -89,7 +91,7 @@ export const NavLinks = styled.nav<NavLinksProps>`
       top: 100%;
       left: 5%;
 
-      background-color: ${({ theme }) => theme.colors.text};
+      background-color: ${({ theme }) => theme.colors.lightText};
       visibility: hidden;
 
       transform: scaleX(0);
@@ -126,9 +128,9 @@ export const NavButton = styled.button`
 
   border: none;
   background: transparent;
-  color: ${({ theme }) => theme.colors.text};
 
   .list-icon {
+    color: ${({ theme }) => theme.colors.lightText};
     transition: filter 0.4s;
 
     &:hover {

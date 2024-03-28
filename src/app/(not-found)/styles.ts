@@ -29,7 +29,7 @@ export const Container = styled.main`
 
     p {
       font-size: 2rem;
-      color: ${({ theme }) => theme.colors.altText};
+      color: ${({ theme }) => theme.colors.text};
       font-weight: 400;
     }
   }

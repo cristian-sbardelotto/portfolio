@@ -28,10 +28,10 @@ export const Article = styled.article`
 
   p {
     margin-bottom: 2rem;
-    color: ${({ theme }) => theme.colors.altText};
+    color: ${({ theme }) => theme.colors.text};
   }
 
   span {
-    color: ${({ theme }) => theme.colors.text};
+    color: ${({ theme }) => theme.colors.lightText};
   }
 `;

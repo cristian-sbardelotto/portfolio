@@ -39,7 +39,7 @@ export const TitleGroup = styled.div`
     font-size: 2rem;
 
     a {
-      color: ${({ theme }) => theme.colors.alt};
+      color: ${({ theme }) => theme.colors.main};
       display: flex;
 
       &:hover {

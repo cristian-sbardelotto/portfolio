@@ -6,7 +6,7 @@ export const Container = styled.span`
   p {
     font-size: 1.7rem;
     line-height: 160%;
-    color: ${({ theme }) => theme.colors.altText};
+    color: ${({ theme }) => theme.colors.text};
 
     margin-bottom: 2rem;
     max-width: 80ch;

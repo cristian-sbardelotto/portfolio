@@ -10,14 +10,14 @@ export const Container = styled.li`
   align-items: center;
   gap: 2rem;
 
-  border: 1px solid #fff2;
+  border: ${({ theme }) => theme.borders.main};
   border-radius: 15px;
   background-color: #0d0d0f;
 
   transition: 0.7s border;
 
   &:hover {
-    border: 1px solid ${({ theme }) => theme.colors.alt};
+    border: 1px solid ${({ theme }) => theme.colors.main};
 
     p {
       visibility: visible;
@@ -43,8 +43,9 @@ export const StackTitle = styled.p`
   bottom: 65%;
   z-index: 99;
 
-  border: 1px solid #fff4;
+  border: ${({ theme }) => theme.borders.main};
   border-radius: 8px;
+  color: ${({ theme }) => theme.colors.lightText};
   background-color: ${({ theme }) => theme.colors.background};
   font-size: 1.25rem;
   user-select: none;

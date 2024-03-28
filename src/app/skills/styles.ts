@@ -57,10 +57,10 @@ export const InfoGroup = styled.section`
 
     p {
       font-size: 1.75rem;
-      color: ${({ theme }) => theme.colors.altText};
+      color: ${({ theme }) => theme.colors.text};
 
       span {
-        color: ${({ theme }) => theme.colors.text};
+        color: ${({ theme }) => theme.colors.lightText};
       }
 
       @media screen and (max-width: 768px) {
@@ -68,7 +68,7 @@ export const InfoGroup = styled.section`
       }
 
       a {
-        color: ${({ theme }) => theme.colors.alt};
+        color: ${({ theme }) => theme.colors.main};
 
         &:hover {
           text-decoration: underline;
@@ -104,6 +104,7 @@ export const Skills = styled.ul`
 
 export const Subtitle = styled.h4`
   font-size: 3rem;
+  color: ${({ theme }) => theme.colors.lightText};
   margin-bottom: 0.75rem;
 `;
 
@@ -120,10 +121,10 @@ export const Languages = styled.div`
 
     li {
       font-size: 1.75rem;
-      color: ${({ theme }) => theme.colors.altText};
+      color: ${({ theme }) => theme.colors.text};
 
       span {
-        color: ${({ theme }) => theme.colors.text};
+        color: ${({ theme }) => theme.colors.lightText};
       }
 
       @media screen and (max-width: 768px) {

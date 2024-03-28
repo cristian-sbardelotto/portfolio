@@ -8,12 +8,12 @@ export const StyledButton = styled.button<{ variant: 'default' | 'light' }>`
   align-items: center;
   gap: 1rem;
 
-  border: ${({ theme }) => theme.borders.mainLight};
+  border: ${({ theme }) => theme.borders.main};
   color: ${({ theme, variant }) =>
-    variant === 'default' ? theme.colors.text : theme.colors.background};
+    variant === 'default' ? theme.colors.lightText : theme.colors.background};
   border-radius: 8px;
   background: ${({ theme, variant }) =>
-    variant === 'default' ? 'transparent' : theme.colors.text};
+    variant === 'default' ? 'transparent' : theme.colors.lightText};
   font-family: '__Inter_aaf875', sans-serif;
   font-weight: 600;
 
@@ -21,7 +21,7 @@ export const StyledButton = styled.button<{ variant: 'default' | 'light' }>`
 
   &:hover {
     background: ${({ theme, variant }) =>
-      variant === 'default' ? theme.colors.text : '#d6d3d1'};
+      variant === 'default' ? theme.colors.lightText : '#d6d3d1'};
     color: ${({ theme, variant }) =>
       variant === 'default' && theme.colors.background};
     cursor: pointer;

@@ -21,7 +21,7 @@ export const List = styled.ul`
       gap: 4rem;
 
       span:hover {
-        color: ${({ theme }) => theme.colors.alt};
+        color: ${({ theme }) => theme.colors.main};
         text-decoration: underline;
       }
     }

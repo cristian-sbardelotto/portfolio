@@ -16,7 +16,7 @@ export const Span = styled.span`
   font-size: 1.5rem;
 
   a {
-    color: ${({ theme }) => theme.colors.alt};
+    color: ${({ theme }) => theme.colors.main};
 
     &:hover {
       text-decoration: underline;

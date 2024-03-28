@@ -39,7 +39,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    color: ${({ theme }) => theme.colors.text};
+    color: ${({ theme }) => theme.colors.lightText};
     background-color: ${({ theme }) => theme.colors.background};
 
     transition-property: background-color, color;
@@ -50,6 +50,6 @@ export const GlobalStyle = createGlobalStyle`
 
   a {
     text-decoration: none;
-    color: ${({ theme }) => theme.colors.text};
+    color: ${({ theme }) => theme.colors.lightText};
   }
 `;
