@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { appearUp } from '@/styles/utils';
 
 export const Container = styled.div`
   width: 400px;
@@ -7,6 +8,11 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+
+  opacity: 0;
+
+  animation: ${appearUp} 0.75s;
+  animation-fill-mode: forwards;
 
   @media screen and (max-width: 1024px) {
     max-width: 90vw;

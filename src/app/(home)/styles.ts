@@ -1,4 +1,4 @@
-import { Title } from '@/styles/utils';
+import { Title, appearUp } from '@/styles/utils';
 import Image from 'next/image';
 import styled, { keyframes } from 'styled-components';
 
@@ -25,6 +25,14 @@ export const Container = styled.main`
     flex-direction: column;
     align-items: start;
     gap: 2rem;
+  }
+
+  .article {
+    opacity: 0;
+
+    animation: ${appearUp} 0.75s;
+    animation-delay: 0.75s;
+    animation-fill-mode: forwards;
   }
 
   .image-group {
@@ -143,6 +151,12 @@ export const ImageGroup = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+
+  opacity: 0;
+
+  animation: ${appearUp} 0.75s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
 
   @media screen and (max-width: 1024px) {
     flex-direction: column-reverse !important;

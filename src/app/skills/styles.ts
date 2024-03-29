@@ -1,6 +1,6 @@
 /* eslint-disable indent */
 
-import { Title } from '@/styles/utils';
+import { Title, appearUp } from '@/styles/utils';
 import styled from 'styled-components';
 
 export const Container = styled.main`
@@ -49,6 +49,12 @@ export const InfoGroup = styled.section`
   grid-template-columns: 1fr 1fr;
   gap: 10rem;
   padding-inline: 1rem;
+
+  opacity: 0;
+
+  animation: ${appearUp} 0.75s;
+  animation-delay: 0.75s;
+  animation-fill-mode: forwards;
 
   .text-group {
     display: flex;
@@ -110,6 +116,12 @@ export const Subtitle = styled.h4`
 
 export const Languages = styled.div`
   margin-top: 2rem;
+
+  opacity: 0;
+
+  animation: ${appearUp} 0.75s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
 
   ul {
     margin-top: 2rem;

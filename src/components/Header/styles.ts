@@ -1,22 +1,11 @@
 import styled from 'styled-components';
-import { Title } from '@/styles/utils';
+import { Title, appearUp } from '@/styles/utils';
 
 type NavLinksProps = {
   ismenuopen: boolean | number; // boolean or 0 | 1
 };
 
 export const Header = styled.header`
-  @keyframes appear {
-    0% {
-      transform: translateY(2rem);
-      opacity: 0;
-    }
-
-    100% {
-      opacity: 1;
-    }
-  }
-
   padding: 2rem;
   display: flex;
   justify-content: space-between;
@@ -24,7 +13,7 @@ export const Header = styled.header`
 
   border-bottom: ${({ theme }) => theme.borders.main};
   border-radius: 7px;
-  animation: appear 0.5s;
+  animation: ${appearUp} 0.5s;
 
   h1 {
     ${Title}
@@ -46,7 +35,7 @@ export const NavLinks = styled.nav<NavLinksProps>`
     list-style: none;
     font-size: 1.6rem;
 
-    animation: appear 0.2s;
+    animation: ${appearUp} 0.2s;
 
     .active {
       color: ${({ theme }) => theme.colors.main};

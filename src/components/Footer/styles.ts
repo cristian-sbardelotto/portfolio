@@ -1,3 +1,4 @@
+import { appearDown } from '@/styles/utils';
 import styled from 'styled-components';
 
 export const Footer = styled.footer`
@@ -16,6 +17,8 @@ export const Footer = styled.footer`
   background-color: #09090bcc;
   border-top: ${({ theme }) => theme.borders.main};
   border-radius: 7px;
+
+  animation: ${appearDown} 0.5s;
 
   > a {
     color: ${({ theme }) => theme.colors.lightText};

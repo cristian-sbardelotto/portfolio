@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { appearUp } from '@/styles/utils';
 
 export const Container = styled.ul`
   list-style: none;
@@ -7,6 +8,13 @@ export const Container = styled.ul`
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
+
+  li {
+    opacity: 0;
+
+    animation: ${appearUp} 0.75s;
+    animation-fill-mode: forwards;
+  }
 
   li,
   a,

@@ -10,7 +10,7 @@ import Image from 'next/image';
 export function ContactLinks() {
   return (
     <S.Container>
-      <li>
+      <li style={{ animationDelay: '0.75s' }}>
         <Link
           href='https://github.com/cristian-sbardelotto'
           target='_blank'
@@ -24,7 +24,7 @@ export function ContactLinks() {
         </Link>
       </li>
 
-      <li>
+      <li style={{ animationDelay: '1.25s' }}>
         <Link
           href='https://linkedin.com/in/cristian-k-sbardelotto/'
           target='_blank'
@@ -38,7 +38,7 @@ export function ContactLinks() {
         </Link>
       </li>
 
-      <li>
+      <li style={{ animationDelay: '1.75s' }}>
         <Link
           href='mailto:cristian.k.sbardelotto@gmail.com'
           target='_blank'
@@ -52,7 +52,7 @@ export function ContactLinks() {
         </Link>
       </li>
 
-      <li>
+      <li style={{ animationDelay: '2.25s' }}>
         <Link
           href='https://api.whatsapp.com/send?phone=5551996380154'
           target='_blank'
@@ -66,7 +66,7 @@ export function ContactLinks() {
         </Link>
       </li>
 
-      <li>
+      <li style={{ animationDelay: '2.75s' }}>
         <a
           download
           href='/documents/resume.pdf'
@@ -77,7 +77,7 @@ export function ContactLinks() {
         </a>
       </li>
 
-      <li>
+      <li style={{ animationDelay: '3.25s' }}>
         <Link
           href='https://discord.com/users/669660510093967371'
           target='_blank'

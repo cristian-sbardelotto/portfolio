@@ -12,7 +12,7 @@ import * as S from './styles';
 export default function Home() {
   return (
     <S.Container>
-      <div>
+      <div className='article'>
         <S.AboveTitle>
           <Line />i am a
         </S.AboveTitle>

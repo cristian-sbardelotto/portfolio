@@ -1,9 +1,25 @@
 import styled from 'styled-components';
-import { Title } from '@/styles/utils';
+import { Title, appearUp } from '@/styles/utils';
 
 export const Container = styled.div`
   max-width: 130rem;
   padding: 5rem 7.5vw;
+
+  > div {
+    opacity: 0;
+
+    animation: ${appearUp} 0.75s;
+    animation-delay: 0.75s;
+    animation-fill-mode: forwards;
+  }
+
+  > section {
+    opacity: 0;
+
+    animation: ${appearUp} 0.75s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+  }
 
   @media screen and (max-width: 768px) {
     padding: 2rem;

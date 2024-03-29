@@ -29,9 +29,10 @@ export default function Projects() {
       </S.TitleGroup>
 
       <main>
-        {projects.map(project => (
+        {projects.map((project, index) => (
           <ProjectCard
             key={project.id}
+            delay={index++ - 0.5}
             {...project}
           />
         ))}
