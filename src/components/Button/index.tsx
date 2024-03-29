@@ -2,7 +2,7 @@ import * as S from './styles';
 import { ComponentPropsWithoutRef } from 'react';
 
 type ButtonProps = ComponentPropsWithoutRef<'button'> & {
-  variant: 'default' | 'light';
+  variant: 'default' | 'light' | 'dark';
 };
 
 export function Button({ children, variant, ...rest }: ButtonProps) {

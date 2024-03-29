@@ -16,10 +16,10 @@ export function ContactLinks() {
           target='_blank'
         >
           <Button
-            variant='light'
+            variant='dark'
             className='gray'
           >
-            <Github size={20} /> Github
+            <Github size={22} /> Github
           </Button>
         </Link>
       </li>
@@ -30,10 +30,10 @@ export function ContactLinks() {
           target='_blank'
         >
           <Button
-            variant='light'
+            variant='dark'
             className='light-blue'
           >
-            <Linkedin size={20} /> LinkedIn
+            <Linkedin size={22} /> LinkedIn
           </Button>
         </Link>
       </li>
@@ -44,10 +44,10 @@ export function ContactLinks() {
           target='_blank'
         >
           <Button
-            variant='light'
+            variant='dark'
             className='red'
           >
-            <Mail size={20} /> Email
+            <Mail size={22} /> Email
           </Button>
         </Link>
       </li>
@@ -58,10 +58,10 @@ export function ContactLinks() {
           target='_blank'
         >
           <Button
-            variant='light'
+            variant='dark'
             className='green'
           >
-            <Phone size={20} /> WhatsApp
+            <Phone size={22} /> WhatsApp
           </Button>
         </Link>
       </li>
@@ -72,10 +72,10 @@ export function ContactLinks() {
           href='/documents/resume.pdf'
         >
           <Button
-            variant='light'
+            variant='dark'
             className='white'
           >
-            <FileText size={20} /> Download Resume
+            <FileText size={22} /> Download Resume
           </Button>
         </a>
       </li>
@@ -86,14 +86,14 @@ export function ContactLinks() {
           target='_blank'
         >
           <Button
-            variant='light'
+            variant='dark'
             className='dark-blue'
           >
             <Image
               src={discordIcon}
               alt='Discord Icon'
-              width={20}
-              height={20}
+              width={22}
+              height={22}
             />{' '}
             Discord
           </Button>
