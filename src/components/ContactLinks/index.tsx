@@ -71,10 +71,7 @@ export function ContactLinks() {
           download
           href='/documents/resume.pdf'
         >
-          <Button
-            variant='dark'
-            className='white'
-          >
+          <Button variant='dark'>
             <FileText size={22} /> Download Resume
           </Button>
         </a>
@@ -85,17 +82,15 @@ export function ContactLinks() {
           href='https://discord.com/users/669660510093967371'
           target='_blank'
         >
-          <Button
-            variant='dark'
-            className='dark-blue'
-          >
+          <Button variant='dark'>
             <Image
               src={discordIcon}
               alt='Discord Icon'
+              className='dark-blue'
               width={22}
               height={22}
             />{' '}
-            Discord
+            <span className='dark-blue'>Discord</span>
           </Button>
         </Link>
       </li>
