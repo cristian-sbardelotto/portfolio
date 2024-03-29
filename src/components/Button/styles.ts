@@ -16,7 +16,7 @@ function backgroundVariantStyles(
 }
 
 export const StyledButton = styled.button<{
-  variant: 'default' | 'light' | 'dark';
+  $variant: 'default' | 'light' | 'dark';
 }>`
   padding: 1rem 1.5rem;
 
@@ -26,21 +26,21 @@ export const StyledButton = styled.button<{
   gap: 1rem;
 
   border: ${({ theme }) => theme.borders.main};
-  color: ${({ theme, variant }) =>
-    variant === 'light' ? theme.colors.background : theme.colors.lightText};
+  color: ${({ theme, $variant }) =>
+    $variant === 'light' ? theme.colors.background : theme.colors.lightText};
   border-radius: 8px;
-  background: ${({ theme, variant }) =>
-    variant === 'light' ? theme.colors.lightText : 'transparent'};
+  background: ${({ theme, $variant }) =>
+    $variant === 'light' ? theme.colors.lightText : 'transparent'};
   font-family: '__Inter_aaf875', sans-serif;
   font-weight: 600;
 
   transition: background 0.3s, color 0.3s;
 
   &:hover {
-    background: ${({ theme, variant }) =>
-      backgroundVariantStyles(variant, theme)};
-    color: ${({ theme, variant }) =>
-      variant === 'default' && theme.colors.background};
+    background: ${({ theme, $variant }) =>
+      backgroundVariantStyles($variant, theme)};
+    color: ${({ theme, $variant }) =>
+      $variant === 'default' && theme.colors.background};
     cursor: pointer;
   }
 `;

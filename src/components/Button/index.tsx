@@ -8,7 +8,7 @@ type ButtonProps = ComponentPropsWithoutRef<'button'> & {
 export function Button({ children, variant, ...rest }: ButtonProps) {
   return (
     <S.StyledButton
-      variant={variant}
+      $variant={variant}
       {...rest}
     >
       {children}

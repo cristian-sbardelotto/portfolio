@@ -20,7 +20,7 @@ export function Header() {
         </Link>
       </h1>
 
-      <S.NavLinks ismenuopen={isMenuOpen ? 1 : 0}>
+      <S.NavLinks $ismenuopen={isMenuOpen ? 1 : 0}>
         <ul>
           <li onClick={() => setIsMenuOpen(false)}>
             <Link
