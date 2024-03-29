@@ -41,4 +41,17 @@ export const Container = styled.ul`
       filter: brightness(0.5);
     }
   }
+
+  @media screen and (max-width: 768px) {
+    button {
+      padding-block: 1rem;
+      font-size: 1.3rem;
+
+      svg,
+      img {
+        height: 2rem;
+        width: 2rem;
+      }
+    }
+  }
 `;
