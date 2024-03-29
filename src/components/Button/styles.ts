@@ -6,6 +6,7 @@ export const StyledButton = styled.button<{ variant: 'default' | 'light' }>`
 
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
 
   border: ${({ theme }) => theme.borders.main};
