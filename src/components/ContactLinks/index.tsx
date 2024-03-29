@@ -40,7 +40,7 @@ export function ContactLinks() {
 
       <li style={{ animationDelay: '1.75s' }}>
         <Link
-          href='mailto:cristian.k.sbardelotto@gmail.com'
+          href='https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=cristian.k.sbardelotto@gmail.com'
           target='_blank'
         >
           <Button
