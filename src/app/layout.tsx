@@ -21,7 +21,7 @@ export default function RootLayout({ children }: ChildrenComponentProps) {
 
         <html lang='en'>
           <head>
-            <title>My Portfolio</title>
+            <title>Cristian Sbardelotto</title>
           </head>
 
           <body
