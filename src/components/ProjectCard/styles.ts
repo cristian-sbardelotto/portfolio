@@ -1,122 +1,90 @@
 import styled from 'styled-components';
+import { appearUp } from '@/styles/utils';
 
 export const Container = styled.div`
-  width: 500px;
-  height: 470px;
-  margin-bottom: 50px;
+  width: 400px;
+  height: 450px;
 
-  border-radius: 15px;
-  background: ${({ theme }) => theme.colors.altBackground};
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 
-  overflow-x: hidden;
-  overflow-y: auto;
+  opacity: 0;
 
-  box-shadow: #0004 0 5px 15px;
+  animation: ${appearUp} 0.75s;
+  animation-fill-mode: forwards;
 
-  section {
-    padding: 2rem;
-
-    h4 {
-      margin-bottom: 1.5rem;
-
-      font-size: 2.5rem;
-    }
-
-    p {
-      margin-bottom: 1.5rem;
-
-      font-size: 1.5rem;
-    }
+  @media screen and (max-width: 1024px) {
+    max-width: 90vw;
   }
 
-  @media screen and (max-width: 768px) {
-    width: 400px;
-    height: 375px;
+  h4 {
+    font-size: 2.5rem;
+    color: ${({ theme }) => theme.colors.lightText};
 
-    section {
-      padding: 1.5rem;
+    a {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      color: ${({ theme }) => theme.colors.lightText};
 
-      h4 {
-        margin-bottom: 1.5rem;
-
-        font-size: 2rem;
+      svg {
+        display: none;
       }
+    }
 
-      p {
-        margin-bottom: 1.2rem;
-
-        font-size: 1.2rem;
+    &:hover {
+      svg {
+        display: inline-block;
       }
     }
   }
 
-  @media screen and (max-width: 658px) {
-    width: 300px;
+  p {
+    font-size: 1.6rem;
+    line-height: 150%;
+    overflow-y: auto;
   }
 `;
 
 export const TechnologiesGroup = styled.div`
   display: flex;
   gap: 1rem;
-  flex-flow: row wrap;
+  flex-wrap: wrap;
+  cursor: default;
 
   span {
-    padding: 0.5rem 1.75rem 0.75rem 1.75rem;
-
-    background: ${({ theme }) => theme.colors.alt};
-    border-radius: 30px;
-    font-size: 1.5rem;
-  }
-
-  @media screen and (max-width: 1168px) {
-    font-size: 1rem;
-
-    span {
-      padding: 0.25rem 1.25rem 0.5rem 1.25rem;
-    }
+    font-size: 1.3rem;
+    color: #737271;
   }
 `;
 
 export const ImageGroup = styled.div`
-  position: relative;
-
-  &:hover {
-    div {
-      visibility: visible;
-    }
-
-    img {
-      filter: brightness(0.5);
-    }
-  }
-
-  div {
-    visibility: hidden;
-    position: absolute;
-    bottom: 5%;
-    right: 5%;
-
+  a {
     display: flex;
-    gap: 1rem;
-
-    a {
-      transition: 0.3s all;
-      color: #fff;
-    }
-
-    a:hover {
-      color: ${({ theme }) => theme.colors.alt};
-    }
-
-    @media screen and (max-width: 658px) {
-      right: 40%;
-    }
-  }
-
-  img {
-    transition: 0.3s all;
+    align-items: center;
+    justify-content: center;
 
     height: 220px;
-    width: 100%;
+
+    background-color: #0d0d0f;
+    border: ${({ theme }) => theme.borders.main};
+
+    transition: all 0.3s;
+
+    img {
+      transition: scale 0.3s;
+    }
+
+    &:hover {
+      box-shadow: #f974167c -5px 5px;
+      cursor: pointer;
+      filter: brightness(0.9);
+      transform: translate(0.5rem, -0.5rem);
+
+      img {
+        scale: 1.1;
+      }
+    }
   }
 `;

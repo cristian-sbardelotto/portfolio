@@ -5,33 +5,21 @@ export const Container = styled.div`
   padding: 3rem 5vw 0 5vw;
 
   main {
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    flex-flow: row wrap;
+    margin: 0 auto;
 
-    .swiper-wrapper {
-      cursor: grab;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-items: center;
 
-      &:active {
-        cursor: grabbing;
-      }
+    @media screen and (max-width: 1680px) {
+      max-width: 1250px;
+      grid-template-columns: repeat(2, 1fr);
     }
 
-    @media screen and (max-width: 1168px) {
-      .swiper-wrapper {
-        margin-left: 100px;
-      }
-    }
-
-    @media screen and (max-width: 524px) {
-      .swiper-wrapper {
-        margin-left: 0;
-      }
-    }
-
-    @media screen and (max-width: 768px) {
-      gap: 5rem;
+    @media screen and (max-width: 1024px) {
+      grid-template-columns: 1fr;
+      justify-items: start;
     }
   }
 `;
@@ -51,7 +39,7 @@ export const TitleGroup = styled.div`
     font-size: 2rem;
 
     a {
-      color: ${({ theme }) => theme.colors.alt};
+      color: ${({ theme }) => theme.colors.main};
       display: flex;
 
       &:hover {

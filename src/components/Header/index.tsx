@@ -1,64 +1,82 @@
 import Link from 'next/link';
 import { useState } from 'react';
 
+import { usePathname } from 'next/navigation';
+
 import { Button } from '../Button';
-
-import { Sun, Moon, AlignJustify, X } from 'lucide-react';
-
-import { DefaultTheme } from 'styled-components';
 import * as S from './styles';
 
-type HeaderProps = {
-  theme: DefaultTheme;
-  toggleTheme: () => void;
-};
+import { AlignJustify, X } from 'lucide-react';
 
-export function Header({ theme, toggleTheme }: HeaderProps) {
-  const [isMenuOpen, setIsMenuOpen] = useState<'true' | 'false'>('false');
+export function Header() {
+  const pathname = usePathname();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <S.Header>
       <h1>
         <Link href='/'>
-          Cristian <span>Sbardelotto</span>
+          C <span>Sbardelotto</span>
         </Link>
       </h1>
 
-      <S.NavLinks ismenuopen={isMenuOpen}>
+      <S.NavLinks $ismenuopen={isMenuOpen ? 1 : 0}>
         <ul>
-          <li>
-            <Link href='/about'>About me</Link>
+          <li onClick={() => setIsMenuOpen(false)}>
+            <Link
+              className={pathname === '/about' ? 'active' : ''}
+              href='/about'
+            >
+              About me
+            </Link>
           </li>
-          <li>
-            <Link href='/skills'>Skills</Link>
+
+          <li onClick={() => setIsMenuOpen(false)}>
+            <Link
+              className={pathname === '/skills' ? 'active' : ''}
+              href='/skills'
+            >
+              Skills
+            </Link>
           </li>
-          <li>
-            <Link href='/projects'>Projects</Link>
+
+          <li onClick={() => setIsMenuOpen(false)}>
+            <Link
+              className={pathname === '/projects' ? 'active' : ''}
+              href='/projects'
+            >
+              Projects
+            </Link>
           </li>
-          {isMenuOpen === 'true' && window.innerWidth < 768 && (
-            <li>
-              <Link href='/contact'>Contact me</Link>
-            </li>
-          )}
+
+          <li
+            onClick={() => setIsMenuOpen(false)}
+            className='contact-link'
+          >
+            <Link href='/contact'>Contact me</Link>
+          </li>
         </ul>
       </S.NavLinks>
 
       <S.NavMenuGroup>
-        {theme.title === 'dark' ? (
-          <Moon onClick={toggleTheme} />
-        ) : (
-          <Sun onClick={toggleTheme} />
-        )}
-
-        <Button>
-          <Link href='/contact'>Contact me</Link>
-        </Button>
+        <Link
+          className='contact-button'
+          href='/contact'
+        >
+          <Button variant='default'>Contact me</Button>
+        </Link>
 
         <S.NavButton>
-          {isMenuOpen === 'true' ? (
-            <X onClick={() => setIsMenuOpen('false')} />
+          {isMenuOpen ? (
+            <X
+              className='list-icon'
+              onClick={() => setIsMenuOpen(false)}
+            />
           ) : (
-            <AlignJustify onClick={() => setIsMenuOpen('true')} />
+            <AlignJustify
+              className='list-icon'
+              onClick={() => setIsMenuOpen(true)}
+            />
           )}
         </S.NavButton>
       </S.NavMenuGroup>

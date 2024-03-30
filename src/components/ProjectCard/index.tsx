@@ -1,10 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { GithubIcon, Rocket } from 'lucide-react';
-
 import { ProjectProps } from '@/types';
 
+import { ExternalLinkIcon } from 'lucide-react';
 import * as S from './styles';
 
 export function ProjectCard({
@@ -13,48 +12,40 @@ export function ProjectCard({
   description,
   technologies,
   githubUrl,
-  deployUrl,
-}: ProjectProps) {
+  delay,
+}: ProjectProps & { delay: number }) {
   return (
-    <S.Container>
+    <S.Container style={{ animationDelay: `${delay}s` }}>
       <S.ImageGroup>
-        <Image
-          src={image}
-          alt={`${title} Project Card`}
-        />
-
-        <div>
-          <Link
-            href={githubUrl}
-            target='_blank'
-            title='Go see the project on Github'
-          >
-            <GithubIcon />
-          </Link>
-
-          {deployUrl && (
-            <Link
-              href={deployUrl}
-              target='_blank'
-              title='Go see the project on Web'
-            >
-              <Rocket />
-            </Link>
-          )}
-        </div>
+        <Link
+          href={githubUrl}
+          target='_blank'
+        >
+          <Image
+            src={image}
+            alt={`${title} Project Card`}
+          />
+        </Link>
       </S.ImageGroup>
 
-      <section>
-        <h4>{title}</h4>
+      <h4>
+        <Link
+          href={githubUrl}
+          target='_blank'
+        >
+          {title}
 
-        <p>{description}</p>
+          <ExternalLinkIcon />
+        </Link>
+      </h4>
 
-        <S.TechnologiesGroup>
-          {technologies.map((technology, index) => (
-            <span key={index}>{technology}</span>
-          ))}
-        </S.TechnologiesGroup>
-      </section>
+      <S.TechnologiesGroup>
+        {technologies.map(technology => (
+          <span key={technology}>{technology}</span>
+        ))}
+      </S.TechnologiesGroup>
+
+      <p>{description}</p>
     </S.Container>
   );
 }

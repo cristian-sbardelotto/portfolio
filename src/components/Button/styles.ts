@@ -1,33 +1,46 @@
-import styled from 'styled-components';
+/* eslint-disable indent */
+import styled, { DefaultTheme } from 'styled-components';
 
-export const StyledButton = styled.button`
-  width: 10.75rem;
-  height: 4.5rem;
+function backgroundVariantStyles(
+  variant: 'default' | 'light' | 'dark',
+  theme: DefaultTheme
+) {
+  switch (variant) {
+    case 'default':
+      return theme.colors.lightText;
+    case 'light':
+      return '#d6d3d1';
+    case 'dark':
+      return '#fff1';
+  }
+}
 
-  border: 2px solid ${({ theme }) => theme.colors.text};
+export const StyledButton = styled.button<{
+  $variant: 'default' | 'light' | 'dark';
+}>`
+  padding: 1rem 1.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  border: ${({ theme }) => theme.borders.main};
+  color: ${({ theme, $variant }) =>
+    $variant === 'light' ? theme.colors.background : theme.colors.lightText};
   border-radius: 8px;
-  background: transparent;
-  font-family: '__Plus_Jakarta_Sans_fd0c7c',
-    '__Plus_Jakarta_Sans_Fallback_fd0c7c';
+  background: ${({ theme, $variant }) =>
+    $variant === 'light' ? theme.colors.lightText : 'transparent'};
+  font-family: '__Inter_aaf875', sans-serif;
   font-weight: 600;
 
-  transition: all 0.2s;
+  transition: background 0.3s, color 0.3s;
 
   &:hover {
-    background: ${({ theme }) => theme.colors.text};
-
-    * {
-      color: ${({ theme }) => theme.colors.background};
-    }
-  }
-
-  a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    font-family: '__Plus_Jakarta_Sans_47178e',
-      '__Plus_Jakarta_Sans_Fallback_47178e';
+    background: ${({ theme, $variant }) =>
+      backgroundVariantStyles($variant, theme)};
+    color: ${({ theme, $variant }) =>
+      $variant === 'default' && theme.colors.background};
+    cursor: pointer;
   }
 `;

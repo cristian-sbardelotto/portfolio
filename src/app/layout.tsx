@@ -6,38 +6,36 @@ import { Header } from '@/components/Header';
 import { GlobalStyle } from '@/styles/GlobalStyle';
 import { ThemeProvider } from 'styled-components';
 
-import { useTheme } from '@/hooks/useTheme';
+import theme from '@/styles/theme';
 import { ChildrenComponentProps } from '@/types';
-import { Plus_Jakarta_Sans } from 'next/font/google';
+import { Inter } from 'next/font/google';
+import StyledComponentsRegistry from '@/lib/registry';
 
-const jakartaSans = Plus_Jakarta_Sans({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'] });
 
 export default function RootLayout({ children }: ChildrenComponentProps) {
-  const { theme, toggleTheme } = useTheme();
-
   return (
     <ThemeProvider theme={theme}>
-      <html lang='pt-br'>
+      <StyledComponentsRegistry>
         <GlobalStyle />
 
-        <head>
-          <title>My Portfolio</title>
-        </head>
+        <html lang='en'>
+          <head>
+            <title>Cristian Sbardelotto</title>
+          </head>
 
-        <body
-          className={jakartaSans.className}
-          suppressHydrationWarning={true}
-        >
-          <Header
-            toggleTheme={toggleTheme}
-            theme={theme}
-          />
+          <body
+            className={inter.className}
+            suppressHydrationWarning={true}
+          >
+            <Header />
 
-          {children}
+            {children}
 
-          <Footer />
-        </body>
-      </html>
+            <Footer />
+          </body>
+        </html>
+      </StyledComponentsRegistry>
     </ThemeProvider>
   );
 }

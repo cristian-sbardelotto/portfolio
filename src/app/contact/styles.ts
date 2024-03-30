@@ -1,27 +1,28 @@
 import { Title } from '@/styles/utils';
 import styled from 'styled-components';
 
-export const Container = styled.main`
-  img {
-    width: 100%;
-    height: 20vh;
-    margin-bottom: 9rem;
-
-    object-fit: cover;
-
-    @media screen and (max-width: 524px) {
-      margin-bottom: 5rem;
-    }
-  }
-`;
+export const Container = styled.main``;
 
 export const StyledTitle = styled.h2`
   ${Title};
-  margin-block: 3rem;
-
-  text-align: center;
+  padding: 3rem 0 3rem 3rem;
 
   @media screen and (max-width: 768px) {
     font-size: 3rem;
+  }
+`;
+
+export const LinksGroup = styled.section`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const LinksWrapper = styled.div`
+  width: 400px;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    padding-inline: 2rem;
   }
 `;

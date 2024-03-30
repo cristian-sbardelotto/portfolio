@@ -2,14 +2,16 @@ import 'styled-components';
 
 declare module 'styled-components' {
   export interface DefaultTheme {
-    title: string;
-
     colors: {
       background: string;
-      altBackground: string;
+      lightBackground: string;
+      lightText: string;
       text: string;
 
-      alt: string;
+      main: string;
+    };
+    borders: {
+      main: string;
     };
   }
 }

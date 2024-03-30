@@ -4,7 +4,7 @@ const nextConfig = {
     styledComponents: true,
   },
   images: {
-    domains: ['github.com', 'media.eadbox.com'],
+    domains: ['github.com', 'media.eadbox.com', 'media.licdn.com'],
   },
 };
 

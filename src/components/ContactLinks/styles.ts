@@ -1,49 +1,65 @@
 import styled from 'styled-components';
+import { appearUp } from '@/styles/utils';
 
-export const List = styled.ul`
-  width: 100%;
+export const Container = styled.ul`
   list-style: none;
+
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
 
-  font-size: 2rem;
+  li {
+    opacity: 0;
 
-  div {
-    display: flex;
-    flex-direction: column;
-    gap: 7rem;
+    animation: ${appearUp} 0.75s;
+    animation-fill-mode: forwards;
+  }
 
-    li a {
-      width: fit-content;
+  li,
+  a,
+  button {
+    width: 100%;
+  }
 
-      display: flex;
-      align-items: center;
-      gap: 4rem;
+  button {
+    padding-block: 2rem;
+    font-size: 1.5rem;
+  }
 
-      span:hover {
-        color: ${({ theme }) => theme.colors.alt};
-        text-decoration: underline;
+  a:hover {
+    .gray {
+      color: #adb3b9;
+    }
+
+    .light-blue {
+      color: #71b7fb;
+    }
+
+    .red {
+      color: #ce3c30;
+    }
+
+    .green {
+      color: #25d366;
+    }
+
+    .dark-blue {
+      -webkit-filter: brightness(0.5);
+      filter: brightness(0.5);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    button {
+      padding-block: 1rem;
+      font-size: 1.3rem;
+
+      svg,
+      img {
+        height: 2rem;
+        width: 2rem;
       }
     }
-  }
-
-  @media screen and (max-width: 968px) {
-    flex-direction: column;
-    align-items: center;
-    font-size: 1.5rem;
-    gap: 5rem;
-
-    div {
-      gap: 5rem;
-      align-items: center;
-    }
-
-    li a {
-      gap: 1rem;
-    }
-  }
-
-  @media screen and (max-width: 524px) {
-    font-size: 1rem;
   }
 `;

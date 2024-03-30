@@ -1,3 +1,4 @@
+import { appearDown } from '@/styles/utils';
 import styled from 'styled-components';
 
 export const Footer = styled.footer`
@@ -12,37 +13,30 @@ export const Footer = styled.footer`
   bottom: 0;
   z-index: 2;
 
-  background-color: ${({ theme }) => theme.colors.altBackground};
+  backdrop-filter: blur(5px);
+  background-color: #09090bcc;
+  border-top: ${({ theme }) => theme.borders.main};
+  border-radius: 7px;
 
-  > p {
-    color: ${({ theme }) => theme.colors.text};
+  animation: ${appearDown} 0.5s;
+
+  > a {
+    color: ${({ theme }) => theme.colors.lightText};
     font-weight: 500;
-    font-size: 1.4rem;
-  }
+    font-size: 1.75rem;
 
-  > button {
-    width: 5rem;
-    height: 5rem;
+    transition: filter 0.3s;
 
-    background-color: ${({ theme }) => theme.colors.alt};
-    border: none;
-    border-radius: 50%;
+    &:hover {
+      filter: brightness(0.7);
+    }
   }
 
   @media screen and (max-width: 768px) {
-    padding: 2rem 0;
-    justify-content: space-around;
+    padding: 2rem 1rem;
 
-    > p {
+    > a {
       font-size: 1.2rem;
-    }
-
-    > button {
-      display: none;
-    }
-
-    svg {
-      height: 20px;
     }
   }
 `;

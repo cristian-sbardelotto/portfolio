@@ -1,114 +1,74 @@
 'use client';
 
-import { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 
-import { AreaProps } from '@/types';
-
-import usa from '@/../public/assets/usa.svg';
-
-import { SkillsList } from '@/components/SkillsList';
+import { Button } from '@/components/Button';
+import { SkillsItem } from '@/components/SkillsItem';
 import { skills } from '@/data/skillsMock';
 import * as S from './styles';
 
-function renderAreaSkills(area: AreaProps) {
-  const frontendSkills = skills.frontend.map((skill, index) => (
-    <SkillsList
-      key={index}
-      image={skill.image}
-      name={skill.name}
-    />
-  ));
-
-  const backendSkills = skills.backend.map((skill, index) => (
-    <SkillsList
-      key={index}
-      image={skill.image}
-      name={skill.name}
-    />
-  ));
-
-  const complementarySkills = skills.complementary.map((skill, index) => (
-    <SkillsList
-      key={index}
-      image={skill.image}
-      name={skill.name}
-    />
-  ));
-
-  if (area === 'frontend') return frontendSkills;
-
-  if (area === 'backend') return backendSkills;
-
-  return complementarySkills;
-}
+import { GithubIcon } from 'lucide-react';
 
 export default function Skills() {
-  const [selectedArea, setSelectedArea] = useState<AreaProps>('frontend');
-
   return (
     <S.Container>
-      <S.StyledTitle>
-        Technologies <span>&</span> Skills
-      </S.StyledTitle>
+      <S.Wrapper>
+        <S.TitleSection>
+          <S.StyledTitle>
+            Technologies <span>&</span> Skills
+          </S.StyledTitle>
 
-      <S.SkillsSection>
-        <S.SkillsSectionHeader>
-          <S.AreaSelector
-            id='frontend'
-            activearea={selectedArea}
-            onClick={() => setSelectedArea('frontend')}
+          <Link
+            href='https://github.com/cristian-sbardelotto'
+            target='_blank'
           >
-            Frontend
-          </S.AreaSelector>
-          <S.AreaSelector
-            id='backend'
-            activearea={selectedArea}
-            onClick={() => setSelectedArea('backend')}
-          >
-            Backend
-          </S.AreaSelector>
-          <S.AreaSelector
-            id='complementary'
-            activearea={selectedArea}
-            onClick={() => setSelectedArea('complementary')}
-          >
-            Complementary
-          </S.AreaSelector>
-        </S.SkillsSectionHeader>
+            <Button variant='light'>
+              <GithubIcon size={20} /> <p>Github</p>
+            </Button>
+          </Link>
+        </S.TitleSection>
 
-        <S.Skills>{renderAreaSkills(selectedArea)}</S.Skills>
-      </S.SkillsSection>
+        <S.InfoGroup>
+          <div className='text-group'>
+            <p>
+              <span>Tip:</span> hover the technologies to get their name.
+            </p>
 
-      <p>
-        You can{' '}
-        <Link
-          href='https://github.com/cristian-sbardelotto'
-          target='_blank'
-          title='My Github'
-        >
-          visit my Github
-        </Link>{' '}
-        to check out all my projects, or view some of my{' '}
-        <Link
-          href='/projects'
-          title='My Projects'
-        >
-          best/favorite projects here.
-        </Link>
-      </p>
+            <p>
+              You can also check out some of my best/favorite projects{' '}
+              <Link
+                href='/projects'
+                title='My Projects'
+              >
+                here.
+              </Link>
+            </p>
+          </div>
 
-      <p>
-        <Image
-          src={usa}
-          alt='United States Flag Image'
-          width={30}
-          height={30}
-        />
-        I am Brazilian, but I am constantly in contact with English, so I can
-        communicate, read, listen and understand both in English and Portuguese.
-      </p>
+          <S.Skills>
+            {skills.map(skill => (
+              <SkillsItem
+                key={skill.name}
+                image={skill.image}
+                name={skill.name}
+              />
+            ))}
+          </S.Skills>
+        </S.InfoGroup>
+
+        <S.Languages>
+          <S.Subtitle>Languages</S.Subtitle>
+
+          <ul>
+            <li>
+              <span>Portuguese</span>: native.
+            </li>
+            <li>
+              <span>English</span>: intermediate/advanced level.
+            </li>
+          </ul>
+        </S.Languages>
+      </S.Wrapper>
     </S.Container>
   );
 }

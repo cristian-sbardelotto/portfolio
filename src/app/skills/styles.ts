@@ -1,99 +1,147 @@
 /* eslint-disable indent */
 
-import { Title } from '@/styles/utils';
+import { Title, appearUp } from '@/styles/utils';
 import styled from 'styled-components';
 
-import { AreaProps } from '@/types';
-
-type ActiveAreaProps = {
-  activearea: AreaProps;
-};
-
 export const Container = styled.main`
+  display: flex;
+  justify-content: center;
+
+  @media screen and (max-width: 1024px) {
+    display: initial;
+  }
+`;
+
+export const Wrapper = styled.div`
   padding: 2rem 5rem 0 5rem;
 
   @media screen and (max-width: 768px) {
     padding: 2rem 2rem 12rem 2rem;
   }
+`;
 
-  p {
-    margin-top: 5rem;
+export const TitleSection = styled.section`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-    text-align: center;
-    font-size: 1.9rem;
+  margin-bottom: 3rem;
 
-    @media screen and (max-width: 768px) {
-      font-size: 1.5rem;
-    }
-
-    &:last-child {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
-    }
-
-    a {
-      color: ${({ theme }) => theme.colors.alt};
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: start;
+    gap: 1.5rem;
   }
 `;
 
 export const StyledTitle = styled.h2`
   ${Title};
-  margin: 3rem 0 6rem 0;
-`;
 
-export const Skills = styled.ul`
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-  flex-flow: row wrap;
-
-  list-style: none;
-`;
-
-export const SkillsSection = styled.section`
-  text-align: center;
-`;
-
-export const SkillsSectionHeader = styled.div`
-  margin-bottom: 5rem;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-
-  @media screen and (max-width: 524px) {
-    flex-direction: column;
+  @media screen and (max-width: 768px) {
+    font-size: 3.25rem;
   }
 `;
 
-export const AreaSelector = styled.button<ActiveAreaProps>`
-  padding: 1rem;
+export const InfoGroup = styled.section`
+  max-width: 140rem;
 
-  font-size: 1.7rem;
-  font-family: '__Plus_Jakarta_Sans_47178e',
-    '__Plus_Jakarta_Sans_Fallback_47178e';
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10rem;
+  padding-inline: 1rem;
 
-  color: ${({ theme, id, activearea }) =>
-    activearea === id ? theme.colors.alt : theme.colors.text};
+  opacity: 0;
 
-  border: 1.5px solid
-    ${({ theme, id, activearea }) =>
-      activearea === id ? theme.colors.alt : theme.colors.text};
+  animation: ${appearUp} 0.75s;
+  animation-delay: 0.75s;
+  animation-fill-mode: forwards;
 
-  border-radius: 10px;
-  background: transparent;
+  .text-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 
-  cursor: pointer;
+    p {
+      font-size: 1.75rem;
+      color: ${({ theme }) => theme.colors.text};
 
-  @media screen and (max-width: 524px) {
-    padding: 0;
+      span {
+        color: ${({ theme }) => theme.colors.lightText};
+      }
 
-    border: none;
+      @media screen and (max-width: 768px) {
+        font-size: 1.5rem;
+      }
+
+      a {
+        color: ${({ theme }) => theme.colors.main};
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+`;
+
+export const Skills = styled.ul`
+  margin-bottom: 2rem;
+
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  gap: 2rem;
+  justify-self: center;
+
+  list-style: none;
+
+  @media screen and (max-width: 1024px) {
+    margin-top: 1.5rem;
+
+    display: flex;
+    flex-wrap: wrap;
+  }
+`;
+
+export const Subtitle = styled.h4`
+  font-size: 3rem;
+  color: ${({ theme }) => theme.colors.lightText};
+  margin-bottom: 0.75rem;
+`;
+
+export const Languages = styled.div`
+  margin-top: 2rem;
+
+  opacity: 0;
+
+  animation: ${appearUp} 0.75s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+
+  ul {
+    margin-top: 2rem;
+    padding-left: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    li {
+      font-size: 1.75rem;
+      color: ${({ theme }) => theme.colors.text};
+
+      span {
+        color: ${({ theme }) => theme.colors.lightText};
+      }
+
+      @media screen and (max-width: 768px) {
+        font-size: 1.5rem;
+      }
+    }
   }
 `;

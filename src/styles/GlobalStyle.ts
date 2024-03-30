@@ -31,10 +31,15 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
+
+    &::selection {
+      background-color: #98ff96;
+      color: ${({ theme }) => theme.colors.background};
+    }
   }
 
   body {
-    color: ${({ theme }) => theme.colors.text};
+    color: ${({ theme }) => theme.colors.lightText};
     background-color: ${({ theme }) => theme.colors.background};
 
     transition-property: background-color, color;
@@ -45,6 +50,6 @@ export const GlobalStyle = createGlobalStyle`
 
   a {
     text-decoration: none;
-    color: ${({ theme }) => theme.colors.text};
+    color: ${({ theme }) => theme.colors.lightText};
   }
 `;
