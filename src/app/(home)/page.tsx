@@ -19,13 +19,13 @@ export default function Home() {
 
         <S.StyledTitle>
           <h2>
-            FullStack <span>Developer</span>
+            Frontend <span>Developer</span>
           </h2>
         </S.StyledTitle>
 
         <S.Article>
           <p>
-            Hey there! My name is <span>Cristian Sbardelotto.</span>
+            Hi! My name is <span>Cristian Sbardelotto</span>.
           </p>
 
           <p>
@@ -40,10 +40,10 @@ export default function Home() {
           </p>
 
           <p>
-            My main technologies are{' '}
+            My main stack is{' '}
             <span>
-              Javascript, Typescript, React, NextJS, TailwindCSS, NodeJS,
-              Prisma, Fastify, Express
+              HTML, CSS, Javascript, Typescript, React, NextJS, TailwindCSS,
+              Styled-components
             </span>
             .
           </p>
