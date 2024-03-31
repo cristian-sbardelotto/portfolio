@@ -40,10 +40,6 @@ export const Container = styled.ul`
       color: #ce3c30;
     }
 
-    .green {
-      color: #25d366;
-    }
-
     .dark-blue {
       -webkit-filter: brightness(0.5);
       filter: brightness(0.5);

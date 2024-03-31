@@ -39,8 +39,8 @@ export const StackTitle = styled.p`
   visibility: hidden;
   padding: 0.75rem 1rem;
   position: absolute;
-  left: 50%;
-  bottom: 65%;
+  left: 10%;
+  bottom: 85%;
   z-index: 99;
 
   border: ${({ theme }) => theme.borders.main};

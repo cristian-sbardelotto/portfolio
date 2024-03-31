@@ -4,10 +4,10 @@ import { v4 as randomUUID } from 'uuid';
 
 import portfolio from '/public/assets/projects/portfolio.svg';
 import memeCreator from '/public/assets/projects/meme-creator.svg';
-import studionBackend from '/public/assets/projects/studion-backend.svg';
+import imagineshop from '/public/assets/projects/imagineshop.svg';
 import todoList from '/public/assets/projects/todo-list.svg';
 import cristianOS from '/public/assets/projects/cristian-os.svg';
-import devPolls from '/public/assets/projects/dev-polls.svg';
+import qrCodeGenerator from '/public/assets/projects/qr-code-generator.svg';
 
 export const projects: ProjectProps[] = [
   {
@@ -20,20 +20,20 @@ export const projects: ProjectProps[] = [
   },
   {
     id: randomUUID(),
+    title: 'Portfolio',
+    image: portfolio,
+    description: 'Wait. You are already here. Then, check out the source code.',
+    technologies: ['typescript', 'next.js', 'styled-components'],
+    githubUrl: 'https://github.com/cristian-sbardelotto/portfolio',
+  },
+  {
+    id: randomUUID(),
     title: 'Meme Creator',
     image: memeCreator,
     description:
       'Create some memes, using any image you want. After that, download the meme and send it to you friends.',
     technologies: ['typescript', 'react', 'styled-components'],
     githubUrl: 'https://github.com/cristian-sbardelotto/meme-creator',
-  },
-  {
-    id: randomUUID(),
-    title: 'Portfolio',
-    image: portfolio,
-    description: 'Wait. You are already here. Then, check out the source code.',
-    technologies: ['typescript', 'nextjs', 'styled-components'],
-    githubUrl: 'https://github.com/cristian-sbardelotto/portfolio',
   },
   {
     id: randomUUID(),
@@ -46,20 +46,20 @@ export const projects: ProjectProps[] = [
   },
   {
     id: randomUUID(),
-    title: 'Studion Backend',
-    image: studionBackend,
+    title: 'ImagineShop',
+    image: imagineshop,
     description:
-      'Manage and view events effortlessly. Register, list, and interact with detailed information. Efficient and flexible.',
-    technologies: ['typescript', 'nodejs', 'fastify', 'prisma'],
-    githubUrl: 'https://github.com/cristian-sbardelotto/studion-backend',
+      'The project simulates an e-commerce website, where you can buy items from the store with a false authentication.',
+    technologies: ['typescript', 'next.js', 'styled-components'],
+    githubUrl: 'https://github.com/cristian-sbardelotto/imagineshop/',
   },
   {
     id: randomUUID(),
-    title: 'Dev Polls',
-    image: devPolls,
+    title: 'QR Generator',
+    image: qrCodeGenerator,
     description:
-      'Vote in any poll you choose, and view the voting progression in real time. Made in the NLW Expert.',
-    technologies: ['typescript', 'nodejs', 'fastify', 'prisma'],
-    githubUrl: 'https://github.com/cristian-sbardelotto/dev-polls',
+      'A simple QR Code generator that allows the user to download the image of any link that was typed.',
+    technologies: ['javascript', 'react', 'css'],
+    githubUrl: 'https://github.com/cristian-sbardelotto/qr-code-generator/',
   },
 ];

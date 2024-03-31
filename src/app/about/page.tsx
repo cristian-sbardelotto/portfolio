@@ -50,7 +50,10 @@ export default function About() {
 
         {experiences.map(experience => (
           <ExperienceCard.Root key={experience.id}>
-            <ExperienceCard.Header image={experience.company.image}>
+            <ExperienceCard.Header
+              experienceUrl={experience.company.url}
+              image={experience.company.image}
+            >
               {experience.name}
             </ExperienceCard.Header>
 
