@@ -79,7 +79,6 @@ export const ImageGroup = styled.div`
     &:hover {
       box-shadow: #f974167c -5px 5px;
       cursor: pointer;
-      filter: brightness(0.9);
       transform: translate(0.5rem, -0.5rem);
 
       img {
