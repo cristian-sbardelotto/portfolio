@@ -1,8 +1,11 @@
 'use client';
 
+import Link from 'next/link';
+
 import { ExperienceCard } from '@/components/ExperienceCard';
 import { experiences } from '@/data/experiencesMock';
 
+import { ExternalLinkIcon } from 'lucide-react';
 import * as S from './styles';
 
 export default function About() {
@@ -39,6 +42,18 @@ export default function About() {
               dedication, perseverance, and a continuous thirst for knowledge
             </span>
             , I can achieve my goals in the world of programming.
+          </p>
+
+          <p>
+            If you want to know more about me in a fun and different way, you
+            should try{' '}
+            <Link
+              href='https://cristian-os.vercel.app/'
+              target='_blank'
+            >
+              Cristian OS <ExternalLinkIcon size={16} />
+            </Link>
+            .
           </p>
         </S.Article>
       </div>
