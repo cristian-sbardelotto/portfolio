@@ -24,3 +24,32 @@ export const Span = styled.span`
     }
   }
 `;
+
+export const RelatedProjects = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: 1.5rem;
+
+  span {
+    color: ${({ theme }) => theme.colors.lightText};
+  }
+
+  a,
+  svg {
+    color: ${({ theme }) => theme.colors.main};
+  }
+
+  svg {
+    transition: transform 0.3s;
+  }
+
+  a:hover {
+    text-decoration: underline;
+
+    svg {
+      transform: translate(2px, -2px);
+    }
+  }
+`;

@@ -73,6 +73,7 @@ export default function About() {
             </ExperienceCard.Header>
 
             <ExperienceCard.Info
+              relatedProjects={experience.relatedProjects}
               duration={experience.duration}
               experienceUrl={experience.company.url}
             >
