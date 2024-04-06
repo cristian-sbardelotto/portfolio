@@ -14,3 +14,9 @@ export type ProjectProps = {
 export type ChildrenComponentProps = {
   children: ReactNode;
 };
+
+export type RelatedProject = {
+  id: string;
+  name: string;
+  url: string;
+};

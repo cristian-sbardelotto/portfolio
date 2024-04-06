@@ -45,6 +45,23 @@ export const Article = styled.article`
   p {
     margin-bottom: 2rem;
     color: ${({ theme }) => theme.colors.text};
+
+    a,
+    svg {
+      color: ${({ theme }) => theme.colors.main};
+    }
+
+    svg {
+      transition: transform 0.3s;
+    }
+
+    a:hover {
+      text-decoration: underline;
+
+      svg {
+        transform: translate(2px, -2px);
+      }
+    }
   }
 
   span {
