@@ -29,20 +29,34 @@ export default function About() {
             Currently, my personal quest is to secure my <span>first job</span>{' '}
             in the industry. But that's not where my ambitions end. In the
             future, I have the idea of becoming a <span>Tech Lead</span>, a role
-            that encompasses not only technical knowledge but also soft skills.
+            that encompasses not only technical knowledge but also a a
+            consolidated arsenal of soft skills.
           </p>
 
-          <p>
-            To maintain a strong foundation in web programming, I always{' '}
-            <span>challenge</span> myself and seek valuable learning
-            opportunities. Armed with this knowledge and a desire for continuous
-            improvement, I am excited to keep expanding my skills and taking on
-            new challenges. I believe that with{' '}
-            <span>
-              dedication, perseverance, and a continuous thirst for knowledge
-            </span>
-            , I can achieve my goals in the world of programming.
-          </p>
+          <div>
+            And what about my <span>soft skills</span>? There we go:
+            <ul>
+              <li>
+                <span>Commitment</span>: I'm punctual and rarely fail with
+                deadlines.
+              </li>
+
+              <li>
+                <span>Responsibility</span>: I admit my mistakes and take on the
+                duties I can handle.
+              </li>
+
+              <li>
+                <span>Proactivity</span>: I'm the first one to try to get the
+                solution and contribute when possible.
+              </li>
+
+              <li>
+                <span>Self Improvement</span>: I'm always finding new ways and
+                ideas to boost my knowledge and experience.
+              </li>
+            </ul>
+          </div>
 
           <p>
             If you want to know more about me in a fun and different way, you
