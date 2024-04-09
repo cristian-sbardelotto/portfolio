@@ -62,6 +62,7 @@ export default function About() {
             If you want to know more about me in a fun and different way, you
             should try{' '}
             <Link
+              className='os-link'
               href='https://cristian-os.vercel.app/'
               target='_blank'
             >

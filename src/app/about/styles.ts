@@ -60,6 +60,10 @@ export const Article = styled.article`
       transition: transform 0.3s;
     }
 
+    .os-link {
+      white-space: nowrap;
+    }
+
     a:hover {
       text-decoration: underline;
 
