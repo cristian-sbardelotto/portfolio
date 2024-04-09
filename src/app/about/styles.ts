@@ -42,7 +42,12 @@ export const Article = styled.article`
   font-size: 1.6rem;
   line-height: 175%;
 
-  p {
+  ul {
+    padding-left: 2rem;
+  }
+
+  p,
+  div {
     margin-bottom: 2rem;
     color: ${({ theme }) => theme.colors.text};
 
