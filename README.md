@@ -7,7 +7,7 @@
 Welcome to my [portfolio](https://portfolio-chi-lemon-51.vercel.app)! This is a website that show my abilities and best projects in Web Development.
 The project also makes it easy to contact with me.
 
-> ⚠️ Feel free to [contact me](https://portfolio-cristian-sbardelotto.vercel.app/contact/), and share your **_feedback_** and **_insights_**, or report a **_bug_**!
+> ⚠️ Feel free to [contact me](https://portfolio-chi-lemon-51.vercel.app/contact), and share your **_feedback_** and **_insights_**, or report a **_bug_**!
 
 <p>
   <a href="#technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
