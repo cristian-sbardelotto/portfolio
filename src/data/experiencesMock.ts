@@ -31,7 +31,7 @@ export const experiences: ExperienceProps[] = [
     relatedProjects: [
       {
         name: 'RK Imóveis LP',
-        url: 'https://rk-lp-tom.netlify.app',
+        url: 'https://rklp-tom.netlify.app/',
         id: randomUUID(),
       },
     ],
