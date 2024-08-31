@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { Button } from '../Button';
 
 import { Github, Linkedin, Mail, FileText } from 'lucide-react';
-import discordIcon from 'public/assets/discord.svg';
+import discordIcon from '../../../public/assets/discord.svg';
 import * as S from './styles';
 
 export function ContactLinks() {
@@ -83,3 +83,4 @@ export function ContactLinks() {
     </S.Container>
   );
 }
+
