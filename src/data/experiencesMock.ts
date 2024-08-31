@@ -20,6 +20,18 @@ export const experiences: ExperienceProps[] = [
     id: randomUUID(),
     name: 'Frontend Developer',
     company: {
+      name: 'Hash³',
+      url: 'https://www.linkedin.com/company/hashcubed/',
+      image: 'https://i.ibb.co/9VbNJq7/hashcubed-logo.jpg',
+    },
+    description:
+      'I work with cutting-edge frontend technologies, including TypeScript, React, TailwindCSS, and shadcn/ui. My daily responsibilities involve developing new features, enhancing existing ones, refactoring code, analyzing real-world applications, and seamlessly integrating systems to ensure everything functions perfectly.',
+    duration: 'Jul. 2024 - until now',
+  },
+  {
+    id: randomUUID(),
+    name: 'Frontend Developer',
+    company: {
       name: 'Lab Yes!',
       url: 'https://linkedin.com/company/lab-yes/',
       image: 'https://i.ibb.co/tYN8pM9/lab-yes-logo.jpg',
@@ -73,4 +85,3 @@ export const experiences: ExperienceProps[] = [
       'One notable course I completed was the Javascript course taught by Gustavo Guanabara, an experienced and renowned instructor in the field, known for his incredible teaching methodology. This course provided me with a comprehensive understanding of Javascript, which also covered programming logic, helping me develop dynamic and interactive websites.',
   },
 ];
-
