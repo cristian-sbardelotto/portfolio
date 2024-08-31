@@ -22,8 +22,7 @@ export const experiences: ExperienceProps[] = [
     company: {
       name: 'Lab Yes!',
       url: 'https://linkedin.com/company/lab-yes/',
-      image:
-        'https://media.licdn.com/dms/image/D4D0BAQGXTx5awi2SbA/company-logo_200_200/0/1693486596455/lab_yes_logo?e=1718841600&v=beta&t=8D0blMXKEnMwTFGOja_TwCLhXaHYhtLX58eKI3TULtM',
+      image: 'https://i.ibb.co/tYN8pM9/lab-yes-logo.jpg',
     },
     description:
       'We engage in the development of web applications to address genuine client needs on a voluntary basis. In this process, I am using Javascript, React, Styled-Components, etc. This is done with the goal of gaining practical experiences covering the entire system creation process, from organization to development and finalization of advanced software solutions. We also employ agile approaches like Scrum and Kanban, in order to boost productivity and performance. This work enhances collaboration, teamwork, communication, proactivity, and other soft skills.',
@@ -74,3 +73,4 @@ export const experiences: ExperienceProps[] = [
       'One notable course I completed was the Javascript course taught by Gustavo Guanabara, an experienced and renowned instructor in the field, known for his incredible teaching methodology. This course provided me with a comprehensive understanding of Javascript, which also covered programming logic, helping me develop dynamic and interactive websites.',
   },
 ];
+

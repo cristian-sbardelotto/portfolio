@@ -4,7 +4,11 @@ const nextConfig = {
     styledComponents: true,
   },
   images: {
-    domains: ['github.com', 'media.eadbox.com', 'media.licdn.com'],
+    remotePatterns: [
+      { hostname: 'github.com' },
+      { hostname: 'media.eadbox.com' },
+      { hostname: 'i.ibb.co' },
+    ],
   },
 };
 
