@@ -6,7 +6,6 @@ import { ChevronRight } from 'lucide-react';
 
 import { Button } from '@/components/Button';
 import { Line } from '@/components/Line';
-import { SocialLinks } from '@/components/SocialLinks';
 import * as S from './styles';
 
 export default function Home() {
@@ -70,10 +69,8 @@ export default function Home() {
           alt="Cristian Sbardelotto's profile picture"
           width={300}
           height={300}
-          priority={true}
+          priority
         />
-
-        <SocialLinks />
       </S.ImageGroup>
     </S.Container>
   );

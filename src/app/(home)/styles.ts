@@ -13,11 +13,10 @@ const pulse = keyframes`
 
 export const Container = styled.main`
   width: 100%;
-  padding: 0 5vw;
   margin-top: 8vh;
 
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 3rem;
 
   > div {

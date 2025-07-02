@@ -74,16 +74,15 @@ export const ImageGroup = styled.div`
 
     img {
       transition: scale 0.3s;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     &:hover {
       box-shadow: #f974167c -5px 5px;
       cursor: pointer;
       transform: translate(0.5rem, -0.5rem);
-
-      img {
-        scale: 1.1;
-      }
     }
   }
 `;

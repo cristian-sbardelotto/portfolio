@@ -1,28 +1,30 @@
 import styled from 'styled-components';
 
-export const SocialLinks = styled.ul`
+export const SocialLinks = styled.div`
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
+`;
 
-  list-style: none;
+export const Item = styled.a`
+  width: 50px;
+  height: 50px;
 
-  li a svg {
-    color: ${({ theme }) => theme.colors.lightText};
-    transition: 0.2s color;
+  color: ${({ theme }) => theme.colors.text};
+  background-color: ${({ theme }) => theme.colors.lightBackground};
+  border: ${({ theme }) => theme.borders.main};
+  border-radius: 50%;
 
-    &:hover {
-      cursor: pointer;
-      color: ${({ theme }) => theme.colors.main};
-    }
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  @media screen and (max-width: 768px) {
-    gap: 1rem;
+  transition: 0.3s all ease;
 
-    svg {
-      height: 18px;
-      width: 18px;
-    }
+  &:hover {
+    background: ${({ theme }) => theme.colors.main};
+    color: ${({ theme }) => theme.colors.background};
+    transform: translateY(-2px);
+    border-color: ${({ theme }) => theme.colors.main};
   }
 `;

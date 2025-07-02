@@ -8,6 +8,7 @@ import quizzed from '/public/assets/projects/quizzed.svg';
 import portfolio from '/public/assets/projects/portfolio.svg';
 import memeCreator from '/public/assets/projects/meme-creator.svg';
 import qrCodeGenerator from '/public/assets/projects/qr-code-generator.svg';
+import cristianLinks from '/public/assets/projects/cristian-links.png';
 
 export const projects: ProjectProps[] = [
   {
@@ -16,7 +17,7 @@ export const projects: ProjectProps[] = [
     image: cristianOS,
     description: 'A little more about me. Also looks like Windows.',
     technologies: ['typescript', 'react', 'tailwind-css'],
-    githubUrl: 'https://github.com/cristian-sbardelotto/cristian-os',
+    url: 'https://github.com/cristian-sbardelotto/cristian-os',
   },
   {
     id: randomUUID(),
@@ -24,7 +25,7 @@ export const projects: ProjectProps[] = [
     image: studay,
     description: 'See your homework in an organized and clean way.',
     technologies: ['typescript', 'react', 'tailwind-css'],
-    githubUrl: 'https://github.com/cristian-sbardelotto/studay',
+    url: 'https://github.com/cristian-sbardelotto/studay',
   },
   {
     id: randomUUID(),
@@ -33,7 +34,16 @@ export const projects: ProjectProps[] = [
     description:
       'Test your knowledge and try our quiz to challenge yourself! Are you really a quiz wizard?',
     technologies: ['typescript', 'react', 'tailwind-css'],
-    githubUrl: 'https://github.com/cristian-sbardelotto/quizzed/',
+    url: 'https://github.com/cristian-sbardelotto/quizzed/',
+  },
+  {
+    id: randomUUID(),
+    title: 'Cristian Links',
+    image: cristianLinks,
+    description:
+      'Minimalist and beautiful links page, where you can find my most important links and projects.',
+    technologies: ['typescript', 'react', 'tailwind-css'],
+    url: 'https://cristian-links.vercel.app/',
   },
   {
     id: randomUUID(),
@@ -41,7 +51,7 @@ export const projects: ProjectProps[] = [
     image: portfolio,
     description: 'Wait. You are already here. Then, check out the source code.',
     technologies: ['typescript', 'next.js', 'styled-components'],
-    githubUrl: 'https://github.com/cristian-sbardelotto/portfolio',
+    url: 'https://github.com/cristian-sbardelotto/portfolio',
   },
   {
     id: randomUUID(),
@@ -50,7 +60,7 @@ export const projects: ProjectProps[] = [
     description:
       'Create some memes, using any image you want. After that, download the meme and send it to you friends.',
     technologies: ['typescript', 'react', 'styled-components'],
-    githubUrl: 'https://github.com/cristian-sbardelotto/meme-creator',
+    url: 'https://github.com/cristian-sbardelotto/meme-creator',
   },
   {
     id: randomUUID(),
@@ -59,6 +69,6 @@ export const projects: ProjectProps[] = [
     description:
       'A simple QR Code generator that allows the user to download the image of any link that was typed.',
     technologies: ['javascript', 'react', 'css'],
-    githubUrl: 'https://github.com/cristian-sbardelotto/qr-code-generator/',
+    url: 'https://github.com/cristian-sbardelotto/qr-code-generator/',
   },
 ];

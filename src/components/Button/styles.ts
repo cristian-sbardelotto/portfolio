@@ -31,7 +31,6 @@ export const StyledButton = styled.button<{
   border-radius: 8px;
   background: ${({ theme, $variant }) =>
     $variant === 'light' ? theme.colors.lightText : 'transparent'};
-  font-family: '__Inter_aaf875', sans-serif;
   font-weight: 600;
 
   transition: background 0.3s, color 0.3s;
@@ -44,3 +43,4 @@ export const StyledButton = styled.button<{
     cursor: pointer;
   }
 `;
+

@@ -11,14 +11,14 @@ export function ProjectCard({
   image,
   description,
   technologies,
-  githubUrl,
   delay,
+  url,
 }: ProjectProps & { delay: number }) {
   return (
     <S.Container style={{ animationDelay: `${delay}s` }}>
       <S.ImageGroup>
         <Link
-          href={githubUrl}
+          href={url}
           target='_blank'
         >
           <Image
@@ -30,7 +30,7 @@ export function ProjectCard({
 
       <h4>
         <Link
-          href={githubUrl}
+          href={url}
           target='_blank'
         >
           {title}
@@ -49,3 +49,4 @@ export function ProjectCard({
     </S.Container>
   );
 }
+

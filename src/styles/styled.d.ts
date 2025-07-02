@@ -13,5 +13,9 @@ declare module 'styled-components' {
     borders: {
       main: string;
     };
+    breakpoints: {
+      maxWidth: string;
+    };
   }
 }
+
