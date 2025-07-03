@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import { Title, appearUp } from '@/styles/utils';
+import { appearUp } from '@/styles/utils';
 
 type NavLinksProps = {
-  $ismenuopen: boolean; // boolean or 0 | 1
+  $ismenuopen: boolean;
 };
 
 export const Container = styled.div`
@@ -24,7 +24,7 @@ export const Header = styled.header`
 
   border: ${({ theme }) => theme.borders.main};
   border-radius: 1000px;
-  background-color: ${({ theme }) => `${theme.colors.background}`};
+  background-color: ${({ theme }) => `${theme.colors.background}80`};
   backdrop-filter: blur(5px);
   animation: ${appearUp} 0.5s;
 

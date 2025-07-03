@@ -9,6 +9,7 @@ declare module 'styled-components' {
       text: string;
 
       main: string;
+      lightMain: string;
     };
     borders: {
       main: string;
@@ -18,4 +19,3 @@ declare module 'styled-components' {
     };
   }
 }
-

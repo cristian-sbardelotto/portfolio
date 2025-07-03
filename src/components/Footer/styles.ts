@@ -29,14 +29,10 @@ export const FooterDescription = styled.div`
   flex-direction: column;
   gap: 1rem;
 
-  h6 {
-    font-size: 2.4rem;
-    font-weight: 600;
-  }
-
   p {
-    font-size: 1.6rem;
-    color: ${({ theme }) => theme.colors.text};
+    font-size: 1.8rem;
+    font-weight: 500;
+    /* color: ${({ theme }) => theme.colors.text}; */
   }
 
   span {

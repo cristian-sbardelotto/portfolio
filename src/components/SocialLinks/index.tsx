@@ -1,8 +1,5 @@
-import Link from 'next/link';
-
 import { Github, Linkedin, Mail, Phone } from 'lucide-react';
 import * as S from './styles';
-import theme from '@/styles/theme';
 
 export function SocialLinks() {
   return (

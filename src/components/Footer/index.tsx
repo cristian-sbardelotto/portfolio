@@ -1,16 +1,17 @@
-import Link from 'next/link';
-
 import { SocialLinks } from '../SocialLinks';
 import * as S from './styles';
+
+const currentYear = new Date().getFullYear();
 
 export function Footer() {
   return (
     <S.Footer>
       <S.Container>
         <S.FooterDescription>
-          <h6>Let's work together</h6>
           <p>Ready to bring your ideas to life? Get in touch!</p>
-          <span>© All rights reserved - Cristian Sbardelotto 2025</span>
+          <span>
+            © All rights reserved - Cristian Sbardelotto {currentYear}
+          </span>
         </S.FooterDescription>
 
         <SocialLinks />

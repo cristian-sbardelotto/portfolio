@@ -3,7 +3,6 @@ import { useState } from 'react';
 
 import { usePathname } from 'next/navigation';
 
-import { Button } from '../Button';
 import * as S from './styles';
 
 import { AlignJustify, X } from 'lucide-react';

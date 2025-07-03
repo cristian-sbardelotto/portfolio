@@ -8,7 +8,6 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   flex: 1;
-  height: 100%;
   max-width: ${({ theme }) => theme.breakpoints.maxWidth};
   width: 100%;
   margin-inline: auto;

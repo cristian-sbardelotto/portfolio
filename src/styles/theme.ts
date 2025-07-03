@@ -6,6 +6,7 @@ const theme = {
     text: '#a8a29e',
 
     main: '#FF8C42',
+    lightMain: '#ffa268',
   },
   borders: {
     main: '1px solid #fff2',

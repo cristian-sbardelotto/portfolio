@@ -46,15 +46,19 @@ export const Container = styled.main`
 `;
 
 export const AboveTitle = styled.span`
-  display: flex;
-  align-items: center;
+  display: inline-block;
+  background: ${({ theme }) => theme.colors.main}10;
+  color: ${({ theme }) => theme.colors.main};
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 1.4rem;
+  width: fit-content;
+  border: 1px solid ${({ theme }) => theme.colors.main}30;
 
-  font-weight: 200;
-  font-size: 1.5rem;
-  line-height: 8px;
-  letter-spacing: 0.7rem;
-  color: #656d72;
-  text-transform: uppercase;
+  @media (max-width: 968px) {
+    margin: 0 auto;
+  }
 `;
 
 export const StyledTitle = styled.div`
@@ -71,14 +75,26 @@ export const StyledTitle = styled.div`
   }
 
   width: 400px;
+  direction: ltr;
 
   border-right: 3px solid;
   white-space: nowrap;
-  animation: typing 3.5s steps(21), blink 0.8s infinite alternate;
+  animation: typing 3.5s steps(21) forwards, blink 0.8s infinite alternate;
   overflow: hidden;
 
   h2 {
     ${Title};
+
+    span {
+      background: linear-gradient(
+        to right,
+        ${({ theme }) => theme.colors.main},
+        ${({ theme }) => theme.colors.lightMain}
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
 
   @media screen and (max-width: 1440px) {
@@ -99,6 +115,8 @@ export const StyledTitle = styled.div`
 `;
 
 export const Article = styled.article`
+  margin-bottom: 2rem;
+
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -109,13 +127,12 @@ export const Article = styled.article`
 
   p {
     color: ${({ theme }) => theme.colors.text};
-
-    span {
-      color: ${({ theme }) => theme.colors.lightText};
-    }
+    font-size: 1.7rem;
+    line-height: 1.6;
+    max-width: 500px;
 
     a {
-      display: flex;
+      display: inline-flex;
       align-items: center;
 
       color: ${({ theme }) => theme.colors.main};
@@ -128,22 +145,22 @@ export const Article = styled.article`
         text-decoration: underline;
 
         svg {
-          transform: translateX(1rem);
+          transform: translateX(5px);
         }
       }
     }
-  }
-
-  .p-about-me {
-    display: flex;
-    gap: 6px;
-    align-items: center;
   }
 
   @media screen and (max-width: 1024px) {
     font-size: 1.5rem;
     gap: 1.5rem;
   }
+`;
+
+export const ButtonsGroup = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 `;
 
 export const ImageGroup = styled.div`
@@ -163,7 +180,7 @@ export const ImageGroup = styled.div`
 `;
 
 export const StyledImage = styled(Image)`
-  border-radius: 50%;
+  border-radius: 5px;
   transition: scale 0.3s;
   animation: ${pulse} 2s infinite;
 
