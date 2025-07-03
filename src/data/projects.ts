@@ -2,14 +2,6 @@ import { ProjectProps } from '@/types';
 
 import { v4 as randomUUID } from 'uuid';
 
-import cristianOS from '/assets/projects/cristian-os.svg';
-import studay from '/assets/projects/studay.svg';
-import quizzed from '/assets/projects/quizzed.svg';
-import portfolio from '/assets/projects/portfolio.svg';
-import memeCreator from '/assets/projects/meme-creator.svg';
-import qrCodeGenerator from '/assets/projects/qr-code-generator.svg';
-import cristianLinks from '/assets/projects/cristian-links.png';
-
 export const projects: ProjectProps[] = [
   {
     id: randomUUID(),
