@@ -32,6 +32,8 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
+    font-family: Inter, sans-serif;
+
 
     &::selection {
       background-color: #98ff96;
