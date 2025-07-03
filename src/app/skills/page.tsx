@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 import { Button } from '@/components/Button';
 import { SkillsItem } from '@/components/SkillsItem';
-import { skills } from '@/data/skillsMock';
+import { skills } from '@/data/skills';
 import * as S from './styles';
 
 import { GithubIcon } from 'lucide-react';
@@ -72,3 +72,4 @@ export default function Skills() {
     </S.Container>
   );
 }
+

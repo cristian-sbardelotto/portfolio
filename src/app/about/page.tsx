@@ -3,7 +3,7 @@
 import Link from 'next/link';
 
 import { ExperienceCard } from '@/components/ExperienceCard';
-import { experiences } from '@/data/experiencesMock';
+import { experiences } from '@/data/experiences';
 
 import { ExternalLinkIcon } from 'lucide-react';
 import * as S from './styles';
@@ -104,3 +104,4 @@ export default function About() {
     </S.Container>
   );
 }
+

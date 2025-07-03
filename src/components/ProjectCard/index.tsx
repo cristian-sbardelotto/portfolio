@@ -24,6 +24,8 @@ export function ProjectCard({
           <Image
             src={image}
             alt={`${title} Project Card`}
+            width={1000}
+            height={1000}
           />
         </Link>
       </S.ImageGroup>
@@ -49,4 +51,3 @@ export function ProjectCard({
     </S.Container>
   );
 }
-

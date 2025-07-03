@@ -7,7 +7,7 @@ import { ChevronRight } from 'lucide-react';
 import { ProjectCard } from '@/components/ProjectCard';
 import * as S from './styles';
 
-import { projects } from '@/data/projectsMock';
+import { projects } from '@/data/projects';
 
 export default function Projects() {
   return (
@@ -40,3 +40,4 @@ export default function Projects() {
     </S.Container>
   );
 }
+
