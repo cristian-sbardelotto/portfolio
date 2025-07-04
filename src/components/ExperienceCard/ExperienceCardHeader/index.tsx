@@ -2,8 +2,6 @@ import { ReactNode } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { Line } from '@/components/Line';
-
 import * as S from './styles';
 
 type ExperienceCardHeaderProps = {
@@ -19,8 +17,6 @@ export function ExperienceCardHeader({
 }: ExperienceCardHeaderProps) {
   return (
     <S.Container>
-      <Line />
-
       <Link
         href={experienceUrl}
         target='_blank'
@@ -37,3 +33,4 @@ export function ExperienceCardHeader({
     </S.Container>
   );
 }
+

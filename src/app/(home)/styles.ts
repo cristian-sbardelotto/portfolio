@@ -135,7 +135,7 @@ export const Article = styled.article`
       display: inline-flex;
       align-items: center;
 
-      color: ${({ theme }) => theme.colors.main};
+      color: ${({ theme }) => theme.colors.lightText};
 
       svg {
         transition: 0.2s transform;
@@ -164,6 +164,8 @@ export const ButtonsGroup = styled.div`
 `;
 
 export const ImageGroup = styled.div`
+  position: relative;
+
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -180,9 +182,11 @@ export const ImageGroup = styled.div`
 `;
 
 export const StyledImage = styled(Image)`
-  border-radius: 5px;
   transition: scale 0.3s;
-  animation: ${pulse} 2s infinite;
+  border-radius: 5px;
+  object-fit: cover;
+  /* animation: ${pulse} 2s infinite; */
+  box-shadow: #00000070 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 
   &:hover {
     scale: 1.02;
@@ -193,5 +197,29 @@ export const StyledImage = styled(Image)`
     height: 200px;
 
     align-self: center;
+  }
+`;
+
+export const ImageBadge = styled.div`
+  position: absolute;
+  bottom: -5%;
+  left: -15%;
+  padding: 12px 25px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  background: ${({ theme }) => theme.colors.main};
+  color: ${({ theme }) => theme.colors.background};
+  font-size: 1.4rem;
+  font-weight: 600;
+  border-radius: 5px;
+  box-shadow: ${({ theme }) => theme.colors.main}20 5px 5px 2px,
+    ${({ theme }) => theme.colors.main}10 10px 10px 4px;
+  transition: scale 0.3s;
+
+  &:hover {
+    scale: 1.04;
   }
 `;

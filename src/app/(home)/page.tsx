@@ -2,7 +2,12 @@
 
 import Link from 'next/link';
 
-import { ArrowRightIcon, DownloadIcon } from 'lucide-react';
+import {
+  ArrowRightIcon,
+  DownloadIcon,
+  MapPinIcon,
+  PinIcon,
+} from 'lucide-react';
 
 import { Button } from '@/components/Button';
 import * as S from './styles';
@@ -54,12 +59,20 @@ export default function Home() {
 
       <S.ImageGroup className='image-group'>
         <S.StyledImage
-          src='https://github.com/cristian-sbardelotto.png'
+          src='/images/profile.jpeg'
           alt="Cristian Sbardelotto's profile picture"
           width={325}
           height={350}
           priority
         />
+
+        <S.ImageBadge>
+          <MapPinIcon
+            strokeWidth={1.5}
+            size={20}
+          />{' '}
+          <span>SC, Brazil</span>
+        </S.ImageBadge>
       </S.ImageGroup>
     </S.Container>
   );

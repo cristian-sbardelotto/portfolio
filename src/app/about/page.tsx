@@ -104,4 +104,3 @@ export default function About() {
     </S.Container>
   );
 }
-

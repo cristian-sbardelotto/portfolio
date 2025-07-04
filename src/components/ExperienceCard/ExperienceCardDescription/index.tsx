@@ -9,9 +9,6 @@ type ExperienceCardDescriptionProps = {
 export function ExperienceCardDescription({
   children,
 }: ExperienceCardDescriptionProps) {
-  return (
-    <S.Container>
-      <p>{children}</p>
-    </S.Container>
-  );
+  return <S.Container>{children}</S.Container>;
 }
+
