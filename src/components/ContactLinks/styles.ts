@@ -3,11 +3,12 @@ import { appearUp } from '@/styles/utils';
 
 export const Container = styled.ul`
   list-style: none;
+  max-width: 700px;
 
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  flex-wrap: wrap;
+  gap: 3rem;
 
   li {
     opacity: 0;
@@ -16,34 +17,18 @@ export const Container = styled.ul`
     animation-fill-mode: forwards;
   }
 
-  li,
-  a,
   button {
-    width: 100%;
-  }
-
-  button {
-    padding-block: 2rem;
+    width: 190px;
+    height: 170px;
     font-size: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
 
   a:hover {
-    .gray {
-      color: #adb3b9;
-    }
-
-    .light-blue {
-      color: #71b7fb;
-    }
-
-    .red {
-      color: #ce3c30;
-    }
-
-    .dark-blue {
-      -webkit-filter: brightness(0.5);
-      filter: brightness(0.5);
-    }
   }
 
   @media screen and (max-width: 768px) {

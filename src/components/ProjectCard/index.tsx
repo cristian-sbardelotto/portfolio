@@ -11,9 +11,9 @@ export function ProjectCard({
   image,
   description,
   technologies,
-  delay,
+  delay = 0,
   url,
-}: ProjectProps & { delay: number }) {
+}: ProjectProps & { delay?: number }) {
   return (
     <S.Container style={{ animationDelay: `${delay}s` }}>
       <S.ImageGroup>

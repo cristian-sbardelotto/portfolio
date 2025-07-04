@@ -18,11 +18,3 @@ export const LinksGroup = styled.section`
   align-items: center;
 `;
 
-export const LinksWrapper = styled.div`
-  width: 400px;
-
-  @media screen and (max-width: 768px) {
-    width: 100%;
-    padding-inline: 2rem;
-  }
-`;

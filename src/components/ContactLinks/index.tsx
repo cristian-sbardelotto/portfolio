@@ -3,28 +3,36 @@ import Image from 'next/image';
 
 import { Button } from '../Button';
 
-import { Github, Linkedin, Mail, FileText } from 'lucide-react';
-import discordIcon from '../../../public/assets/discord.svg';
 import * as S from './styles';
+import { contactLinks } from './constants';
 
 export function ContactLinks() {
   return (
     <S.Container>
-      <li style={{ animationDelay: '0.75s' }}>
-        <Link
-          href='https://github.com/cristian-sbardelotto'
-          target='_blank'
-        >
-          <Button
-            variant='dark'
-            className='gray'
+      {contactLinks.map(item => (
+        <li key={item.name}>
+          <Link
+            href={item.url}
+            target='_blank'
+            download={item.name === 'Resume'}
           >
-            <Github size={22} /> Github
-          </Button>
-        </Link>
-      </li>
+            <Button
+              variant='dark'
+              className='gray'
+            >
+              <Image
+                src={item.icon}
+                alt={item.name}
+                width={48}
+                height={48}
+              />
+              <span>{item.name}</span>
+            </Button>
+          </Link>
+        </li>
+      ))}
 
-      <li style={{ animationDelay: '1.25s' }}>
+      {/* <li style={{ animationDelay: '1.25s' }}>
         <Link
           href='https://linkedin.com/in/cristian-k-sbardelotto/'
           target='_blank'
@@ -79,8 +87,7 @@ export function ContactLinks() {
             <span className='dark-blue'>Discord</span>
           </Button>
         </Link>
-      </li>
+      </li> */}
     </S.Container>
   );
 }
-

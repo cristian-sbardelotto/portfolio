@@ -31,6 +31,7 @@ function getVariantStyle(
       text: theme.colors.lightText,
       background: 'transparent',
       border: theme.borders.main,
+      hoverBackground: '#fff2',
     },
     outline: {
       background: 'transparent',
@@ -69,5 +70,7 @@ export const StyledButton = styled.button<{
     opacity: 0.8;
     border-color: ${({ $variant }) => getVariantStyle($variant, 'hoverBorder')};
     color: ${({ $variant }) => getVariantStyle($variant, 'hoverText')};
+    background: ${({ $variant }) =>
+      getVariantStyle($variant, 'hoverBackground')};
   }
 `;
