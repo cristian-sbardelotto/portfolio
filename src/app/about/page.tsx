@@ -26,11 +26,11 @@ export default function About() {
           </p>
 
           <p>
-            Currently, my personal quest is to secure my <span>first job</span>{' '}
-            in the industry. But that's not where my ambitions end. In the
-            future, I have the idea of becoming a <span>Tech Lead</span>, a role
-            that encompasses not only technical knowledge but also a a
-            consolidated arsenal of soft skills.
+            Currently, I work at <span>Hash³</span> using the latest
+            technologies in the JavaScript and TypeScript ecosystem (more
+            details in the experience section below). At the same time, I've
+            also been diving into backend development as well, exploring{' '}
+            <span>Python and Go</span> to round out my skill set.
           </p>
 
           <div>

@@ -2,12 +2,7 @@
 
 import Link from 'next/link';
 
-import {
-  ArrowRightIcon,
-  DownloadIcon,
-  MapPinIcon,
-  PinIcon,
-} from 'lucide-react';
+import { ArrowRightIcon, DownloadIcon, MapPinIcon } from 'lucide-react';
 
 import { Button } from '@/components/Button';
 import * as S from './styles';
