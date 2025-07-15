@@ -1,19 +1,12 @@
 import { Title, appearUp } from '@/styles/utils';
 import Image from 'next/image';
-import styled, { keyframes } from 'styled-components';
-
-const pulse = keyframes`
- 0% {
-    box-shadow: 0 0 0 0px #fff1;
-  }
-  100% {
-    box-shadow: 0 0 0 20px #fff0;
-  }
-`;
+import styled from 'styled-components';
 
 export const Container = styled.main`
   width: 100%;
   margin-top: 8vh;
+  padding-inline: 4rem;
+  padding-bottom: 4rem;
 
   display: flex;
   justify-content: space-between;
@@ -34,13 +27,9 @@ export const Container = styled.main`
     animation-fill-mode: forwards;
   }
 
-  .image-group {
-    align-items: center;
-  }
-
   @media screen and (max-width: 1024px) {
     flex-direction: column;
-    justify-content: initial;
+    justify-content: center;
     gap: 4rem;
   }
 `;
@@ -55,10 +44,6 @@ export const AboveTitle = styled.span`
   font-size: 1.4rem;
   width: fit-content;
   border: 1px solid ${({ theme }) => theme.colors.main}30;
-
-  @media (max-width: 968px) {
-    margin: 0 auto;
-  }
 `;
 
 export const StyledTitle = styled.div`
@@ -133,20 +118,12 @@ export const Article = styled.article`
 
     a {
       display: inline-flex;
-      align-items: center;
+      align-items: start;
 
       color: ${({ theme }) => theme.colors.lightText};
 
-      svg {
-        transition: 0.2s transform;
-      }
-
       &:hover {
         text-decoration: underline;
-
-        svg {
-          transform: translateX(5px);
-        }
       }
     }
   }
@@ -161,6 +138,22 @@ export const ButtonsGroup = styled.div`
   display: flex;
   align-items: center;
   gap: 2rem;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+
+    max-width: 448px;
+
+    a {
+      width: 100%;
+
+      button {
+        width: 100%;
+      }
+    }
+  }
 `;
 
 export const ImageGroup = styled.div`
@@ -177,7 +170,7 @@ export const ImageGroup = styled.div`
   animation-fill-mode: forwards;
 
   @media screen and (max-width: 1024px) {
-    flex-direction: column-reverse !important;
+    display: none !important;
   }
 `;
 
@@ -185,7 +178,6 @@ export const StyledImage = styled(Image)`
   transition: scale 0.3s;
   border-radius: 5px;
   object-fit: cover;
-  /* animation: ${pulse} 2s infinite; */
   box-shadow: #00000070 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 
   &:hover {
@@ -195,8 +187,9 @@ export const StyledImage = styled(Image)`
   @media screen and (max-width: 1024px) {
     width: 200px;
     height: 200px;
+    margin-left: auto;
 
-    align-self: center;
+    /* align-self: flex-end; */
   }
 `;
 

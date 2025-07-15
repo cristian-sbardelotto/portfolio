@@ -16,5 +16,9 @@ export const LinksGroup = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-`;
 
+  @media screen and (max-width: 768px) {
+    padding-inline: 20px;
+    padding-bottom: 30px;
+  }
+`;

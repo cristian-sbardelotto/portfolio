@@ -22,6 +22,16 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+
+    .social-links {
+      align-self: flex-end;
+    }
+  }
 `;
 
 export const FooterDescription = styled.div`
@@ -32,11 +42,19 @@ export const FooterDescription = styled.div`
   p {
     font-size: 1.8rem;
     font-weight: 500;
-    /* color: ${({ theme }) => theme.colors.text}; */
   }
 
   span {
     font-size: 1.4rem;
     color: ${({ theme }) => theme.colors.text};
+  }
+
+  @media screen and (max-width: 768px) {
+    p {
+      font-size: 1.6rem;
+    }
+    span {
+      font-size: 1.2rem;
+    }
   }
 `;

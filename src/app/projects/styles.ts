@@ -33,9 +33,16 @@ export const TitleGroup = styled.div`
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
+    align-items: flex-start;
+
     gap: 2rem;
 
-    margin-bottom: 7rem;
+    margin-bottom: 20px;
+
+    button {
+      padding: 1.25rem 2rem;
+      font-size: 1.2rem;
+    }
   }
 `;
 

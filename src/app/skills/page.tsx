@@ -16,18 +16,18 @@ export default function Skills() {
 
         <S.InfoGroup>
           <div className='text-group'>
-            <div>
+            <div className='copy'>
               <p>
                 <span>Tip:</span> hover the technologies to get their name.
               </p>
 
               <p>
-                You can also check out some of my best/favorite projects{' '}
+                Check out some of my best projects{' '}
                 <Link
                   href='/projects'
                   title='My Projects'
                 >
-                  here.
+                  here
                 </Link>
               </p>
             </div>

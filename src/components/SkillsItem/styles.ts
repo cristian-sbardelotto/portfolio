@@ -52,7 +52,9 @@ export const StackTitle = styled.p`
   user-select: none;
   white-space: nowrap;
 
-  @media screen and (max-width: 524px) {
-    left: 25%;
+  @media screen and (max-width: 768px) {
+    font-size: 1.1rem;
+    padding: 0.5rem 0.75rem;
+    left: -10%;
   }
 `;

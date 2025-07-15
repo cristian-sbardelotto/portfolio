@@ -73,4 +73,8 @@ export const StyledButton = styled.button<{
     background: ${({ $variant }) =>
       getVariantStyle($variant, 'hoverBackground')};
   }
+
+  @media screen and (max-width: 768px) {
+    font-size: 1.4rem;
+  }
 `;

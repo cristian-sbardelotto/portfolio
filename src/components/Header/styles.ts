@@ -74,15 +74,20 @@ export const NavLinks = styled.nav<NavLinksProps>`
       padding: 2rem;
       display: ${({ $ismenuopen }) => ($ismenuopen ? 'flex' : 'none')};
       flex-direction: column;
+      align-items: flex-start;
 
       position: absolute;
-      right: 7vw;
-      top: 11vh;
+      right: 20px;
+      top: 60px;
       z-index: 100;
 
       border: ${({ theme }) => theme.borders.main};
       border-radius: 1rem;
       background-color: ${({ theme }) => theme.colors.lightBackground};
+
+      div {
+        display: none;
+      }
 
       .contact-link {
         display: inline-block;
@@ -153,5 +158,6 @@ export const NavButton = styled.button`
 
   @media screen and (max-width: 768px) {
     display: block;
+    padding: 0;
   }
 `;

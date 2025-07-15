@@ -47,7 +47,7 @@ export const skills: SkillsProps[] = [
   },
   {
     image: styledComponents,
-    name: 'Styled Components',
+    name: 'styled-components',
   },
   {
     image: git,

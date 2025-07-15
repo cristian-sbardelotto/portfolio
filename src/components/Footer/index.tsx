@@ -1,9 +1,9 @@
 import { SocialLinks } from '../SocialLinks';
 import * as S from './styles';
 
-const currentYear = new Date().getFullYear();
-
 export function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <S.Footer>
       <S.Container>
@@ -14,7 +14,9 @@ export function Footer() {
           </span>
         </S.FooterDescription>
 
-        <SocialLinks />
+        <div className='social-links'>
+          <SocialLinks />
+        </div>
       </S.Container>
     </S.Footer>
   );
