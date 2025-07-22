@@ -59,6 +59,7 @@ export default function About() {
           </div>
 
           <p>
+            I'm an avid gamer, and have a passion for almost all types of music.
             If you want to know more about me in a fun and different way, you
             should try{' '}
             <Link

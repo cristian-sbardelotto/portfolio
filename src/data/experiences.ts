@@ -33,8 +33,8 @@ export const experiences: ExperienceProps[] = [
     name: 'Frontend Developer',
     company: {
       name: 'Lab Yes!',
-      url: 'https://linkedin.com/company/lab-yes/',
-      image: 'https://i.ibb.co/tYN8pM9/lab-yes-logo.jpg',
+      url: 'https://www.lab-yes.com/',
+      image: 'https://i.ibb.co/7Jzb2XbT/Captura-de-tela-2025-07-22-060439.png',
     },
     description:
       'We engage in the development of web applications to address genuine client needs on a voluntary basis. In this process, I am using Javascript, React, Styled-Components, etc. This is done with the goal of gaining practical experiences covering the entire system creation process, from organization to development and finalization of advanced software solutions. We also employ agile approaches like Scrum and Kanban, in order to boost productivity and performance. This work enhances collaboration, teamwork, communication, proactivity, and other soft skills.',
