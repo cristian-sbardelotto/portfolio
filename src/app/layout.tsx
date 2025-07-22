@@ -1,41 +1,26 @@
-'use client';
-
-import { Footer } from '@/components/Footer';
-import { Header } from '@/components/Header';
-
-import { GlobalStyle } from '@/styles/GlobalStyle';
-import { ThemeProvider } from 'styled-components';
-
-import theme from '@/styles/theme';
-import { ChildrenComponentProps } from '@/types';
 import { Inter } from 'next/font/google';
 import StyledComponentsRegistry from '@/lib/registry';
+import { ChildrenComponentProps } from '@/types';
+import ClientLayout from './client-layout';
 
 const inter = Inter({ subsets: ['latin'] });
 
+export const metadata = {
+  title: "Sbardelotto's portfolio",
+  description: 'Portfolio website showcasing my projects and skills',
+};
+
 export default function RootLayout({ children }: ChildrenComponentProps) {
   return (
-    <ThemeProvider theme={theme}>
-      <StyledComponentsRegistry>
-        <GlobalStyle />
-
-        <html lang='en'>
-          <head>
-            <title>Cristian Sbardelotto</title>
-          </head>
-
-          <body
-            className={inter.className}
-            suppressHydrationWarning={true}
-          >
-            <Header />
-
-            {children}
-
-            <Footer />
-          </body>
-        </html>
-      </StyledComponentsRegistry>
-    </ThemeProvider>
+    <html lang='en'>
+      <body
+        className={inter.className}
+        suppressHydrationWarning={true}
+      >
+        <StyledComponentsRegistry>
+          <ClientLayout>{children}</ClientLayout>
+        </StyledComponentsRegistry>
+      </body>
+    </html>
   );
 }

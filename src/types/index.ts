@@ -7,8 +7,7 @@ export type ProjectProps = {
   image: string | StaticImageData;
   description: string;
   technologies: string[];
-  githubUrl: string;
-  deployUrl?: string;
+  url: string;
 };
 
 export type ChildrenComponentProps = {
@@ -20,3 +19,4 @@ export type RelatedProject = {
   name: string;
   url: string;
 };
+

@@ -2,12 +2,13 @@
 
 import Link from 'next/link';
 
-import { ChevronRight } from 'lucide-react';
+import { GithubIcon } from 'lucide-react';
 
 import { ProjectCard } from '@/components/ProjectCard';
 import * as S from './styles';
 
-import { projects } from '@/data/projectsMock';
+import { projects } from '@/data/projects';
+import { Button } from '@/components/Button';
 
 export default function Projects() {
   return (
@@ -17,22 +18,20 @@ export default function Projects() {
           My <span>Projects</span>
         </S.StyledTitle>
 
-        <p>
-          See all my projects
-          <Link
-            href='https://github.com/cristian-sbardelotto'
-            target='_blank'
-          >
-            here <ChevronRight />
-          </Link>
-        </p>
+        <Link
+          href='https://github.com/cristian-sbardelotto'
+          target='_blank'
+        >
+          <Button variant='outline'>
+            <GithubIcon size={20} /> <p>Github</p>
+          </Button>
+        </Link>
       </S.TitleGroup>
 
       <main>
-        {projects.map((project, index) => (
+        {projects.map(project => (
           <ProjectCard
             key={project.id}
-            delay={index++ - 0.5}
             {...project}
           />
         ))}

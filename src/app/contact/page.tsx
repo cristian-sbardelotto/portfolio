@@ -11,10 +11,9 @@ export default function Contact() {
       </S.StyledTitle>
 
       <S.LinksGroup>
-        <S.LinksWrapper>
-          <ContactLinks />
-        </S.LinksWrapper>
+        <ContactLinks />
       </S.LinksGroup>
     </S.Container>
   );
 }
+

@@ -1,5 +1,5 @@
 <img src="./.github/banner.png" width="100%">
-  
+
 # 🧡 Portfolio
 
 [README PT-BR](./README-pt.md)

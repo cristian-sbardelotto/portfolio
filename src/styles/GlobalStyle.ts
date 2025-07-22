@@ -3,6 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 export const GlobalStyle = createGlobalStyle`
   html {
     font-size: 62.5%;
+    height: 100%;
 
     ::-webkit-scrollbar {
       width: 10px;
@@ -31,6 +32,8 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
+    font-family: Inter, sans-serif;
+
 
     &::selection {
       background-color: #98ff96;
@@ -39,13 +42,11 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
+    height: 100%;
+    padding-top: 10rem;
+
     color: ${({ theme }) => theme.colors.lightText};
-    background-color: ${({ theme }) => theme.colors.background};
-
-    transition-property: background-color, color;
-    transition-duration: 0.3s;
-
-    margin-bottom: 10rem;
+    background-color: ${({ theme }) => theme.colors.lightBackground};
   }
 
   a {

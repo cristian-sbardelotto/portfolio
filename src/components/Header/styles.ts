@@ -1,36 +1,60 @@
 import styled from 'styled-components';
-import { Title, appearUp } from '@/styles/utils';
+import { appearUp } from '@/styles/utils';
 
 type NavLinksProps = {
-  $ismenuopen: boolean | number; // boolean or 0 | 1
+  $ismenuopen: boolean;
 };
 
+export const Container = styled.div`
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  padding: 4rem 2rem;
+  z-index: 50;
+`;
+
 export const Header = styled.header`
-  padding: 2rem;
+  margin-inline: auto;
+  max-width: 1000px;
+  padding: 2rem 3rem;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  border-bottom: ${({ theme }) => theme.borders.main};
-  border-radius: 7px;
+  border: ${({ theme }) => theme.borders.main};
+  border-radius: 1000px;
+  background-color: ${({ theme }) => `${theme.colors.background}80`};
+  backdrop-filter: blur(5px);
   animation: ${appearUp} 0.5s;
 
   h1 {
-    ${Title}
-
-    font-size: 2.5rem;
+    font-size: 2rem;
+    font-weight: 600;
+    color: ${({ theme }) => theme.colors.main};
     transition: 0.3s filter;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1.25px;
 
     &:hover {
       filter: brightness(0.8);
+    }
+
+    a {
+      color: ${({ theme }) => theme.colors.main};
     }
   }
 `;
 
 export const NavLinks = styled.nav<NavLinksProps>`
+  display: flex;
+  align-items: center;
+
   ul {
     display: flex;
-    gap: 2rem;
+    align-items: center;
+    gap: 1rem;
 
     list-style: none;
     font-size: 1.6rem;
@@ -50,15 +74,20 @@ export const NavLinks = styled.nav<NavLinksProps>`
       padding: 2rem;
       display: ${({ $ismenuopen }) => ($ismenuopen ? 'flex' : 'none')};
       flex-direction: column;
+      align-items: flex-start;
 
       position: absolute;
-      right: 7vw;
-      top: 11vh;
+      right: 20px;
+      top: 60px;
       z-index: 100;
 
       border: ${({ theme }) => theme.borders.main};
       border-radius: 1rem;
       background-color: ${({ theme }) => theme.colors.lightBackground};
+
+      div {
+        display: none;
+      }
 
       .contact-link {
         display: inline-block;
@@ -68,7 +97,7 @@ export const NavLinks = styled.nav<NavLinksProps>`
 
   li a {
     position: relative;
-    color: ${({ theme }) => theme.colors.lightText};
+    color: ${({ theme }) => theme.colors.text};
 
     transition: 0.2s all;
 
@@ -80,7 +109,7 @@ export const NavLinks = styled.nav<NavLinksProps>`
       top: 100%;
       left: 5%;
 
-      background-color: ${({ theme }) => theme.colors.lightText};
+      background-color: ${({ theme }) => theme.colors.text};
       visibility: hidden;
 
       transform: scaleX(0);
@@ -129,5 +158,6 @@ export const NavButton = styled.button`
 
   @media screen and (max-width: 768px) {
     display: block;
+    padding: 0;
   }
 `;

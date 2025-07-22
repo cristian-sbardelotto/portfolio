@@ -1,23 +1,15 @@
 import { Title, appearUp } from '@/styles/utils';
 import Image from 'next/image';
-import styled, { keyframes } from 'styled-components';
-
-const pulse = keyframes`
- 0% {
-    box-shadow: 0 0 0 0px #fff1;
-  }
-  100% {
-    box-shadow: 0 0 0 20px #fff0;
-  }
-`;
+import styled from 'styled-components';
 
 export const Container = styled.main`
   width: 100%;
-  padding: 0 5vw;
   margin-top: 8vh;
+  padding-inline: 4rem;
+  padding-bottom: 4rem;
 
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 3rem;
 
   > div {
@@ -35,27 +27,23 @@ export const Container = styled.main`
     animation-fill-mode: forwards;
   }
 
-  .image-group {
-    align-items: center;
-  }
-
   @media screen and (max-width: 1024px) {
     flex-direction: column;
-    justify-content: initial;
+    justify-content: center;
     gap: 4rem;
   }
 `;
 
 export const AboveTitle = styled.span`
-  display: flex;
-  align-items: center;
-
-  font-weight: 200;
-  font-size: 1.5rem;
-  line-height: 8px;
-  letter-spacing: 0.7rem;
-  color: #656d72;
-  text-transform: uppercase;
+  display: inline-block;
+  background: ${({ theme }) => theme.colors.main}10;
+  color: ${({ theme }) => theme.colors.main};
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 1.4rem;
+  width: fit-content;
+  border: 1px solid ${({ theme }) => theme.colors.main}30;
 `;
 
 export const StyledTitle = styled.div`
@@ -72,14 +60,26 @@ export const StyledTitle = styled.div`
   }
 
   width: 400px;
+  direction: ltr;
 
   border-right: 3px solid;
   white-space: nowrap;
-  animation: typing 3.5s steps(21), blink 0.8s infinite alternate;
+  animation: typing 3.5s steps(21) forwards, blink 0.8s infinite alternate;
   overflow: hidden;
 
   h2 {
     ${Title};
+
+    span {
+      background: linear-gradient(
+        to right,
+        ${({ theme }) => theme.colors.main},
+        ${({ theme }) => theme.colors.lightMain}
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
 
   @media screen and (max-width: 1440px) {
@@ -100,6 +100,8 @@ export const StyledTitle = styled.div`
 `;
 
 export const Article = styled.article`
+  margin-bottom: 2rem;
+
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -110,35 +112,20 @@ export const Article = styled.article`
 
   p {
     color: ${({ theme }) => theme.colors.text};
-
-    span {
-      color: ${({ theme }) => theme.colors.lightText};
-    }
+    font-size: 1.7rem;
+    line-height: 1.6;
+    max-width: 500px;
 
     a {
-      display: flex;
-      align-items: center;
+      display: inline-flex;
+      align-items: start;
 
-      color: ${({ theme }) => theme.colors.main};
-
-      svg {
-        transition: 0.2s transform;
-      }
+      color: ${({ theme }) => theme.colors.lightText};
 
       &:hover {
         text-decoration: underline;
-
-        svg {
-          transform: translateX(1rem);
-        }
       }
     }
-  }
-
-  .p-about-me {
-    display: flex;
-    gap: 6px;
-    align-items: center;
   }
 
   @media screen and (max-width: 1024px) {
@@ -147,7 +134,31 @@ export const Article = styled.article`
   }
 `;
 
+export const ButtonsGroup = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+
+    max-width: 448px;
+
+    a {
+      width: 100%;
+
+      button {
+        width: 100%;
+      }
+    }
+  }
+`;
+
 export const ImageGroup = styled.div`
+  position: relative;
+
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -159,14 +170,15 @@ export const ImageGroup = styled.div`
   animation-fill-mode: forwards;
 
   @media screen and (max-width: 1024px) {
-    flex-direction: column-reverse !important;
+    display: none !important;
   }
 `;
 
 export const StyledImage = styled(Image)`
-  border-radius: 50%;
   transition: scale 0.3s;
-  animation: ${pulse} 2s infinite;
+  border-radius: 5px;
+  object-fit: cover;
+  box-shadow: #00000070 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 
   &:hover {
     scale: 1.02;
@@ -175,7 +187,32 @@ export const StyledImage = styled(Image)`
   @media screen and (max-width: 1024px) {
     width: 200px;
     height: 200px;
+    margin-left: auto;
 
-    align-self: center;
+    /* align-self: flex-end; */
+  }
+`;
+
+export const ImageBadge = styled.div`
+  position: absolute;
+  bottom: -5%;
+  left: -15%;
+  padding: 12px 25px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  background: ${({ theme }) => theme.colors.main};
+  color: ${({ theme }) => theme.colors.background};
+  font-size: 1.4rem;
+  font-weight: 600;
+  border-radius: 5px;
+  box-shadow: ${({ theme }) => theme.colors.main}20 5px 5px 2px,
+    ${({ theme }) => theme.colors.main}10 10px 10px 4px;
+  transition: scale 0.3s;
+
+  &:hover {
+    scale: 1.04;
   }
 `;

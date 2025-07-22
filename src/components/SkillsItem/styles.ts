@@ -9,10 +9,11 @@ export const Container = styled.li`
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  justify-self: end;
 
-  border: ${({ theme }) => theme.borders.main};
+  border: transparent;
   border-radius: 15px;
-  background-color: #0d0d0f;
+  background-color: ${({ theme }) => theme.colors.main}08;
 
   transition: 0.7s border;
 
@@ -25,12 +26,12 @@ export const Container = styled.li`
   }
 
   img {
-    height: 5rem;
-    width: 5rem;
+    height: 4rem;
+    width: 4rem;
 
     @media screen and (max-width: 768px) {
-      height: 4rem;
-      width: 4rem;
+      height: 3.5rem;
+      width: 3.5rem;
     }
   }
 `;
@@ -39,8 +40,8 @@ export const StackTitle = styled.p`
   visibility: hidden;
   padding: 0.75rem 1rem;
   position: absolute;
-  left: 10%;
-  bottom: 85%;
+  left: 0;
+  bottom: 90%;
   z-index: 99;
 
   border: ${({ theme }) => theme.borders.main};
@@ -51,7 +52,9 @@ export const StackTitle = styled.p`
   user-select: none;
   white-space: nowrap;
 
-  @media screen and (max-width: 524px) {
-    left: 25%;
+  @media screen and (max-width: 768px) {
+    font-size: 1.1rem;
+    padding: 0.5rem 0.75rem;
+    left: -10%;
   }
 `;

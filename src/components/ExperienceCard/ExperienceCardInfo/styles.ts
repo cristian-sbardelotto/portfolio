@@ -5,7 +5,7 @@ export const Container = styled.div`
   flex-direction: column;
   gap: 1rem;
 
-  padding-left: 3rem;
+  /* padding-left: 3rem; */
 
   @media screen and (max-width: 768px) {
     padding: 0;
@@ -53,3 +53,4 @@ export const RelatedProjects = styled.div`
     }
   }
 `;
+

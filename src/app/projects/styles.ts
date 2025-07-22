@@ -2,24 +2,20 @@ import { Title } from '@/styles/utils';
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  padding: 3rem 5vw 0 5vw;
+  padding: 3rem;
+  width: 100%;
 
   main {
     margin: 0 auto;
 
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: start;
     gap: 2rem;
-    justify-items: center;
 
-    @media screen and (max-width: 1680px) {
-      max-width: 1250px;
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    @media screen and (max-width: 1024px) {
-      grid-template-columns: 1fr;
-      justify-items: start;
+    @media screen and (max-width: 1250px) {
+      justify-content: center;
     }
   }
 `;
@@ -29,39 +25,24 @@ export const TitleGroup = styled.div`
 
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   p {
-    height: fit-content;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-
-    font-size: 2rem;
-
-    a {
-      color: ${({ theme }) => theme.colors.main};
-      display: flex;
-
-      &:hover {
-        text-decoration: underline;
-
-        svg {
-          transform: translateX(1rem);
-        }
-      }
-
-      svg {
-        align-self: flex-end;
-        transition: 0.2s transform;
-      }
-    }
+    font-size: 1.6rem;
   }
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
+    align-items: flex-start;
+
     gap: 2rem;
 
-    margin-bottom: 7rem;
+    margin-bottom: 20px;
+
+    button {
+      padding: 1.25rem 2rem;
+      font-size: 1.2rem;
+    }
   }
 `;
 

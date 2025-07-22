@@ -13,10 +13,10 @@ export const Container = styled.main`
 `;
 
 export const Wrapper = styled.div`
-  padding: 2rem 5rem 0 5rem;
+  padding: 5rem 5rem 0 5rem;
 
   @media screen and (max-width: 768px) {
-    padding: 2rem 2rem 12rem 2rem;
+    padding: 5rem 2rem 2rem 2rem;
   }
 `;
 
@@ -36,6 +36,7 @@ export const TitleSection = styled.section`
 
 export const StyledTitle = styled.h2`
   ${Title};
+  margin-bottom: 2rem;
 
   @media screen and (max-width: 768px) {
     font-size: 3.25rem;
@@ -43,12 +44,9 @@ export const StyledTitle = styled.h2`
 `;
 
 export const InfoGroup = styled.section`
-  max-width: 140rem;
-
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10rem;
-  padding-inline: 1rem;
 
   opacity: 0;
 
@@ -59,7 +57,12 @@ export const InfoGroup = styled.section`
   .text-group {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     gap: 1.5rem;
+
+    .copy {
+      line-height: 300%;
+    }
 
     p {
       font-size: 1.75rem;
@@ -91,12 +94,15 @@ export const InfoGroup = styled.section`
 `;
 
 export const Skills = styled.ul`
+  padding-top: 2rem;
   margin-bottom: 2rem;
+  width: fit-content;
+  overflow-x: hidden;
 
   display: grid;
   grid-template-columns: repeat(4, 100px);
   gap: 2rem;
-  justify-self: center;
+  justify-self: end;
 
   list-style: none;
 
@@ -105,6 +111,7 @@ export const Skills = styled.ul`
 
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
 `;
 

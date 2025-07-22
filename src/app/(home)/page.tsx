@@ -2,20 +2,16 @@
 
 import Link from 'next/link';
 
-import { ChevronRight } from 'lucide-react';
+import { ArrowRightIcon, DownloadIcon, MapPinIcon } from 'lucide-react';
 
 import { Button } from '@/components/Button';
-import { Line } from '@/components/Line';
-import { SocialLinks } from '@/components/SocialLinks';
 import * as S from './styles';
 
 export default function Home() {
   return (
     <S.Container>
       <div className='article'>
-        <S.AboveTitle>
-          <Line />i am a
-        </S.AboveTitle>
+        <S.AboveTitle>🚀 Welcome to my portfolio</S.AboveTitle>
 
         <S.StyledTitle>
           <h2>
@@ -25,55 +21,53 @@ export default function Home() {
 
         <S.Article>
           <p>
-            Hi! My name is <span>Cristian Sbardelotto</span>.
-          </p>
-
-          <p>
-            I started studying <span>Web Programming</span> in August 2022, and
-            since then, I feel more and more <span>inspired and willing</span>{' '}
-            to pursue my career in the area.
-          </p>
-
-          <p>
-            My current <span>goal</span> is to get my first job and, in the
-            future, become a <span>Tech Lead</span>.
-          </p>
-
-          <p>
-            My main stack is{' '}
-            <span>
-              HTML, CSS, Javascript, Typescript, React, NextJS, TailwindCSS,
-              Styled-components
-            </span>
-            .
-          </p>
-
-          <p className='p-about-me'>
-            Know more about me{' '}
-            <Link href='/about'>
-              here <ChevronRight size={18} />
-            </Link>
+            My name is Cristian Sbardelotto, and I am a Web Developer that loves
+            to connect with people and try new experiences. I am currently
+            working at{' '}
+            <a
+              href='https://www.linkedin.com/company/hashcubed/'
+              target='_blank'
+            >
+              Hash³
+            </a>
+            . My main stack is HTML, CSS, Javascript, Typescript, React, NextJS.
           </p>
         </S.Article>
 
-        <a
-          download
-          href='/documents/resume.pdf'
-        >
-          <Button variant='light'>Download CV</Button>
-        </a>
+        <S.ButtonsGroup>
+          <a
+            download
+            href='/documents/resume.pdf'
+          >
+            <Button>
+              <DownloadIcon /> Download CV
+            </Button>
+          </a>
+
+          <Link href='/about'>
+            <Button variant='outline'>
+              More about me <ArrowRightIcon />
+            </Button>
+          </Link>
+        </S.ButtonsGroup>
       </div>
 
       <S.ImageGroup className='image-group'>
         <S.StyledImage
-          src='https://github.com/cristian-sbardelotto.png'
+          src='/images/profile.jpeg'
           alt="Cristian Sbardelotto's profile picture"
-          width={300}
-          height={300}
-          priority={true}
+          width={325}
+          height={350}
+          priority
         />
 
-        <SocialLinks />
+        <S.ImageBadge>
+          <MapPinIcon
+            strokeWidth={1.5}
+            size={20}
+          />{' '}
+          <span>SC, Brazil</span>
+        </S.ImageBadge>
       </S.ImageGroup>
     </S.Container>
   );

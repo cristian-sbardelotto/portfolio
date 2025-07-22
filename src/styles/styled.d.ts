@@ -9,9 +9,13 @@ declare module 'styled-components' {
       text: string;
 
       main: string;
+      lightMain: string;
     };
     borders: {
       main: string;
+    };
+    breakpoints: {
+      maxWidth: string;
     };
   }
 }

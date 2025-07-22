@@ -16,13 +16,9 @@ export const LinksGroup = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-`;
-
-export const LinksWrapper = styled.div`
-  width: 400px;
 
   @media screen and (max-width: 768px) {
-    width: 100%;
-    padding-inline: 2rem;
+    padding-inline: 20px;
+    padding-bottom: 30px;
   }
 `;
