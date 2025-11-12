@@ -8,8 +8,8 @@ import tailwind from '../../public/assets/skills/tailwind.svg';
 import styledComponents from '../../public/assets/skills/styled-components.svg';
 import git from '../../public/assets/skills/git.svg';
 import github from '../../public/assets/skills/github.svg';
-import vscode from '../../public/assets/skills/vscode.svg';
-import figma from '../../public/assets/skills/figma.svg';
+import go from '../../public/assets/skills/go.svg';
+import python from '../../public/assets/skills/python.svg';
 
 type SkillsProps = {
   image: string;
@@ -18,20 +18,28 @@ type SkillsProps = {
 
 export const skills: SkillsProps[] = [
   {
-    image: html,
-    name: 'HTML',
-  },
-  {
-    image: css,
-    name: 'CSS',
-  },
-  {
     image: javascript,
     name: 'JavaScript',
   },
   {
     image: typescript,
     name: 'TypeScript',
+  },
+  {
+    image: go,
+    name: 'Go',
+  },
+  {
+    image: python,
+    name: 'Python',
+  },
+  {
+    image: html,
+    name: 'HTML',
+  },
+  {
+    image: css,
+    name: 'CSS',
   },
   {
     image: react,
@@ -56,13 +64,5 @@ export const skills: SkillsProps[] = [
   {
     image: github,
     name: 'Github',
-  },
-  {
-    image: vscode,
-    name: 'VS Code',
-  },
-  {
-    image: figma,
-    name: 'Figma',
   },
 ];

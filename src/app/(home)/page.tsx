@@ -30,7 +30,7 @@ export default function Home() {
             >
               Hash³
             </a>
-            . My main stack is HTML, CSS, Javascript, Typescript, React, NextJS.
+            . My main stack is Typescript, NextJS, Python, and Go.
           </p>
         </S.Article>
 

@@ -94,7 +94,7 @@ export const InfoGroup = styled.section`
 `;
 
 export const Skills = styled.ul`
-  padding-top: 2rem;
+  padding-top: 3rem;
   margin-bottom: 2rem;
   width: fit-content;
   overflow-x: hidden;
