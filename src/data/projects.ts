@@ -13,6 +13,23 @@ export const projects: ProjectProps[] = [
   },
   {
     id: randomUUID(),
+    title: 'Subscript',
+    image: '/assets/projects/subscript.png',
+    description: 'Easily manage and track all your subscriptions.',
+    technologies: ['typescript', 'react', 'tailwind-css'],
+    url: 'https://subscript-iota.vercel.app/',
+  },
+  {
+    id: randomUUID(),
+    title: 'Subscript API',
+    image: '/assets/projects/subscript-api.png',
+    description:
+      'API for Subscript: application to track all your subscriptions.',
+    technologies: ['go', 'go-chi', 'postgresql'],
+    url: 'https://github.com/cristian-sbardelotto/subscript-api/',
+  },
+  {
+    id: randomUUID(),
     title: 'Studay',
     image: '/assets/projects/studay.png',
     description: 'See your homework in an organized and clean way.',
@@ -44,23 +61,5 @@ export const projects: ProjectProps[] = [
     description: 'Wait. You are already here. Then, check out the source code.',
     technologies: ['typescript', 'next.js', 'styled-components'],
     url: 'https://github.com/cristian-sbardelotto/portfolio',
-  },
-  {
-    id: randomUUID(),
-    title: 'Meme Creator',
-    image: '/assets/projects/meme-creator.png',
-    description:
-      'Create some memes, using any image you want. After that, download the meme and send it to you friends.',
-    technologies: ['typescript', 'react', 'styled-components'],
-    url: 'https://meme-creator-kappa.vercel.app/',
-  },
-  {
-    id: randomUUID(),
-    title: 'QR Generator',
-    image: '/assets/projects/qr-code-generator.png',
-    description:
-      'A simple QR Code generator that allows the user to download the image of any link that was typed.',
-    technologies: ['javascript', 'react', 'css'],
-    url: 'https://qr-code-generator-pied.vercel.app/',
   },
 ];
