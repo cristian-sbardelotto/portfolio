@@ -1,4 +1,4 @@
-import Script from 'next/script';
+import { Analytics } from '@vercel/analytics/next';
 import { Inter } from 'next/font/google';
 import StyledComponentsRegistry from '@/lib/registry';
 import { ChildrenComponentProps } from '@/types';
@@ -20,23 +20,7 @@ export default function RootLayout({ children }: ChildrenComponentProps) {
       >
         <StyledComponentsRegistry>
           <ClientLayout>
-            <Script
-              src='https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX'
-              strategy='afterInteractive'
-            />
-            <Script
-              id='google-analytics'
-              strategy='afterInteractive'
-            >
-              {`
-                        window.dataLayer = window.dataLayer || [];
-                        function gtag(){dataLayer.push(arguments);}
-                        gtag('js', new Date());
-                        gtag('config', 'G-LDYBNX11X8', {
-                          debug_mode: true
-                        });
-                      `}
-            </Script>
+            <Analytics />
 
             {children}
           </ClientLayout>
