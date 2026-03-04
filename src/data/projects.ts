@@ -5,14 +5,6 @@ import { v4 as randomUUID } from 'uuid';
 export const projects: ProjectProps[] = [
   {
     id: randomUUID(),
-    title: 'Cristian OS',
-    image: '/assets/projects/cristian-os.png',
-    description: 'A little more about me. Also looks like Windows.',
-    technologies: ['typescript', 'react', 'tailwind-css'],
-    url: 'https://cristian-os.vercel.app/',
-  },
-  {
-    id: randomUUID(),
     title: 'Subscript',
     image: '/assets/projects/subscript.png',
     description: 'Easily manage and track all your subscriptions.',
@@ -27,6 +19,22 @@ export const projects: ProjectProps[] = [
       'API for Subscript: application to track all your subscriptions.',
     technologies: ['go', 'go-chi', 'postgresql'],
     url: 'https://github.com/cristian-sbardelotto/subscript-api/',
+  },
+  {
+    id: randomUUID(),
+    title: 'Termo-TUI',
+    image: '/assets/projects/termo-tui.png',
+    description: 'A terminal-based game inspired by Termo.',
+    technologies: ['python', 'textual'],
+    url: 'https://github.com/cristian-sbardelotto/termo-tui/',
+  },
+  {
+    id: randomUUID(),
+    title: 'Cristian OS',
+    image: '/assets/projects/cristian-os.png',
+    description: 'A little more about me. Also looks like Windows.',
+    technologies: ['typescript', 'react', 'tailwind-css'],
+    url: 'https://cristian-os.vercel.app/',
   },
   {
     id: randomUUID(),
