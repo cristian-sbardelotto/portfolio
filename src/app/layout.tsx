@@ -7,8 +7,9 @@ import ClientLayout from './client-layout';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: "Sbardelotto's portfolio",
-  description: 'Portfolio website showcasing my projects and skills',
+  title: 'Cristian Sbardelotto',
+  description:
+    'Cristian Sbardelotto’s portfolio with software development projects, web applications, and programming skills.',
 };
 
 export default function RootLayout({ children }: ChildrenComponentProps) {
