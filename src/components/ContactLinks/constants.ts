@@ -16,7 +16,7 @@ export const contactLinks = [
   },
   {
     name: 'Resume',
-    url: '/documents/resume.pdf',
+    url: 'https://docs.google.com/document/d/1_0vOwqThS8tTWe9cDrGe7lM8OJl09nyTgpWbjDZzlP8/export?format=pdf',
     icon: '/assets/icons/resume.svg',
   },
   {

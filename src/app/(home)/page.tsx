@@ -36,8 +36,8 @@ export default function Home() {
 
         <S.ButtonsGroup>
           <a
-            download
-            href='/documents/resume.pdf'
+            download='cristian-sbardelotto-cv.pdf'
+            href='https://docs.google.com/document/d/1_0vOwqThS8tTWe9cDrGe7lM8OJl09nyTgpWbjDZzlP8/export?format=pdf'
           >
             <Button>
               <DownloadIcon /> Download CV
