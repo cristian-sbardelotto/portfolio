@@ -55,7 +55,12 @@ export function Header() {
             <Separator />
 
             <li onClick={() => setIsMenuOpen(false)}>
-              <Link href='/contact'>contact me</Link>
+              <Link 
+                className={pathname === '/projects' ? 'active' : ''} 
+                href='/contact'
+              >
+                contact me
+              </Link>
             </li>
           </ul>
 
