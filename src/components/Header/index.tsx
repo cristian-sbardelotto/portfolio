@@ -56,7 +56,7 @@ export function Header() {
 
             <li onClick={() => setIsMenuOpen(false)}>
               <Link 
-                className={pathname === '/projects' ? 'active' : ''} 
+                className={pathname === '/contact' ? 'active' : ''} 
                 href='/contact'
               >
                 contact me
