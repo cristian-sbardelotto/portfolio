@@ -8,6 +8,7 @@ import { useTheme } from './components/theme-provider';
 import { Footer } from './components/sections/footer';
 import { About } from './components/sections/about';
 import { Projects } from './components/sections/projects';
+import { KineticTextReveal } from './components/ui/kinetic-text-reveal';
 
 export function App() {
   const { theme, setTheme } = useTheme();
@@ -26,9 +27,12 @@ export function App() {
             &gt;_ fullstack developer
           </p>
 
-          <h1 className='max-w-[12ch] text-5xl leading-[1.2] font-bold mb-2'>
-            cristian sbardelotto.
-          </h1>
+          <KineticTextReveal
+            className='max-w-[12ch] text-5xl leading-[1.2] font-bold mb-2'
+            text='cristian sbardelotto.'
+            delay={0.5}
+            transition={{ duration: 0.3, ease: 'easeInOut' }}
+          ></KineticTextReveal>
 
           <p className='mb-8 text-foreground'>
             passionate developer and soon to be a Computer Science student.
@@ -94,11 +98,17 @@ export function App() {
           to toggle dark mode)
         </div>
 
-        <Separator className='mt-16 mb-16' />
+        <Separator
+          id='about'
+          className='mt-16 mb-16'
+        />
 
         <About />
 
-        <Separator className='mt-16 mb-16' />
+        <Separator
+          id='projects'
+          className='mt-16 mb-16'
+        />
 
         <Projects />
       </div>

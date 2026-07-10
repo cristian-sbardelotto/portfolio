@@ -5,7 +5,7 @@ import { ExperienceCard } from '../experience-card';
 
 export function About() {
   return (
-    <section id='about'>
+    <section>
       <h2 className='text-2xl mb-8 text-muted-foreground font-semibold'>
         <span className='text-primary'>#</span> about me.
       </h2>

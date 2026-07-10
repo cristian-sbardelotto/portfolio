@@ -24,7 +24,7 @@ export function ExperienceCard({
     >
       <HoverCardTrigger asChild>
         <div className='bg-sidebar/20 border p-4 hover:bg-sidebar/70 hover:scale-[1.02] transition-all group'>
-          <div className='flex items-center gap-2'>
+          <div className='flex items-center gap-2 text-paragraph'>
             <h6>{title}</h6>
 
             <span className='text-muted-foreground text-xs'>at</span>

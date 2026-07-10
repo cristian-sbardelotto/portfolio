@@ -12,7 +12,7 @@ export function Header() {
 
   return (
     <header
-      className={`fixed inset-0 mb-96 h-fit w-full border-b bg-background/90 px-10 py-5 transition-colors duration-300 ${
+      className={`z-50 fixed inset-0 mb-96 h-fit w-full border-b bg-background/90 px-10 py-5 transition-colors duration-300 ${
         scrolled ? 'border-b-border' : 'border-b-transparent bg-transparent'
       }`}
     >
