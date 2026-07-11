@@ -1,120 +1,55 @@
-import { Button } from '@/components/ui/button';
-import { Kbd } from './components/ui/kbd';
-import { DownloadIcon } from 'lucide-react';
-import { Separator } from './components/ui/separator';
-import { Badge } from './components/ui/badge';
 import { Header } from './components/sections/header';
-import { useTheme } from './components/theme-provider';
 import { Footer } from './components/sections/footer';
 import { About } from './components/sections/about';
 import { Projects } from './components/sections/projects';
-import { KineticTextReveal } from './components/ui/kinetic-text-reveal';
+import { Skills } from './components/sections/skills';
+import { Contact } from './components/sections/contact';
+import { Hero } from './components/sections/hero';
+import { Separator } from './components/ui/separator';
 
 export function App() {
-  const { theme, setTheme } = useTheme();
-
-  function switchTheme() {
-    setTheme(theme === 'light' ? 'dark' : 'light');
-  }
-
   return (
-    <div className='flex min-h-svh flex-col p-6 pt-20'>
-      <Header />
+    <>
+      <div className='flex min-h-svh flex-col p-6 pt-20'>
+        <Header />
 
-      <div className='container mt-20 flex min-w-0 flex-col gap-4 text-sm leading-loose pt-20'>
-        <div className='space-y-8'>
-          <p className='text-xs text-muted-foreground mb-2'>
-            &gt;_ fullstack developer
-          </p>
+        <div className='container mt-20 flex min-w-0 flex-col gap-4 text-sm leading-loose pt-20'>
+          <Hero />
 
-          <KineticTextReveal
-            className='max-w-[12ch] text-5xl leading-[1.2] font-bold mb-2'
-            text='cristian sbardelotto.'
-            delay={0.5}
-            transition={{ duration: 0.3, ease: 'easeInOut' }}
-          ></KineticTextReveal>
+          <Separator
+            id='about'
+            className='my-16'
+          />
 
-          <p className='mb-8 text-foreground'>
-            passionate developer and soon to be a Computer Science student.
-          </p>
+          <About />
 
-          <div className='flex items-center gap-3'>
-            <Badge
-              variant='secondary'
-              className='bg-primary/10 border border-primary/20 px-2 py-0.5 transition-transform hover:translate-x-0.5 hover:-translate-y-0.5 cursor-default'
-            >
-              next.js
-            </Badge>
-            <Badge
-              variant='secondary'
-              className='bg-primary/10 border border-primary/20 px-2 py-0.5 transition-transform hover:translate-x-0.5 hover:-translate-y-0.5 cursor-default'
-            >
-              vue
-            </Badge>
-            <Badge
-              variant='secondary'
-              className='bg-primary/10 border border-primary/20 px-2 py-0.5 transition-transform hover:translate-x-0.5 hover:-translate-y-0.5 cursor-default'
-            >
-              python
-            </Badge>
-            <Badge
-              variant='secondary'
-              className='bg-primary/10 border border-primary/20 px-2 py-0.5 transition-transform hover:translate-x-0.5 hover:-translate-y-0.5 cursor-default'
-            >
-              go
-            </Badge>
-          </div>
+          <Separator
+            id='projects'
+            className='my-16'
+          />
 
-          <div className='flex items-center gap-2 *:m-0'>
-            <a
-              download='cristian-sbardelotto-cv.pdf'
-              href='https://docs.google.com/document/d/1_0vOwqThS8tTWe9cDrGe7lM8OJl09nyTgpWbjDZzlP8/export?format=pdf'
-              className='mt-2'
-            >
-              <Button>
-                download cv <DownloadIcon />
-              </Button>
-            </a>
+          <Projects />
 
-            <a href='#about'>
-              <Button
-                variant='outline'
-                className='font-light'
-              >
-                about me
-              </Button>
-            </a>
-          </div>
+          <Separator
+            id='skills'
+            className='my-16'
+          />
+
+          <Skills />
+
+          <Separator
+            id='contact'
+            className='my-16'
+          />
+
+          <Contact />
         </div>
-
-        <div className='font-mono text-xs text-muted-foreground mt-6'>
-          (Press{' '}
-          <Kbd
-            onClick={switchTheme}
-            className='hover:scale-120 cursor-pointer transition-transform pointer-events-auto'
-          >
-            t
-          </Kbd>{' '}
-          to toggle dark mode)
-        </div>
-
-        <Separator
-          id='about'
-          className='mt-16 mb-16'
-        />
-
-        <About />
-
-        <Separator
-          id='projects'
-          className='mt-16 mb-16'
-        />
-
-        <Projects />
       </div>
 
-      <Footer />
-    </div>
+      <div className='mt-10'>
+        <Footer />
+      </div>
+    </>
   );
 }
 

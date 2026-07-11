@@ -23,7 +23,7 @@ export function ProjectCard({
   deploy,
 }: ProjectProps) {
   return (
-    <div className='bg-card/20 border p-8 flex flex-col gap-3 w-80 h-75 hover:border-ring transition-colors duration-300'>
+    <div className='project-card bg-card/20 border p-8 flex flex-col gap-3 w-80 h-75 hover:border-ring hover:translate-x-0.5 hover:-translate-y-0.5 transition-all duration-300'>
       <div className='text-muted-foreground/40 text-xs mb-4 flex items-center justify-between uppercase'>
         <span>{index}</span> <span>{area}</span>
       </div>
@@ -52,7 +52,7 @@ export function ProjectCard({
         {github && (
           <a
             href={github}
-            className='flex gap-1 items-center text-xs text-muted-foreground hover:underline hover:text-primary group'
+            className='flex gap-1 items-center text-xs text-muted-foreground hover:text-primary group'
             target='_blank'
             rel='noopener noreferrer'
           >
@@ -66,7 +66,7 @@ export function ProjectCard({
         {deploy && (
           <a
             href={deploy}
-            className='flex gap-1 items-center text-xs text-muted-foreground hover:underline hover:text-primary group'
+            className='flex gap-1 items-center text-xs text-muted-foreground hover:text-primary group'
             target='_blank'
             rel='noopener noreferrer'
           >

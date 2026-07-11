@@ -121,15 +121,42 @@
   * {
     @apply border-border outline-ring/50 scroll-smooth;
   }
+
+  /* light mode — stronger glow */
   body {
     @apply bg-background text-foreground;
-    background-image: radial-gradient(
-      ellipse 80% 70% at 6% 2%,
-      color-mix(in oklch, var(--primary) 5%, transparent) 0%,
-      color-mix(in oklch, var(--primary) 3%, transparent) 45%,
-      transparent 75%
-    );
+    background-image:
+      radial-gradient(
+        ellipse 80% 70% at 6% 2%,
+        color-mix(in oklch, var(--primary) 18%, transparent) 0%,
+        color-mix(in oklch, var(--primary) 8%, transparent) 45%,
+        transparent 75%
+      ),
+      radial-gradient(
+        ellipse 80% 70% at 94% 98%,
+        color-mix(in oklch, var(--primary) 18%, transparent) 0%,
+        color-mix(in oklch, var(--primary) 8%, transparent) 45%,
+        transparent 75%
+      );
   }
+
+  /* dark mode — subtle glow */
+  .dark body {
+    background-image:
+      radial-gradient(
+        ellipse 80% 70% at 6% 2%,
+        color-mix(in oklch, var(--primary) 5%, transparent) 0%,
+        color-mix(in oklch, var(--primary) 3%, transparent) 45%,
+        transparent 75%
+      ),
+      radial-gradient(
+        ellipse 80% 70% at 94% 98%,
+        color-mix(in oklch, var(--primary) 5%, transparent) 0%,
+        color-mix(in oklch, var(--primary) 3%, transparent) 45%,
+        transparent 75%
+      );
+  }
+
   button:not(:disabled),
   [role='button']:not(:disabled) {
     cursor: pointer;
@@ -139,12 +166,10 @@
   }
 }
 
-/*  */
 @theme {
   --text-paragraph: 13px;
 }
 
-/* custom container sizes */
 @utility container {
   margin-inline: auto;
   max-width: 100%;
@@ -155,4 +180,20 @@
   @media (width >= 64rem) {
     max-width: 70rem;
   }
+}
+
+.project-card {
+  background-image:
+    radial-gradient(
+      ellipse 80% 70% at 6% 2%,
+      color-mix(in oklch, var(--primary) 2.5%, transparent) 0%,
+      color-mix(in oklch, var(--primary) 1.5%, transparent) 45%,
+      transparent 75%
+    ),
+    radial-gradient(
+      ellipse 80% 70% at 94% 98%,
+      color-mix(in oklch, var(--primary) 2.5%, transparent) 0%,
+      color-mix(in oklch, var(--primary) 1.5%, transparent) 45%,
+      transparent 75%
+    );
 }

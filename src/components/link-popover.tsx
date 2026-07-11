@@ -32,7 +32,7 @@ export function LinkPopover({
         </a>
       </TooltipTrigger>
 
-      <TooltipContent>
+      <TooltipContent className='max-w-auto'>
         <p className='flex items-center gap-1'>
           {href} {isExternal && <ArrowUpRightIcon size={16} />}
         </p>

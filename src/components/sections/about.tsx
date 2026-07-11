@@ -2,20 +2,19 @@ import { Separator } from '../ui/separator';
 import { LinkPopover } from '../link-popover';
 import { experiences } from '@/constants/experience';
 import { ExperienceCard } from '../experience-card';
+import { SectionTitle } from '../section-title';
 
 export function About() {
   return (
     <section>
-      <h2 className='text-2xl mb-8 text-muted-foreground font-semibold'>
-        <span className='text-primary'>#</span> about me.
-      </h2>
+      <SectionTitle>about me.</SectionTitle>
 
       <div className='flex justify-between'>
         <article className='space-y-6'>
           <p className='text-muted-foreground text-paragraph max-w-[50ch] leading-loose'>
-            I'm a web programmer that loves to create and learn new things. I'm
-            completely passionate about solving problems (whether they are
-            important or not) and also building new stuff.
+            I'm a Brazilian web programmer that loves to create and learn new
+            things. I'm completely passionate about solving problems (whether
+            they are important or not) and also building new stuff.
           </p>
 
           <p className='text-muted-foreground text-paragraph max-w-[50ch] leading-loose'>
@@ -52,7 +51,10 @@ export function About() {
 
           <div className='flex flex-col gap-4'>
             {experiences.map(xp => (
-              <ExperienceCard {...xp} />
+              <ExperienceCard
+                key={xp.id}
+                {...xp}
+              />
             ))}
           </div>
         </div>

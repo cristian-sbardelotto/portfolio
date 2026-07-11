@@ -16,7 +16,22 @@ export function Header() {
         scrolled ? 'border-b-border' : 'border-b-transparent bg-transparent'
       }`}
     >
-      <nav className='mx-auto flex max-w-2xl list-none items-center justify-around text-xs text-muted-foreground'>
+      <nav className='mx-auto flex max-w-2xl list-none items-center justify-center gap-[5vw] text-xs text-muted-foreground'>
+        <h3
+          className={`transition-all duration-300 ease-out ${
+            scrolled
+              ? 'opacity-100 scale-100 max-w-5'
+              : 'opacity-0 scale-75 max-w-0 mr-[-5vw]'
+          }`}
+        >
+          <a
+            href='#'
+            className='text-foreground'
+          >
+            home
+          </a>
+        </h3>
+
         <li>
           <a
             className='transition-colors hover:text-foreground'

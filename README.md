@@ -1,4 +1,1 @@
-- usar badge para as tecnologias
-- usar Hover Card pra mostrar detalhes dos projetos, como imagem e descrição
-- nos links externos, usar tooltip para mostrar o link completo
-- animação de entrada de elementos no scroll
+## portfolio
