@@ -9,7 +9,7 @@ export function About() {
     <section>
       <SectionTitle>about me.</SectionTitle>
 
-      <div className='flex justify-between'>
+      <div className='flex justify-between flex-col gap-10 lg:flex-row lg:gap-0'>
         <article className='space-y-6'>
           <p className='text-muted-foreground text-paragraph max-w-[50ch] leading-loose'>
             I'm a Brazilian web programmer that loves to create and learn new

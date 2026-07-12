@@ -14,7 +14,7 @@ export function App() {
       <div className='flex min-h-svh flex-col p-6 pt-20'>
         <Header />
 
-        <div className='container mt-20 flex min-w-0 flex-col gap-4 text-sm leading-loose pt-20'>
+        <div className='container md:mt-20 flex min-w-0 flex-col gap-4 text-sm leading-loose pt-20'>
           <FadeIn delay={400}>
             <Hero />
           </FadeIn>

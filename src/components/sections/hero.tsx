@@ -20,7 +20,7 @@ export function Hero() {
         </p>
 
         <KineticTextReveal
-          className='max-w-[12ch] text-5xl leading-[1.2] font-bold mb-2'
+          className='max-w-[12ch] text-3xl leading-[1.2] font-bold mb-2 md:text-5xl'
           text='cristian sbardelotto.'
           delay={0.6}
           transition={{ duration: 0.3, ease: 'easeInOut' }}
@@ -30,7 +30,7 @@ export function Hero() {
           passionate developer and soon to be a Computer Science student.
         </p>
 
-        <div className='flex items-center gap-3'>
+        <div className='flex items-center flex-wrap gap-3'>
           <Badge
             variant='secondary'
             className='bg-primary/10 border border-primary/20 px-2 py-0.5 transition-transform hover:translate-x-0.5 hover:-translate-y-0.5 cursor-default'
@@ -57,7 +57,7 @@ export function Hero() {
           </Badge>
         </div>
 
-        <div className='flex items-center gap-2 *:m-0'>
+        <div className='flex items-center gap-2 flex-wrap *:m-0'>
           <a
             download='cristian-sbardelotto-cv.pdf'
             href='https://docs.google.com/document/d/1_0vOwqThS8tTWe9cDrGe7lM8OJl09nyTgpWbjDZzlP8/export?format=pdf'
