@@ -6,6 +6,7 @@ import { Skills } from './components/sections/skills';
 import { Contact } from './components/sections/contact';
 import { Hero } from './components/sections/hero';
 import { Separator } from './components/ui/separator';
+import { FadeIn } from './components/fade-in';
 
 export function App() {
   return (
@@ -14,35 +15,45 @@ export function App() {
         <Header />
 
         <div className='container mt-20 flex min-w-0 flex-col gap-4 text-sm leading-loose pt-20'>
-          <Hero />
+          <FadeIn delay={400}>
+            <Hero />
+          </FadeIn>
 
-          <Separator
-            id='about'
-            className='my-16'
-          />
+          <FadeIn delay={600}>
+            <Separator
+              id='about'
+              className='my-16'
+            />
 
-          <About />
+            <About />
+          </FadeIn>
 
-          <Separator
-            id='projects'
-            className='my-16'
-          />
+          <FadeIn>
+            <Separator
+              id='projects'
+              className='my-16'
+            />
 
-          <Projects />
+            <Projects />
+          </FadeIn>
 
-          <Separator
-            id='skills'
-            className='my-16'
-          />
+          <FadeIn>
+            <Separator
+              id='skills'
+              className='my-16'
+            />
 
-          <Skills />
+            <Skills />
+          </FadeIn>
 
-          <Separator
-            id='contact'
-            className='my-16'
-          />
+          <FadeIn>
+            <Separator
+              id='contact'
+              className='my-16'
+            />
 
-          <Contact />
+            <Contact />
+          </FadeIn>
         </div>
       </div>
 

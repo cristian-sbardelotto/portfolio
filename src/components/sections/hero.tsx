@@ -22,7 +22,7 @@ export function Hero() {
         <KineticTextReveal
           className='max-w-[12ch] text-5xl leading-[1.2] font-bold mb-2'
           text='cristian sbardelotto.'
-          delay={0.5}
+          delay={0.6}
           transition={{ duration: 0.3, ease: 'easeInOut' }}
         ></KineticTextReveal>
 
