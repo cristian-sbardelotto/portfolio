@@ -6,7 +6,7 @@ export function Skills() {
     <section>
       <SectionTitle className='mb-16'>skills.</SectionTitle>
 
-      <div className='flex flex-wrap gap-[7vw]'>
+      <div className='flex flex-wrap gap-[7vw] sm:justify-start justify-center'>
         {Object.entries(skills).map(([category, skills]) => (
           <div
             key={category}

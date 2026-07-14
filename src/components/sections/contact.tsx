@@ -6,8 +6,8 @@ export function Contact() {
     <section>
       <SectionTitle className='mb-14'>contact.</SectionTitle>
 
-      <div className='flex items-start gap-8 justify-between'>
-        <div className='flex flex-col gap-8'>
+      <div className='flex items-start gap-2 lg:gap-8 justify-between flex-col lg:flex-row'>
+        <div className='flex flex-col gap-8 lg:order-1 order-2'>
           <p className='max-w-[50ch] text-muted-foreground'>
             feel absolutely free to reach out, i'm always open to new
             connections and opportunities. whether you have a question, a
@@ -45,7 +45,7 @@ export function Contact() {
           </div>
         </div>
 
-        <h2 className='-mt-4 max-w-[16ch] text-5xl leading-[1.2] font-bold mb-2 text-end'>
+        <h2 className='-mt-4 max-w-[16ch] text-3xl lg:text-end lg:text-5xl leading-[1.2] font-bold mb-2 order-1 lg:order-2'>
           i'd love to hear from you.
         </h2>
       </div>

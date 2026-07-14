@@ -3,6 +3,7 @@ import { LinkPopover } from '../link-popover';
 import { experiences } from '@/constants/experience';
 import { ExperienceCard } from '../experience-card';
 import { SectionTitle } from '../section-title';
+import { Accordion } from '../ui/accordion';
 
 export function About() {
   return (
@@ -43,20 +44,26 @@ export function About() {
         <div className='flex flex-col max-w-md w-full'>
           <h3 className='text-muted-foreground'>
             // experiences{' '}
-            <span className='text-xs text-muted-foreground/70'>
+            <span className='lg:inline hidden text-xs text-muted-foreground/70'>
               (hover for description)
+            </span>
+            <span className='lg:hidden text-xs text-muted-foreground/70'>
+              (click for description)
             </span>
           </h3>
           <Separator className='mt-2 mb-4' />
 
-          <div className='flex flex-col gap-4'>
+          <Accordion
+            type='multiple'
+            className='flex flex-col gap-4'
+          >
             {experiences.map(xp => (
               <ExperienceCard
                 key={xp.id}
                 {...xp}
               />
             ))}
-          </div>
+          </Accordion>
         </div>
       </div>
     </section>
