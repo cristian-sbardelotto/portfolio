@@ -21,7 +21,7 @@ export function Contact() {
             cristian.k.sbardelotto@gmail.com
           </LinkPopover>
 
-          <div className='flex items-center gap-5'>
+          <div className='flex items-center gap-5 flex-wrap'>
             <LinkPopover
               className='text-muted-foreground/80 hover:text-foreground/80 no-underline hover:underline'
               href='https://github.com/cristian-sbardelotto'
