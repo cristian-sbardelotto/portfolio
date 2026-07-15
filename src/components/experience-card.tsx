@@ -84,7 +84,7 @@ export function ExperienceCard({
         <HoverCardContent
           sideOffset={20}
           side='left'
-          className='max-w-xl w-full shadow-2xl'
+          className='max-w-96 w-full shadow-2xl'
         >
           <p>{description}</p>
         </HoverCardContent>
