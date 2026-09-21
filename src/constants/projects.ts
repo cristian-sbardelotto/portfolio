@@ -29,16 +29,6 @@ export const projects = [
   },
   {
     id: window.crypto.randomUUID(),
-    title: 'Cristian OS',
-    area: 'frontend',
-    description:
-      'A little more about me, wrapped in an interface that looks just like Windows.',
-    technologies: ['typescript', 'react', 'tailwind'],
-    github: 'https://github.com/cristian-sbardelotto/cristian-os',
-    deploy: 'https://cristian-os.vercel.app/',
-  },
-  {
-    id: window.crypto.randomUUID(),
     title: 'Studay',
     area: 'frontend',
     description:
@@ -56,16 +46,6 @@ export const projects = [
     technologies: ['typescript', 'react', 'tailwind'],
     github: 'https://github.com/cristian-sbardelotto/quizzed',
     deploy: 'https://quizzed-five.vercel.app/',
-  },
-  {
-    id: window.crypto.randomUUID(),
-    title: 'Cristian Links',
-    area: 'frontend',
-    description:
-      'A minimalist links page with my most important projects and profiles in one place.',
-    technologies: ['typescript', 'react', 'tailwind'],
-    github: 'https://github.com/cristian-sbardelotto/cristian-links',
-    deploy: 'https://cristian-links.vercel.app/',
   },
   {
     id: window.crypto.randomUUID(),

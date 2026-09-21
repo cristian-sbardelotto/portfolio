@@ -37,6 +37,10 @@ export function About() {
             <LinkPopover href='https://sbardelotto.dev'>
               sbardelotto.dev
             </LinkPopover>
+            , or my personal blog in{' '}
+            <LinkPopover href='https://blog.cristiansbardelotto.com.br'>
+              blog.cristiansbardelotto.com.br
+            </LinkPopover>
             .
           </p>
         </article>
