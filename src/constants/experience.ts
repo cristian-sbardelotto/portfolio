@@ -7,7 +7,7 @@ export const experiences = [
       url: 'https://www.hash3.dev',
     },
     description:
-      'I work with international teams on cutting-edge frontend technologies, including TypeScript, React, Vue. My daily responsibilities involve developing or enhancing features for internal tools, refactoring code, and seamlessly integrating systems to ensure everything functions perfectly.',
+      'I work with international teams on cutting-edge frontend technologies, including TypeScript, React, and Vue. My daily responsibilities involve creating dashboards, developing new features, enhancing existing ones, refactoring code, analyzing real-world applications, and seamlessly integrating systems to ensure everything functions perfectly.',
     duration: 'Jul. 2024 - until now',
   },
   {
